@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "FrutigerLTArabic";
+  src: url("../fonts/FrutigerLTArabic-45Light.otf");
+  src: url("../fonts/FrutigerLTArabic-Light.eot") format("embedded-opentype"),
+    url("../fonts/FrutigerLTArabic-Light.woff2") format("woff2"),
+    url("../fonts/FrutigerLTArabic-45Light.woff") format("woff"),
+    url("../fonts/FrutigerLTArabic-Light.ttf") format("truetype"),
+    url("../fonts/FrutigerLTArabic-45Light.svg") format("svg");
+  font-display: swap;
+}
+
+body {
+  direction: rtl;
+  text-align: right;
+  overflow-x: hidden;
+  font-family: "FrutigerLTArabic", sans-serif;
+}
+
+.container,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl {
+  max-width: 90%;
+}
+
+a {
+  display: inline-block;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+button {
+  outline: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+:focus,
+:active,
+.btn-secondary:not(:disabled):not(.disabled):active:focus,
+.btn-secondary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-secondary.dropdown-toggle:focus {
+  outline: none;
+  border: 0;
+  box-shadow: 0 0 0 0 transparent;
+}
+
+.divider {
+  height: 100px;
+}
+
+.section {
+  padding: 3rem 0;
+}
+
+.relative {
+  position: relative;
+}
+
+.bottom-shape,
+.top-shape {
+  position: absolute;
+  width: 100%;
+  z-index: 9;
+}
+
+.bottom-shape {
+  top: 100%;
+}
+
+.top-shape {
+  bottom: 0;
+}
+
+.bottom-shape img,
+.top-shape img {
+  height: 3rem;
+}
