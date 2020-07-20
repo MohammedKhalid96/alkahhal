@@ -1,15 +1,24 @@
 <template>
   <div class="home-intro section relative">
     <b-container>
-      <div class="home-intro__text">
-        <Title white small title="بدا في عام 1994 م" />
-        <Title white big bold title="الكحّال" />
-        <Title
-          white
-          medium
-          title="یمتلك نخبة من الإستشاریین و أساتذة الجامعة في كافة تخصصات طب و جراحة العیون"
-        />
-      </div>
+      <b-row>
+        <b-col>
+          <div class="home-intro__text">
+            <Title white small title="بدا في عام 1994 م" />
+            <Title white big bold title="الكحّال" />
+            <Title
+              white
+              small
+              title="یمتلك نخبة من الإستشاریین و أساتذة الجامعة في كافة تخصصات طب و جراحة العیون"
+            />
+          </div>
+        </b-col>
+
+        <b-col>
+          <div class="home-intro__img">
+          </div>
+        </b-col>
+      </b-row>
     </b-container>
     <div class="top-shape">
       <b-img src="../assets/images/bg-top.png" fluid-grow></b-img>
@@ -29,10 +38,16 @@ export default {
 
 <style scoped>
 .home-intro {
-  background: #0096af;
+  background: linear-gradient(#0096af, #0096af),
+    url("../assets/images/child.jpg");
+  background-size: cover;
+  height: 600px;
 }
 
 .home-intro__text {
-  width: 50%;
+}
+
+.home-intro__img img {
+  height: 600px;
 }
 </style>
