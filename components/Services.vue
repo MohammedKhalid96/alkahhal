@@ -82,12 +82,13 @@ export default {
 </script>
 
 <style scoped>
-.col-md-3 {
+.services .col-md-3 {
   margin: auto;
+  margin-bottom: 5rem;
 }
 
-.service-box {
-  margin-bottom: 5rem;
+.services .col-md-3:nth-child(9) {
+  margin-bottom: 0;
 }
 
 .service-img img {

@@ -80,10 +80,10 @@ ul {
 }
 
 .top-shape {
-  bottom: 0;
+  bottom: 100%;
 }
 
 .bottom-shape img,
 .top-shape img {
-  height: 3rem;
+  height: 5rem;
 }

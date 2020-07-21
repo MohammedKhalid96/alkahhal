@@ -2,12 +2,8 @@
   <div class="home-page">
     <div class="home-intro-section section relative">
       <b-container></b-container>
-
-      <div class="top-shape">
-        <b-img src="../assets/images/bg-top.png" fluid-grow></b-img>
-      </div>
     </div>
-    <div class="servies-section section">
+    <div class="servies-section">
       <Services />
     </div>
   </div>
