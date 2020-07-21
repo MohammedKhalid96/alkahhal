@@ -61,7 +61,7 @@ ul {
 }
 
 .section {
-  padding: 3rem 0;
+  padding: 5rem 0;
 }
 
 .relative {
@@ -72,7 +72,7 @@ ul {
 .top-shape {
   position: absolute;
   width: 100%;
-  z-index: 9;
+  z-index: 8;
 }
 
 .bottom-shape {

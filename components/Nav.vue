@@ -1,6 +1,6 @@
 <template>
   <div class="navbar relative">
-    <b-navbar toggleable="lg" type="dark" variant="info" fixed="top">
+    <b-navbar toggleable="lg" type="dark" variant="info">
       <b-container>
         <b-navbar-brand href="#">
           <b-img src="../assets/images/logo.png" fluid alt="alkahhal logo"></b-img>
@@ -17,14 +17,23 @@
           </b-navbar-nav>
 
           <b-navbar-nav class="action-links mr-auto">
-            <b-nav-item href="#">احجز موعد</b-nav-item>
+            <b-nav-item target="_blank" href="#">
+              <font-awesome-icon :icon="['fab', 'facebook']" />
+            </b-nav-item>
+            <b-nav-item target="_blank" href="#">
+              <font-awesome-icon :icon="['fab', 'instagram']" />
+            </b-nav-item>
+            <b-nav-item target="_blank" href="#">
+              <font-awesome-icon :icon="['fab', 'twitter']" />
+            </b-nav-item>
+            <b-nav-item href="#" class="action-link">احجز موعد</b-nav-item>
           </b-navbar-nav>
         </b-collapse>
       </b-container>
     </b-navbar>
-    <div class="bottom-shape">
+    <!-- <div class="bottom-shape">
       <b-img src="../assets/images/bg-bottom.png" fluid-grow></b-img>
-    </div>
+    </div>-->
     <div class="divider"></div>
   </div>
 </template>
@@ -38,12 +47,13 @@ export default {
 <style scoped>
 .navbar {
   width: 100%;
-  padding: 2.5rem 0 0 0;
+  padding: 0 0 0 0;
 }
 
 .bg-info {
-  background: linear-gradient(to left bottom, #fff 40%, #ffffff59, transparent),
-    url("../assets/images/pattern-2.png") !important;
+  /* background: linear-gradient(to left bottom, #fff 40%, #ffffff59, transparent),
+    url("../assets/images/pattern-2.png") !important; */
+    background: transparent !important;
   background-size: cover !important;
 }
 
@@ -60,9 +70,15 @@ export default {
 }
 
 .navbar-dark .navbar-nav .nav-link {
-  padding-right: 1.2rem;
+  padding: 0.5rem 1.5rem 0.8rem 1.5rem !important;
   font-size: 1.2em;
   font-weight: bold;
   color: #0096af;
+}
+
+.action-link .nav-link {
+  background-image: linear-gradient(to left, #0096af, #0095af88);
+  color: #fff !important;
+  border-radius: 5rem;
 }
 </style>

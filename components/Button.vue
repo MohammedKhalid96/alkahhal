@@ -12,8 +12,6 @@
 </template>
 
 <script>
-import Icon from "../Icon/Icon";
-
 export default {
   name: "Button",
 
@@ -27,10 +25,6 @@ export default {
     dark: Boolean,
     smallRadius: Boolean,
     roundedRadius: Boolean
-  },
-
-  components: {
-    Icon
   }
 };
 </script>
