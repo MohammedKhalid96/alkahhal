@@ -70,14 +70,14 @@ export default {
 }
 
 .navbar-dark .navbar-nav .nav-link {
-  padding: 0.5rem 1.5rem 0.8rem 1.5rem !important;
+  padding: 0.5rem 1rem 0.8rem 1rem !important;
   font-size: 1.2em;
   font-weight: bold;
   color: #0096af;
 }
 
 .action-link .nav-link {
-  background-image: linear-gradient(to left, #0096af, #0095af88);
+  background-image: linear-gradient(to left, #0096af, rgba(0, 147, 173, 0.5));
   color: #fff !important;
   border-radius: 5rem;
 }

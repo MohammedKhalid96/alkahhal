@@ -38,6 +38,10 @@ a:hover {
   text-decoration: none;
 }
 
+svg {
+  vertical-align: middle !important;
+}
+
 button {
   outline: 0;
 }
@@ -56,6 +60,23 @@ ul {
   box-shadow: 0 0 0 0 transparent;
 }
 
+.form-control {
+  padding: 1.5rem 1rem;
+  border: 0;
+  border-bottom: 1px solid #0096af;
+}
+
+.custom-select {
+  border: 0;
+  border-bottom: 1px solid #0096af;
+}
+
+.form-control:focus,
+.custom-select:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
 .divider {
   height: 100px;
 }
@@ -66,6 +87,13 @@ ul {
 
 .relative {
   position: relative;
+}
+
+.flex-center {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  height: 100%;
 }
 
 .bottom-shape,
@@ -86,4 +114,15 @@ ul {
 .bottom-shape img,
 .top-shape img {
   height: 5rem;
+}
+
+.action-btn {
+  border: 0;
+  background: transparent;
+  background-image: linear-gradient(to left, #0096af, rgba(0, 147, 173, 0.5));
+  color: #fff !important;
+  border-radius: 5rem;
+  padding: 0.6rem 2rem;
+  padding-top: 0.3rem;
+  margin-top: 1rem;
 }
