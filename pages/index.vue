@@ -1,20 +1,47 @@
 <template>
   <div class="home-page">
     <HomeIntro />
+    <div class="servies-section">
+      <Services />
+    </div>
+
+    <div class="contact-section">
+      <Contact />
+    </div>
   </div>
 </template>
 
 <script>
+import Title from "../components/Title";
 import HomeIntro from "../components/HomeIntro";
+import Form from "../components/Form";
+import Services from "../components/Services";
+import Contact from "../components/Contact";
 
 export default {
   name: "HomePage",
 
   components: {
-    HomeIntro
-  }
+    HomeIntro,
+    Title,
+    Form,
+    Services,
+    Contact,
+  },
 };
 </script>
 
 <style scoped>
+.servies-section {
+  background: url("../assets/images/right-bg.svg");
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+
+.contact-section {
+  background: url("../assets/images/left-bg.svg");
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 </style>
