@@ -22,13 +22,13 @@ import Contact from "./Contact";
 export default {
   name: "HomeIntro",
 
-  components: { Title, Form, Services, Contact }
+  components: { Title, Form, Services, Contact },
 };
 </script>
 
 <style scoped>
 .servies-section {
-  background: url("../assets/images/right-bg.svg");
+  background: url("../assets/images/tall-bg.png");
   background-position: top right;
   background-repeat: no-repeat;
 }
@@ -37,5 +37,6 @@ export default {
   background: url("../assets/images/left-bg.svg");
   background-position: top left;
   background-repeat: no-repeat;
+  background-size: contain;
 }
 </style>

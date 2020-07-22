@@ -5,7 +5,7 @@
         <b-row>
           <b-col md="6">
             <div class="form-radio select-branch">
-              <b-form-radio-group buttons button-variant="outline-primary">
+              <b-form-radio-group buttons>
                 <b-form-radio v-model="selectedBranch" name="some-radios" value="A">فرع الدمام</b-form-radio>
                 <b-form-radio v-model="selectedBranch" name="some-radios" value="B">فرع الأحساء</b-form-radio>
               </b-form-radio-group>
@@ -85,10 +85,10 @@ export default {
       options: [
         { value: null, text: "اسم الطبيب" },
         { value: "د. إلهام التميمي", text: "د. إلهام التميمي" },
-        { value: "د. عادل عبدالعزيز الرشود", text: "د. عادل عبدالعزيز الرشود" }
-      ]
+        { value: "د. عادل عبدالعزيز الرشود", text: "د. عادل عبدالعزيز الرشود" },
+      ],
     };
-  }
+  },
 };
 </script>
 
@@ -111,7 +111,8 @@ export default {
   margin-left: 1rem;
 }
 
-.select-branch .btn-outline-primary {
+.select-branch .btn {
+  background: #fff;
   border: 1px solid #0096af !important;
   color: #0096af;
   border-radius: 5rem !important;
@@ -120,13 +121,19 @@ export default {
   margin-left: 0.3rem;
 }
 
-.select-branch .btn-outline-primary:not(:disabled):not(.disabled):active,
-.btn-outline-primary:not(:disabled):not(.disabled).active,
-.show > .btn-outline-primary.dropdown-toggle {
+.select-branch .btn.active {
   background: transparent;
-  background-image: linear-gradient(to left, #0096af, rgba(0, 147, 173, 0.5));
+  background: linear-gradient(to left, #0096af, rgba(0, 147, 173, 0.5));
   border: 0;
   box-shadow: none;
   color: #fff;
+}
+
+option {
+  background: linear-gradient(to left, #0096af, rgba(0, 147, 173, 0.5)) !important;
+}
+
+.select-doctor .form-group {
+  cursor: pointer;
 }
 </style>

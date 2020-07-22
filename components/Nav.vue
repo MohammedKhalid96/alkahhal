@@ -77,7 +77,7 @@ export default {
 }
 
 .action-link .nav-link {
-  background-image: linear-gradient(to left, #0096af, rgba(0, 147, 173, 0.5));
+  background-image: linear-gradient(to left, #0096af, #0093ad80);
   color: #fff !important;
   border-radius: 5rem;
 }
