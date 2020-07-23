@@ -5,9 +5,9 @@
         <b-row>
           <b-col md="6">
             <div class="form-radio select-branch">
-              <b-form-radio-group buttons>
-                <b-form-radio v-model="selectedBranch" name="some-radios" value="A">فرع الدمام</b-form-radio>
-                <b-form-radio v-model="selectedBranch" name="some-radios" value="B">فرع الأحساء</b-form-radio>
+              <b-form-radio-group name="branch" buttons :value="selectedBranch">
+                <b-form-radio v-model="selectedBranch" value="Dmamm branch" required>فرع الدمام</b-form-radio>
+                <b-form-radio v-model="selectedBranch" value="Ahsa branch" required>فرع الأحساء</b-form-radio>
               </b-form-radio-group>
             </div>
           </b-col>
@@ -15,7 +15,7 @@
           <b-col md="6">
             <div class="form-dropdown select-doctor">
               <b-form-group>
-                <b-form-select v-model="selectedDoctor" :options="options"></b-form-select>
+                <b-form-select name="doctor" v-model="selectedDoctor" :options="options" required></b-form-select>
               </b-form-group>
             </div>
           </b-col>
@@ -27,7 +27,7 @@
           <b-col md="6">
             <div class="form-radio patient-name">
               <b-form-group>
-                <b-input id="inline-form-input-name" class="mb-2" placeholder="اسم المريض"></b-input>
+                <b-input name="name" id="inline-form-input-name" class="mb-2" placeholder="اسم المريض" required></b-input>
               </b-form-group>
             </div>
           </b-col>
@@ -35,7 +35,7 @@
           <b-col md="6">
             <div class="patient-phone">
               <b-form-group>
-                <b-input id="inline-form-input-name" class="mb-2" placeholder="رقم الهاتف"></b-input>
+                <b-input name="phone" id="inline-form-input-name" class="mb-2" placeholder="رقم الهاتف" required></b-input>
               </b-form-group>
             </div>
           </b-col>
@@ -46,11 +46,11 @@
         <b-row>
           <b-col md="6">
             <div class="select-date">
-              <b-form-group>
+              <b-form-group name="datepicker" :value="dateValue">
                 <b-form-datepicker
                   id="example-datepicker"
                   v-model="dateValue"
-                  class="mb-2"
+                  class="mb-2dsdsdsdsd"
                   locale="ar"
                 ></b-form-datepicker>
               </b-form-group>
@@ -59,14 +59,16 @@
 
           <b-col md="6">
             <div class="select-time">
-              <b-form-timepicker v-model="timeValue" locale="ar"></b-form-timepicker>
+              <b-form-group name="timepicker" :value="timeValue">
+                <b-form-timepicker v-model="timeValue" locale="ar"></b-form-timepicker>
+              </b-form-group>
             </div>
           </b-col>
         </b-row>
       </div>
 
       <div class="form-submit-btn text-center">
-        <b-button class="action-btn">إرسال</b-button>
+        <b-button type="submit" class="action-btn">إرسال</b-button>
       </div>
     </b-form>
   </div>
@@ -130,7 +132,11 @@ export default {
 }
 
 option {
-  background: linear-gradient(to left, #0096af, rgba(0, 147, 173, 0.5)) !important;
+  background: linear-gradient(
+    to left,
+    #0096af,
+    rgba(0, 147, 173, 0.5)
+  ) !important;
 }
 
 .select-doctor .form-group {

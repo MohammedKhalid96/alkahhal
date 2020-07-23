@@ -82,7 +82,7 @@ ul {
 }
 
 .divider {
-  height: 100px;
+  height: 150px;
 }
 
 .section {
@@ -123,7 +123,7 @@ ul {
 .action-btn {
   border: 0;
   background: transparent;
-  background-image: linear-gradient(to left, #0096af, rgba(0, 147, 173, 0.5));
+  background-image: linear-gradient(to left, #0096af, #0093ad80);
   color: #fff !important;
   border-radius: 5rem;
   padding: 0.6rem 2rem;

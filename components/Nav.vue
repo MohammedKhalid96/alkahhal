@@ -1,59 +1,71 @@
 <template>
-  <div class="navbar relative">
-    <b-navbar toggleable="lg" type="dark" variant="info">
-      <b-container>
-        <b-navbar-brand href="#">
-          <b-img src="../assets/images/logo.png" fluid alt="alkahhal logo"></b-img>
-        </b-navbar-brand>
+  <header>
+    <div class="top-navbar">
+      <b-row>
+        <b-col class="text-right">
+          <div class="top-navbar__right">
+            
+          </div>
+        </b-col>
+      </b-row>
+    </div>
+    <div class="navbar relative">
+      <b-navbar toggleable="lg" type="dark" variant="info">
+        <b-container>
+          <b-navbar-brand href="#">
+            <b-img src="../assets/images/logo.png" fluid alt="alkahhal logo"></b-img>
+          </b-navbar-brand>
 
-        <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+          <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
-        <b-collapse id="nav-collapse" is-nav>
-          <b-navbar-nav>
-            <b-nav-item href="#">الرئيسية</b-nav-item>
-            <b-nav-item href="#">الخدمات</b-nav-item>
-            <b-nav-item href="#">عن الكحّال</b-nav-item>
-            <b-nav-item href="#">اتصل بنا</b-nav-item>
-          </b-navbar-nav>
+          <b-collapse id="nav-collapse" is-nav>
+            <b-navbar-nav>
+              <b-nav-item href="#">الرئيسية</b-nav-item>
+              <b-nav-item href="#">الخدمات</b-nav-item>
+              <b-nav-item href="#">عن الكحّال</b-nav-item>
+              <b-nav-item href="#">اتصل بنا</b-nav-item>
+            </b-navbar-nav>
 
-          <b-navbar-nav class="action-links mr-auto">
-            <b-nav-item target="_blank" href="#">
-              <font-awesome-icon :icon="['fab', 'facebook']" />
-            </b-nav-item>
-            <b-nav-item target="_blank" href="#">
-              <font-awesome-icon :icon="['fab', 'instagram']" />
-            </b-nav-item>
-            <b-nav-item target="_blank" href="#">
-              <font-awesome-icon :icon="['fab', 'twitter']" />
-            </b-nav-item>
-            <b-nav-item href="#" class="action-link">احجز موعد</b-nav-item>
-          </b-navbar-nav>
-        </b-collapse>
-      </b-container>
-    </b-navbar>
-    <!-- <div class="bottom-shape">
+            <b-navbar-nav class="action-links mr-auto">
+              <b-nav-item target="_blank" href="#">
+                <font-awesome-icon :icon="['fab', 'facebook']" />
+              </b-nav-item>
+              <b-nav-item target="_blank" href="#">
+                <font-awesome-icon :icon="['fab', 'instagram']" />
+              </b-nav-item>
+              <b-nav-item target="_blank" href="#">
+                <font-awesome-icon :icon="['fab', 'twitter']" />
+              </b-nav-item>
+              <b-nav-item href="#" class="action-link">احجز موعد</b-nav-item>
+            </b-navbar-nav>
+          </b-collapse>
+        </b-container>
+      </b-navbar>
+      <!-- <div class="bottom-shape">
       <b-img src="../assets/images/bg-bottom.png" fluid-grow></b-img>
-    </div>-->
-    <div class="divider"></div>
-  </div>
+      </div>-->
+    </div>
+  </header>
 </template>
 
 <script>
 export default {
-  name: "Nav"
+  name: "Nav",
 };
 </script>
 
 <style scoped>
 .navbar {
   width: 100%;
-  padding: 0 0 0 0;
+  padding: 0.5rem 0 0.5rem 0;
+  margin: 0;
+  align-items: inherit;
 }
 
 .bg-info {
   /* background: linear-gradient(to left bottom, #fff 40%, #ffffff59, transparent),
     url("../assets/images/pattern-2.png") !important; */
-    background: transparent !important;
+  background: #fff !important;
   background-size: cover !important;
 }
 
@@ -71,8 +83,7 @@ export default {
 
 .navbar-dark .navbar-nav .nav-link {
   padding: 0.5rem 1rem 0.8rem 1rem !important;
-  font-size: 1.2em;
-  font-weight: bold;
+  font-size: 1.1em;
   color: #0096af;
 }
 

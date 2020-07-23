@@ -1,13 +1,19 @@
 <template>
   <div class="home-page">
-    <HomeIntro />
+    <div class="home-intro-section">
+      <HomeIntro />
+    </div>
+    <div class="divider"></div>
+
     <div class="servies-section">
       <Services />
     </div>
+    <div class="divider"></div>
 
     <div class="contact-section">
       <Contact />
     </div>
+    <div class="divider"></div>
   </div>
 </template>
 
@@ -39,6 +45,13 @@ export default {
 }
 
 .contact-section {
+  background: url("../assets/images/left-bg.svg");
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.home-intro-section {
   background: url("../assets/images/left-bg.svg");
   background-position: top left;
   background-repeat: no-repeat;
