@@ -15,6 +15,11 @@
       <Contact />
     </div>
     <div class="divider"></div>
+
+    <div class="about-section">
+      <About />
+    </div>
+    <div class="divider"></div>
   </div>
 </template>
 
@@ -23,6 +28,7 @@ import Title from "../components/Title";
 import HomeIntro from "../components/HomeIntro";
 import Form from "../components/Form";
 import Services from "../components/Services";
+import About from "../components/About";
 import Contact from "../components/Contact";
 
 export default {
@@ -33,6 +39,7 @@ export default {
     Title,
     Form,
     Services,
+    About,
     Contact,
   },
 };

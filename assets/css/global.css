@@ -100,25 +100,22 @@ ul {
   height: 100%;
 }
 
-.bottom-shape,
-.top-shape {
+.top-svg svg,
+.bottom-svg svg {
   position: absolute;
+  height: 30%;
   width: 100%;
   left: 0;
-  z-index: 8;
+  fill: #0096af;
 }
 
-.bottom-shape {
-  top: 100%;
+.top-svg svg {
+  bottom: 99%;
 }
 
-.top-shape {
-  bottom: 100%;
-}
-
-.bottom-shape img,
-.top-shape img {
-  height: 5rem;
+.bottom-svg svg {
+  top: 99%;
+  transform: rotate(180deg);
 }
 
 .action-btn {

@@ -92,6 +92,7 @@ export default {
 </script>
 
 <style scoped>
+
 .contact-info li {
   margin-bottom: 2rem;
 }
