@@ -4,6 +4,7 @@
       <HomeIntro />
     </div>
     <div class="divider"></div>
+    <div class="divider"></div>
 
     <div class="servies-section">
       <Services />

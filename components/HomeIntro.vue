@@ -1,8 +1,8 @@
 <template>
   <div class="home-intro-wrap">
-    <b-container>
-      <div class="home-intro section relative">
-        <div class="home-intro__form">
+    <div class="home-intro section relative">
+      <b-container>
+        <div class="home-intro__text-and-form-wrap">
           <div class="home-intro__text text-center">
             <Title small white title="بدا في عام 1994 م " />
             <Title big bold white title="الكحال " />
@@ -12,13 +12,15 @@
               title="یمتلك نخبة من الإستشاریین و أساتذة الجامعة في كافة تخصصات طب و جراحة العیون"
             />
           </div>
-          <Form />
+          <div class="home-intro__form relative">
+            <Form />
+          </div>
         </div>
         <div class="bottom-shape">
           <b-img src="../assets/images/bottom-1.png" fluid-grow></b-img>
         </div>
-      </div>
-    </b-container>
+      </b-container>
+    </div>
   </div>
 </template>
 
@@ -43,7 +45,7 @@ export default {
   height: 400px;
 }
 
-.home-intro__form {
+.home-intro__text-and-form-wrap {
   position: absolute;
   width: 50%;
   left: 50%;

@@ -1,13 +1,50 @@
 <template>
   <header>
     <div class="top-navbar">
-      <b-row>
-        <b-col class="text-right">
-          <div class="top-navbar__right">
-            
-          </div>
-        </b-col>
-      </b-row>
+      <b-container>
+        <b-row>
+          <b-col md="8">
+            <div class="top-navbar__right">
+              <a
+                target="_blank"
+                href="https://www.google.com.eg/maps/place/%D9%85%D8%AC%D9%85%D8%B9+%D8%A7%D9%84%D9%83%D8%AD%D8%A7%D9%84+%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%E2%80%AD/@26.4737274,50.0957093,18z/data=!3m1!4b1!4m5!3m4!1s0x3e49fea90b63e9b5:0xa6d890753e9d119!8m2!3d26.4737274!4d50.094615"
+              >
+                <font-awesome-icon :icon="['fas', 'map-marked-alt']" />
+                <span class="contact-info__name">فرع الدمام</span>
+                7672 ابو قيس الجهني, حي الحمراء, الدمام, السعودية
+              </a>
+
+              <a
+                target="_blank"
+                href="https://www.google.com.eg/maps/place/%D9%85%D8%AC%D9%85%D8%B9+%D8%A7%D9%84%D9%83%D8%AD%D8%A7%D9%84+%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%E2%80%AD/@26.4737274,50.0957093,18z/data=!3m1!4b1!4m5!3m4!1s0x3e49fea90b63e9b5:0xa6d890753e9d119!8m2!3d26.4737274!4d50.094615"
+              >
+                <font-awesome-icon :icon="['fas', 'map-marked-alt']" />
+                <span class="contact-info__name">فرع الدمام</span>
+                الأحساء, محاسن, المبرز
+              </a>
+            </div>
+          </b-col>
+
+          <b-col md="4">
+            <div class="top-navbar__left text-left">
+              <a href target="_blank" rel="noopener noreferrer">
+                <font-awesome-icon :icon="['fas', 'mobile-alt']" />
+              </a>
+              <a href target="_blank" rel="noopener noreferrer">
+                <font-awesome-icon :icon="['fab', 'facebook']" />
+              </a>
+
+              <a href target="_blank" rel="noopener noreferrer">
+                <font-awesome-icon :icon="['fab', 'twitter']" />
+              </a>
+
+              <a href target="_blank" rel="noopener noreferrer" class="ml-0">
+                <font-awesome-icon :icon="['fab', 'instagram']" />
+              </a>
+            </div>
+          </b-col>
+        </b-row>
+      </b-container>
     </div>
     <div class="navbar relative">
       <b-navbar toggleable="lg" type="dark" variant="info">
@@ -27,15 +64,6 @@
             </b-navbar-nav>
 
             <b-navbar-nav class="action-links mr-auto">
-              <b-nav-item target="_blank" href="#">
-                <font-awesome-icon :icon="['fab', 'facebook']" />
-              </b-nav-item>
-              <b-nav-item target="_blank" href="#">
-                <font-awesome-icon :icon="['fab', 'instagram']" />
-              </b-nav-item>
-              <b-nav-item target="_blank" href="#">
-                <font-awesome-icon :icon="['fab', 'twitter']" />
-              </b-nav-item>
               <b-nav-item href="#" class="action-link">احجز موعد</b-nav-item>
             </b-navbar-nav>
           </b-collapse>
@@ -55,6 +83,20 @@ export default {
 </script>
 
 <style scoped>
+.top-navbar {
+  background-image: linear-gradient(to left, #0096af, rgba(0, 147, 173, 0.6));
+  padding: 0.5rem 0;
+}
+
+.top-navbar a {
+  color: #fff;
+  margin-left: 1rem;
+}
+
+.top-navbar svg {
+  margin-left: 0.5rem;
+}
+
 .navbar {
   width: 100%;
   padding: 0.5rem 0 0.5rem 0;
