@@ -11,7 +11,7 @@
     </div>
     <div class="divider"></div>
 
-    <div class="about-section">
+    <div class="about-section"> 
       <About />
     </div>
     <div class="divider"></div>
