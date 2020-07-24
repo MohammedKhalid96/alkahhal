@@ -20,5 +20,8 @@
     "nuxt": "^2.13.0",
     "nuxt-fontawesome": "^0.4.0"
   },
+  "engines": {
+    "node": "12.x"
+  },
   "devDependencies": {}
 }
