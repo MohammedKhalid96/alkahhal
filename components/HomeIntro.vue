@@ -16,7 +16,7 @@
             <Form />
           </div>
         </div>
-        
+
         <div class="bottom-svg">
           <svg
             class="divider--hills"
@@ -60,7 +60,7 @@ export default {
   background-size: contain;
   background-position: right;
   background-repeat: no-repeat;
-  height: 400px;
+  height: 450px;
 }
 
 .home-intro__text-and-form-wrap {

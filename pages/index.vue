@@ -11,13 +11,13 @@
     </div>
     <div class="divider"></div>
 
-    <div class="contact-section">
-      <Contact />
+    <div class="about-section">
+      <About />
     </div>
     <div class="divider"></div>
 
-    <div class="about-section">
-      <About />
+    <div class="contact-section">
+      <Contact />
     </div>
     <div class="divider"></div>
   </div>
@@ -46,20 +46,16 @@ export default {
 </script>
 
 <style scoped>
-.servies-section {
+
+.servies-section,
+.contact-section {
   background: url("../assets/images/right-bg.svg");
   background-position: top right;
-  background-repeat: no-repeat;
-}
-
-.contact-section {
-  background: url("../assets/images/left-bg.svg");
-  background-position: top left;
   background-repeat: no-repeat;
   background-size: contain;
 }
 
-.home-intro-section {
+.about-section {
   background: url("../assets/images/left-bg.svg");
   background-position: top left;
   background-repeat: no-repeat;
