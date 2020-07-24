@@ -7,7 +7,7 @@
             <Title small white title="بدا في عام 1994 م " />
             <Title big bold white title="الكحال " />
             <Title
-              small
+              small 
               white
               title="یمتلك نخبة من الإستشاریین و أساتذة الجامعة في كافة تخصصات طب و جراحة العیون"
             />
