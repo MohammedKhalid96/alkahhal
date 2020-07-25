@@ -24,6 +24,7 @@
       <Map />
     </div>
     <div class="divider"></div>
+    <div class="divider"></div>
   </div>
 </template>
 
@@ -60,7 +61,7 @@ export default {
   background-size: contain;
 }
 
-.about-section, .map-section {
+.about-section {
   background: url("../assets/images/left-bg.svg");
   background-position: top left;
   background-repeat: no-repeat;

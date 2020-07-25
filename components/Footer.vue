@@ -20,7 +20,10 @@
         </g>
       </svg>
     </div>
-    
+    <div class="footer__form">
+      <Form />
+    </div>
+    <div class="divider"></div>
     <b-container>
       <b-row>
         <b-col md="3">
@@ -105,12 +108,14 @@
 
 <script>
 import Title from "./Title";
+import Form from "./Form";
 
 export default {
   name: "Footer",
 
   components: {
     Title,
+    Form,
   },
 };
 </script>
@@ -148,5 +153,14 @@ export default {
 
 .icon-img img {
   width: 25px;
+}
+
+.footer__form {
+  position: absolute;
+  width: 50%;
+  left: 50%;
+  top: -50%;
+  transform: translateX(-50%);
+  z-index: 9;
 }
 </style>
