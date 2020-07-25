@@ -72,7 +72,7 @@ export default {
   position: absolute;
   width: 50%;
   left: 50%;
-  bottom: -50%;
+  bottom: -40%;
   transform: translateX(-50%);
   z-index: 9;
 }

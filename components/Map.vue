@@ -5,7 +5,7 @@
         <Title big bold title="نحن في انتظارك دائما" />
       </div>
       <div class="dammam-branch">
-        <b-row>
+        <b-row no-gutters>
           <b-col md="6">
             <div class="map__img relative">
               <b-img-lazy src="../assets/images/map.jpg" fluid></b-img-lazy>
@@ -56,8 +56,8 @@ export default {
   height: 100%;
   top: 0;
   left: 0;
-  background: radial-gradient(closest-side, transparent, #fff 95%),
+  background: radial-gradient(closest-side, transparent, #fff 100%),
     url("../assets/images/pattern-2.png");
-  background-size: cover;
+  background-size: contain;
 }
 </style>

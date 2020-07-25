@@ -5,6 +5,7 @@
     </div>
     <div class="divider"></div>
     <div class="divider"></div>
+    <div class="divider"></div>
 
     <div class="servies-section">
       <Services />
@@ -19,10 +20,9 @@
     <div class="contact-section">
       <Contact />
     </div>
+
     <div class="divider"></div>
-    <div class="map-section">
-      <Map />
-    </div>
+    <div class="divider"></div>
     <div class="divider"></div>
     <div class="divider"></div>
   </div>

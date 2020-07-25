@@ -79,7 +79,7 @@
           </b-collapse>
         </b-container>
       </b-navbar>
-      <div class="bottom-svg nav-svg">
+      <!-- <div class="bottom-svg nav-svg">
         <svg
           class="divider--hills"
           viewBox="0 0 1920 105"
@@ -98,7 +98,7 @@
             />
           </g>
         </svg>
-      </div>
+      </div> -->
     </div>
   </header>
 </template>
