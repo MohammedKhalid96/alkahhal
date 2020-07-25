@@ -55,8 +55,7 @@ export default {
 
 <style scoped>
 .home-intro {
-  background: linear-gradient(#0095af, #0095af),
-    url("../assets/images/banner-bg-1.png");
+  background: linear-gradient(#0095af, #0095af);
   background-size: contain;
   background-position: right;
   background-repeat: no-repeat;

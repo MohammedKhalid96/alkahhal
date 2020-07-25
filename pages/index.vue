@@ -11,13 +11,17 @@
     </div>
     <div class="divider"></div>
 
-    <div class="about-section"> 
+    <div class="about-section">
       <About />
     </div>
     <div class="divider"></div>
 
     <div class="contact-section">
       <Contact />
+    </div>
+    <div class="divider"></div>
+    <div class="map-section">
+      <Map />
     </div>
     <div class="divider"></div>
   </div>
@@ -30,6 +34,7 @@ import Form from "../components/Form";
 import Services from "../components/Services";
 import About from "../components/About";
 import Contact from "../components/Contact";
+import Map from "../components/Map";
 
 export default {
   name: "HomePage",
@@ -41,12 +46,12 @@ export default {
     Services,
     About,
     Contact,
+    Map,
   },
 };
 </script>
 
 <style scoped>
-
 .servies-section,
 .contact-section {
   background: url("../assets/images/right-bg.svg");
@@ -55,7 +60,7 @@ export default {
   background-size: contain;
 }
 
-.about-section {
+.about-section, .map-section {
   background: url("../assets/images/left-bg.svg");
   background-position: top left;
   background-repeat: no-repeat;
