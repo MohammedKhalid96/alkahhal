@@ -4,10 +4,16 @@
       <b-container>
         <div class="home-intro__text-and-form-wrap">
           <div class="home-intro__text text-center">
-            <Title small white title="بدا في عام 1994 م " />
+            <div class="award relative">
+              <Title small bold white title="بدا في عام 1994 م " />
+              <div class="award__icon">
+                <font-awesome-icon :icon="['fas', 'award']" />
+              </div>
+            </div>
             <Title big bold white title="الكحال " />
             <Title
-              small 
+              small
+              bold
               white
               title="یمتلك نخبة من الإستشاریین و أساتذة الجامعة في كافة تخصصات طب و جراحة العیون"
             />
@@ -69,5 +75,18 @@ export default {
   bottom: -50%;
   transform: translateX(-50%);
   z-index: 9;
+}
+
+.award__icon {
+  position: absolute;
+  opacity: 0.1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.award__icon svg {
+  font-size: 4rem;
+  color: #fff;
 }
 </style>

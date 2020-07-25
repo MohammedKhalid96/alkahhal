@@ -5,7 +5,7 @@
     :block="block"
     :disabled="disabled"
     :type="type"
-    :class="{fakelink__roundedradius: roundedRadius, fakelink__smallradius: smallRadius, dark: dark, orange: bgOrange}"
+    :class="{fakelink__roundedradius: roundedRadius, fakelink__smallradius: smallRadius, dark: dark, sky: bgSky}"
   >
     <slot>{{content}}</slot>
   </b-button>
@@ -21,30 +21,22 @@ export default {
     type: String,
     block: Boolean,
     disabled: Boolean,
-    bgOrange: Boolean,
+    bgSky: Boolean,
     dark: Boolean,
     smallRadius: Boolean,
-    roundedRadius: Boolean
-  }
+    roundedRadius: Boolean,
+  },
 };
 </script>
 
 <style scoped>
 button {
-  margin-top: 2rem;
+  margin-top: 3rem;
+  background: transparent;
 }
 
-.dark {
-  background: #272b3a;
-}
-
-.orange {
-  background: #ec5423;
-}
-
-.btn {
-  border: 0;
-  padding: 1rem;
+.sky {
+  background-image: linear-gradient(to left, #0096af, #0093ad80);
 }
 
 .fakelink__roundedradius {

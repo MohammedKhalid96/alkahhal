@@ -1,6 +1,9 @@
 <template>
   <div class="services section text-center">
     <b-container>
+      <div class="section-title text-center">
+        <Title big bold title="الخدمات" />
+      </div>
       <b-row>
         <b-col v-for="service in services" :key="service.id" md="4">
           <div class="service-box">
@@ -14,17 +17,22 @@
           </div>
         </b-col>
       </b-row>
+
+      <div class="section-link">
+        <Button smallRadius bgSky content="احجز موعد" />
+      </div>
     </b-container>
   </div>
 </template>
 
 <script>
 import Title from "./Title";
+import Button from "./Button";
 
 export default {
   name: "Services",
 
-  components: { Title },
+  components: { Title, Button },
 
   data() {
     return {

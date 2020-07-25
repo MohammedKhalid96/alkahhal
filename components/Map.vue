@@ -1,6 +1,9 @@
 <template>
   <div class="map">
     <b-container>
+      <div class="section-title text-center">
+        <Title big bold title="نحن في انتظارك دائما" />
+      </div>
       <div class="dammam-branch">
         <b-row>
           <b-col md="6">
@@ -53,7 +56,7 @@ export default {
   height: 100%;
   top: 0;
   left: 0;
-  background: radial-gradient(closest-side, transparent, #fff 80%),
+  background: radial-gradient(closest-side, transparent, #fff 95%),
     url("../assets/images/pattern-2.png");
   background-size: cover;
 }

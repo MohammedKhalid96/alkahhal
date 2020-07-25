@@ -10,6 +10,9 @@
 
         <b-col md="6">
           <div class="about__info flex-center">
+            <div class="section-title">
+              <Title big bold title="عن الكحال" />
+            </div>
             <Title
               sky
               small
@@ -46,5 +49,10 @@ export default {
   background-size: contain;
   padding: 3rem;
   padding-right: 0;
+}
+
+.about .section-title {
+  margin: 0;
+  text-align: right;
 }
 </style>

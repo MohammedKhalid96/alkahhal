@@ -27,7 +27,13 @@
           <b-col md="6">
             <div class="form-radio patient-name">
               <b-form-group>
-                <b-input name="name" id="inline-form-input-name" class="mb-2" placeholder="اسم المريض" required></b-input>
+                <b-input
+                  name="name"
+                  id="inline-form-input-name"
+                  class="mb-2"
+                  placeholder="اسم المريض"
+                  required
+                ></b-input>
               </b-form-group>
             </div>
           </b-col>
@@ -35,7 +41,13 @@
           <b-col md="6">
             <div class="patient-phone">
               <b-form-group>
-                <b-input name="phone" id="inline-form-input-name" class="mb-2" placeholder="رقم الهاتف" required></b-input>
+                <b-input
+                  name="phone"
+                  id="inline-form-input-name"
+                  class="mb-2"
+                  placeholder="رقم الهاتف"
+                  required
+                ></b-input>
               </b-form-group>
             </div>
           </b-col>
@@ -68,7 +80,7 @@
       </div>
 
       <div class="form-submit-btn text-center">
-        <b-button type="submit" class="action-btn">إرسال</b-button>
+        <b-button type="submit" class="action-btn"><font-awesome-icon :icon="['fas', 'paper-plane']" />إرسال</b-button>
       </div>
     </b-form>
   </div>
@@ -97,11 +109,20 @@ export default {
 <style scoped>
 .form {
   padding: 4rem;
-  background: #fff;
-  background-size: contain;
+  background: linear-gradient(
+      #fff,
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url("../assets/images/pattern-1.png");
+  background-size: cover;
   border-radius: 5rem;
   color: #0096af;
   font-weight: bold;
+}
+
+#example-datepicker__outer_ {
+  direction: ltr;
 }
 
 .form-inline .form-control {
@@ -131,15 +152,7 @@ export default {
   color: #fff;
 }
 
-option {
-  background: linear-gradient(
-    to left,
-    #0096af,
-    rgba(0, 147, 173, 0.5)
-  ) !important;
-}
-
-.select-doctor .form-group {
+.select-doctor {
   cursor: pointer;
 }
 </style>

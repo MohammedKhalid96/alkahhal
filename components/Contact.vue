@@ -1,6 +1,9 @@
 <template>
   <div class="contact">
     <b-container>
+      <div class="section-title text-center">
+        <Title big bold title="أحجز موعدك الأن" />
+      </div>
       <b-row>
         <b-col md="6">
           <div class="contact-info flex-center">
@@ -92,7 +95,6 @@ export default {
 </script>
 
 <style scoped>
-
 .contact-info li {
   margin-bottom: 2rem;
 }

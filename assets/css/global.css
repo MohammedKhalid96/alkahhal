@@ -42,6 +42,23 @@ a:hover {
   text-decoration: none;
 }
 
+.btn:focus {
+  box-shadow: none;
+}
+
+.btn {
+  border: 0;
+  padding: 0.5rem 1rem 0.8rem 1rem;
+  font-size: 1.1em;
+}
+
+.select-time .btn,
+.select-date .btn,
+.select-time .btn:hover,
+.select-date .btn:hover {
+  color: #0096af !important;
+}
+
 svg {
   vertical-align: middle !important;
 }
@@ -67,12 +84,14 @@ ul {
 .form-control {
   padding: 1.5rem 1rem;
   border: 0;
-  border-bottom: 1px solid #0096af;
+  border-bottom: 1px solid rgba(0, 149, 175, 0.3);
+  border-radius: 5rem;
 }
 
 .custom-select {
   border: 0;
-  border-bottom: 1px solid #0096af;
+  border-bottom: 1px solid rgba(0, 149, 175, 0.3);
+  border-radius: 5rem;
 }
 
 .form-control:focus,
@@ -81,8 +100,14 @@ ul {
   box-shadow: none;
 }
 
+.b-form-btn-label-control.form-control > .dropdown-menu {
+  outline: none;
+  box-shadow: none;
+  border: 0;
+}
+
 .divider {
-  height: 150px;
+  height: 120px;
 }
 
 .section {
@@ -91,6 +116,45 @@ ul {
 
 .relative {
   position: relative;
+}
+
+.section-title {
+  position: relative;
+  width: 40%;
+  margin: auto;
+  padding: 0.5rem 0;
+  margin-bottom: 4rem;
+}
+
+/* .section-title::before {
+  position: absolute;
+  content: "";
+  background: url("../images/icons/left-quote.svg");
+  background-size: 6rem;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 5%;
+  width: 30%;
+  height: 100%;
+}
+
+.section-title::after {
+  position: absolute;
+  content: "";
+  background: url("../images/icons/right-quote.svg");
+  background-size: 6rem;
+  background-repeat: no-repeat;
+  top: 0;
+  right: 5%;
+  width: 30%;
+  height: 100%;
+} */
+
+.section-title h4 {
+  background: -webkit-linear-gradient(#0096af, rgb(0, 150, 175, 0.5));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .flex-center {
@@ -107,6 +171,12 @@ ul {
   width: 100%;
   left: 0;
   fill: #0096af;
+}
+
+.nav-svg svg {
+  fill: #fff;
+  z-index: 2;
+  top: -98%;
 }
 
 .top-svg svg {
@@ -127,4 +197,9 @@ ul {
   padding: 0.6rem 2rem;
   padding-top: 0.3rem;
   margin-top: 1rem;
+}
+
+.action-btn svg {
+  color: #fff;
+  margin-left: 0.5rem;
 }

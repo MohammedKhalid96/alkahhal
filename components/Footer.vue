@@ -159,7 +159,7 @@ export default {
   position: absolute;
   width: 50%;
   left: 50%;
-  top: -50%;
+  top: -55%;
   transform: translateX(-50%);
   z-index: 9;
 }

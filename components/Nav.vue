@@ -57,21 +57,48 @@
 
           <b-collapse id="nav-collapse" is-nav>
             <b-navbar-nav>
-              <b-nav-item href="#">الرئيسية</b-nav-item>
-              <b-nav-item href="#">الخدمات</b-nav-item>
-              <b-nav-item href="#">عن الكحّال</b-nav-item>
-              <b-nav-item href="#">اتصل بنا</b-nav-item>
+              <b-nav-item href="#">
+                <font-awesome-icon :icon="['fas', 'home']" />الرئيسية
+              </b-nav-item>
+              <b-nav-item href="#">
+                <font-awesome-icon :icon="['fas', 'eye']" />الخدمات
+              </b-nav-item>
+              <b-nav-item href="#">
+                <font-awesome-icon :icon="['fas', 'hospital-alt']" />عن الكحّال
+              </b-nav-item>
+              <b-nav-item href="#">
+                <font-awesome-icon :icon="['fas', 'paper-plane']" />اتصل بنا
+              </b-nav-item>
             </b-navbar-nav>
 
             <b-navbar-nav class="action-links mr-auto">
-              <b-nav-item href="#" class="action-link">احجز موعد</b-nav-item>
+              <b-nav-item href="#" class="action-link">
+                <font-awesome-icon :icon="['fas', 'paper-plane']" />احجز موعد
+              </b-nav-item>
             </b-navbar-nav>
           </b-collapse>
         </b-container>
       </b-navbar>
-      <!-- <div class="bottom-shape">
-      <b-img src="../assets/images/bg-bottom.png" fluid-grow></b-img>
-      </div>-->
+      <div class="bottom-svg nav-svg">
+        <svg
+          class="divider--hills"
+          viewBox="0 0 1920 105"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+          role="img"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <g fill-rule="evenodd" transform="matrix(1 0 0 -1 0 105)">
+            <path
+              d="m1920 14.8827052c-116.23325 0-224.05162 88.3906828-395.09265 88.3906828-160.92196 0-254.53172-83.4344997-444.90735-83.4344997-154.297581 0-240.095847 39.6344097-367.66819 39.6344097-154.121863 0-198.902329-36.1223133-349.458242-36.1223133-144.878137 0-241.175717 80.8685493-362.873568 80.8685493 0-34.0793243 0-68.1494291 0-102.219534h1920z"
+            />
+            <path
+              d="m1920 14.6612844c-116.11434 0-223.9659 88.8291396-395.06196 88.8291396-160.92415 0-254.54487-83.7874573-444.93804-83.7874573-154.317311 0-240.088941 39.8974838-367.565152 39.8974838-154.034172 0-198.792715-36.4840402-349.164477-36.4840402-144.965828 0-241.283139 81.1250467-363.270371 81.1250467 0-34.7474052 0-69.4948104 0-104.241457h1920z"
+            />
+          </g>
+        </svg>
+      </div>
     </div>
   </header>
 </template>
@@ -109,8 +136,6 @@ export default {
 }
 
 .bg-info {
-  /* background: linear-gradient(to left bottom, #fff 40%, #ffffff59, transparent),
-    url("../assets/images/pattern-2.png") !important; */
   background: #fff !important;
   background-size: cover !important;
 }
@@ -131,11 +156,24 @@ export default {
   padding: 0.5rem 1rem 0.8rem 1rem !important;
   font-size: 1.1em;
   color: #0096af;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+.nav-link svg {
+  color: #a9abad;
+  margin-left: 0.5rem;
+  font-size: 1.1em;
 }
 
 .action-link .nav-link {
   background-image: linear-gradient(to left, #0096af, #0093ad80);
   color: #fff !important;
   border-radius: 5rem;
+  font-weight: normal !important;
+}
+
+.action-link .nav-link svg {
+  color: #fff;
 }
 </style>
