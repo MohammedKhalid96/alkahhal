@@ -1,19 +1,16 @@
 <template>
   <div>
-    <Nav />
+    <Nav2 />
     <nuxt />
-    <Footer />
   </div>
 </template>
 
 <script>
-import Nav from "../components/Nav";
-import Footer from "../components/Footer";
+import Nav2 from "../components/Nav2";
 
 export default {
   components: {
-    Nav,
-    Footer
-  }
+    Nav2,
+  },
 };
 </script>
