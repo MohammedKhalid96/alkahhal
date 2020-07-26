@@ -55,4 +55,18 @@ export default {
   margin: 0;
   text-align: right;
 }
+
+@media (min-width: 992px) and (max-width: 1183px) {
+}
+
+@media (min-width: 768px) and (max-width: 991px),
+  screen and (min-width: 320px) and (max-width: 767px) {
+  .about-img {
+    background: none;
+  }
+
+  .about-img img {
+    width: 100%;
+  }
+}
 </style>

@@ -64,7 +64,14 @@
         </b-col>
 
         <b-col md="6">
-          <div class="contact-form">
+          <div
+            class="contact-form"
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+          >
             <Form />
           </div>
         </b-col>
@@ -106,9 +113,9 @@ export default {
 }
 
 .contact-info__img {
-  width: 75px;
-  height: 75px;
-  line-height: 75px;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
   text-align: center;
   margin-left: 1rem;
   background-image: linear-gradient(to left, #0096af, #0093ad80);
@@ -116,11 +123,35 @@ export default {
 }
 
 .contact-info__img img {
-  width: 35px;
+  width: 25px;
 }
 
 .contact-info__name {
   color: #a9abad;
   margin-left: 0.5rem;
+}
+
+@media (min-width: 992px) and (max-width: 1183px) {
+}
+
+@media (min-width: 768px) and (max-width: 991px),
+  screen and (min-width: 320px) and (max-width: 767px) {
+  .contact-info__img {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+
+  .contact-info__img img {
+    width: 15px;
+  }
+
+  .contact-info {
+    font-size: 0.6rem;
+  }
+
+  .contact-info li {
+    margin-bottom: 1rem;
+  }
 }
 </style>

@@ -18,8 +18,17 @@
         </b-col>
       </b-row>
 
-      <div class="section-link">
-        <Button smallRadius bgSky content="احجز موعد" />
+      <div
+        class="section-link"
+        data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+      >
+        <Button smallRadius bgSky v-scroll-to="'#contact'">
+          <font-awesome-icon :icon="['fas', 'paper-plane']" />احجز موعد
+        </Button>
       </div>
     </b-container>
   </div>
@@ -108,5 +117,16 @@ export default {
 
 .service-name {
   padding: 0 2rem;
+}
+
+@media (min-width: 992px) and (max-width: 1183px) {
+}
+
+@media (min-width: 768px) and (max-width: 991px),
+  screen and (min-width: 320px) and (max-width: 767px) {
+  .services .col-md-4:nth-child(7),
+  .services .col-md-4:nth-child(8) {
+    margin-bottom: 5rem;
+  }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="form">
+  <div class="form relative">
     <b-form>
       <div class="form-select-branch-doctor mb-2">
         <b-row>
@@ -80,7 +80,9 @@
       </div>
 
       <div class="form-submit-btn text-center">
-        <b-button type="submit" class="action-btn"><font-awesome-icon :icon="['fas', 'paper-plane']" />إرسال</b-button>
+        <b-button type="submit" class="action-btn">
+          <font-awesome-icon :icon="['fas', 'paper-plane']" />إرسال
+        </b-button>
       </div>
     </b-form>
   </div>
@@ -109,16 +111,25 @@ export default {
 <style scoped>
 .form {
   padding: 4rem;
-  background: linear-gradient(
-      #fff,
-      rgba(255, 255, 255, 0.9),
-      rgba(255, 255, 255, 0.7)
-    ),
-    url("../assets/images/pattern-1.png");
+  background: #fff;
   background-size: cover;
   border-radius: 5rem;
   color: #0096af;
   font-weight: bold;
+}
+
+.form::before {
+  position: absolute;
+  width: 100%;
+  content: "";
+  z-index: -2;
+  top: -6vh;
+  right: -6vh;
+  bottom: -4vh;
+  max-width: 69.7%;
+  opacity: 1;
+  background-image: radial-gradient(#0096af 6%, transparent 0);
+  background-size: 35px 35px;
 }
 
 #example-datepicker__outer_ {
@@ -154,5 +165,20 @@ export default {
 
 .select-doctor {
   cursor: pointer;
+}
+
+@media (min-width: 992px) and (max-width: 1183px) {
+}
+
+@media (min-width: 768px) and (max-width: 991px),
+  screen and (min-width: 320px) and (max-width: 767px) {
+  .form {
+    padding: 2rem 1rem;
+  }
+
+  .select-branch {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
 }
 </style>

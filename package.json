@@ -14,11 +14,14 @@
     "@fortawesome/free-brands-svg-icons": "^5.14.0",
     "@fortawesome/free-solid-svg-icons": "^5.14.0",
     "@fortawesome/vue-fontawesome": "^0.1.10",
+    "aos": "^3.0.0-beta.6",
     "bootstrap": "^4.5.0",
     "bootstrap-vue": "^2.15.0",
     "express": "^4.17.1",
     "nuxt": "^2.13.0",
-    "nuxt-fontawesome": "^0.4.0"
+    "nuxt-fontawesome": "^0.4.0",
+    "vue-countup-directive": "^1.2.3",
+    "vue-scrollto": "^2.18.1"
   },
   "engines": {
     "node": "12.16.3",

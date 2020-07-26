@@ -37,16 +37,16 @@ export default {
 
 <style scoped>
 #title {
-  margin: 1rem 0;
+  margin: 0.7rem 0;
 }
 
 .title__big {
-  font-size: 3em;
+  font-size: 3.5em;
   font-weight: bold;
 }
 
 .title__medium {
-  font-size: 1.8em;
+  font-size: 1.2em;
 }
 
 .title__small {
@@ -80,10 +80,7 @@ export default {
   screen and (min-width: 768px) and (max-width: 991px),
   screen and (min-width: 320px) and (max-width: 767px) {
   .title__big {
-    font-size: 3em;
-  }
-  .title__small {
-    font-size: 1em;
+    font-size: 2em;
   }
 }
 </style>

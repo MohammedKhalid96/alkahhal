@@ -9,7 +9,7 @@
                 target="_blank"
                 href="https://www.google.com.eg/maps/place/%D9%85%D8%AC%D9%85%D8%B9+%D8%A7%D9%84%D9%83%D8%AD%D8%A7%D9%84+%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%E2%80%AD/@26.4737274,50.0957093,18z/data=!3m1!4b1!4m5!3m4!1s0x3e49fea90b63e9b5:0xa6d890753e9d119!8m2!3d26.4737274!4d50.094615"
               >
-                <b-img src="../assets/images/icons/location-white.svg" fluid></b-img>
+                <b-img src="../assets/images/icons/location.svg" fluid></b-img>
                 <span class="contact-info__name">فرع الدمام</span>
                 7672 ابو قيس الجهني, حي الحمراء, الدمام, السعودية
               </a>
@@ -18,7 +18,7 @@
                 target="_blank"
                 href="https://www.google.com.eg/maps/place/%D9%85%D8%AC%D9%85%D8%B9+%D8%A7%D9%84%D9%83%D8%AD%D8%A7%D9%84+%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%E2%80%AD/@26.4737274,50.0957093,18z/data=!3m1!4b1!4m5!3m4!1s0x3e49fea90b63e9b5:0xa6d890753e9d119!8m2!3d26.4737274!4d50.094615"
               >
-                <b-img src="../assets/images/icons/location-white.svg" fluid></b-img>
+                <b-img src="../assets/images/icons/location.svg" fluid></b-img>
                 <span class="contact-info__name">فرع الدمام</span>
                 الأحساء, محاسن, المبرز
               </a>
@@ -28,7 +28,7 @@
           <b-col md="4">
             <div class="top-navbar__left text-left">
               <a href target="_blank" rel="noopener noreferrer">
-                <b-img src="../assets/images/icons/phone-white.svg" fluid></b-img>
+                <b-img src="../assets/images/icons/phone.svg" fluid></b-img>
               </a>
               <a href target="_blank" rel="noopener noreferrer">
                 <font-awesome-icon :icon="['fab', 'facebook']" />
@@ -57,22 +57,14 @@
 
           <b-collapse id="nav-collapse" is-nav>
             <b-navbar-nav>
-              <b-nav-item href="#">
-                <font-awesome-icon :icon="['fas', 'home']" />الرئيسية
-              </b-nav-item>
-              <b-nav-item href="#">
-                <font-awesome-icon :icon="['fas', 'eye']" />الخدمات
-              </b-nav-item>
-              <b-nav-item href="#">
-                <font-awesome-icon :icon="['fas', 'hospital-alt']" />عن الكحّال
-              </b-nav-item>
-              <b-nav-item href="#">
-                <font-awesome-icon :icon="['fas', 'paper-plane']" />اتصل بنا
-              </b-nav-item>
+              <b-nav-item href="#" v-scroll-to="'#home'">الرئيسية</b-nav-item>
+              <b-nav-item href="#" v-scroll-to="'#services'">الخدمات</b-nav-item>
+              <b-nav-item href="#" v-scroll-to="'#about'" >عن الكحّال</b-nav-item>
+              <b-nav-item href="#" v-scroll-to="'#contact'">اتصل بنا</b-nav-item>
             </b-navbar-nav>
 
             <b-navbar-nav class="action-links mr-auto">
-              <b-nav-item href="#" class="action-link">
+              <b-nav-item href="#" v-scroll-to="'#contact'" class="action-link">
                 <font-awesome-icon :icon="['fas', 'paper-plane']" />احجز موعد
               </b-nav-item>
             </b-navbar-nav>
@@ -98,7 +90,7 @@
             />
           </g>
         </svg>
-      </div> -->
+      </div>-->
     </div>
   </header>
 </template>
@@ -110,14 +102,23 @@ export default {
 </script>
 
 <style scoped>
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
 .top-navbar {
-  background-image: linear-gradient(to left, #0096af, rgba(0, 147, 173, 0.6));
-  padding: 0.5rem 0;
+  /* background-image: linear-gradient(to left, #0096af, rgba(0, 147, 173, 0.6)); */
+  background: #fff;
+  padding: 0.8rem 0;
 }
 
 .top-navbar a {
-  color: #fff;
+  color: #0096af;
   margin-left: 1rem;
+  font-weight: bold;
+  font-size: 0.9em;
 }
 
 .top-navbar svg {
@@ -136,7 +137,7 @@ export default {
 }
 
 .bg-info {
-  background: #fff !important;
+  background: transparent !important;
   background-size: cover !important;
 }
 
@@ -175,5 +176,33 @@ export default {
 
 .action-link .nav-link svg {
   color: #fff;
+}
+
+@media (min-width: 992px) and (max-width: 1183px) {
+}
+
+@media (min-width: 768px) and (max-width: 991px),
+  screen and (min-width: 320px) and (max-width: 767px) {
+  .top-navbar {
+    display: none;
+  }
+
+  .navbar-brand img {
+    width: 7rem;
+  }
+
+  .navbar-nav {
+    margin-right: 0;
+    margin-top: 1rem;
+  }
+
+  .navbar-dark .navbar-nav .nav-link {
+    margin-bottom: 1rem;
+    margin-right: 0;
+  }
+
+  .action-link .nav-link {
+    text-align: center;
+  }
 }
 </style>

@@ -52,6 +52,10 @@ a:hover {
   font-size: 1.1em;
 }
 
+.btn svg {
+  margin-left: 0.5rem;
+}
+
 .select-time .btn,
 .select-date .btn,
 .select-time .btn:hover,
@@ -85,13 +89,11 @@ ul {
   padding: 1.5rem 1rem;
   border: 0;
   border-bottom: 1px solid rgba(0, 149, 175, 0.3);
-  border-radius: 5rem;
 }
 
 .custom-select {
   border: 0;
   border-bottom: 1px solid rgba(0, 149, 175, 0.3);
-  border-radius: 5rem;
 }
 
 .form-control:focus,
@@ -125,30 +127,6 @@ ul {
   padding: 0.5rem 0;
   margin-bottom: 4rem;
 }
-
-/* .section-title::before {
-  position: absolute;
-  content: "";
-  background: url("../images/icons/left-quote.svg");
-  background-size: 6rem;
-  background-repeat: no-repeat;
-  top: 0;
-  left: 5%;
-  width: 30%;
-  height: 100%;
-}
-
-.section-title::after {
-  position: absolute;
-  content: "";
-  background: url("../images/icons/right-quote.svg");
-  background-size: 6rem;
-  background-repeat: no-repeat;
-  top: 0;
-  right: 5%;
-  width: 30%;
-  height: 100%;
-} */
 
 .section-title h4 {
   background: -webkit-linear-gradient(#0096af, rgb(0, 150, 175, 0.5));
@@ -202,4 +180,46 @@ ul {
 .action-btn svg {
   color: #fff;
   margin-left: 0.5rem;
+}
+
+@media (min-width: 992px) and (max-width: 1183px) {
+}
+
+@media (min-width: 768px) and (max-width: 991px),
+  screen and (min-width: 320px) and (max-width: 767px) {
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl {
+    max-width: 98%;
+  }
+
+  .navbar-dark .navbar-toggler {
+    border: 0;
+    box-shadow: none;
+    outline: none;
+  }
+
+  .navbar-dark .navbar-toggler-icon {
+    background-image: url("../images/icons/open-menu.svg");
+  }
+
+  .divider {
+    height: 30px;
+  }
+
+  .top-svg svg,
+  .bottom-svg svg {
+    height: 5%;
+  }
+
+  .section {
+    padding: 2rem 0;
+  }
+
+  .section-title {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
 }
