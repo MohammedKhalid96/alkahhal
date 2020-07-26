@@ -180,5 +180,9 @@ export default {
     text-align: center;
     margin-bottom: 2rem;
   }
+
+  .form::before {
+    top: -3vh;
+  }
 }
 </style>

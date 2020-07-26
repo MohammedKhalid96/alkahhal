@@ -128,7 +128,9 @@ ul {
   margin-bottom: 4rem;
 }
 
-.section-title h4 {
+.section-title h4,
+.counter__box__name h4,
+.kahhal-name {
   background: -webkit-linear-gradient(#0096af, rgb(0, 150, 175, 0.5));
   background-clip: text;
   -webkit-background-clip: text;
@@ -221,5 +223,13 @@ ul {
   .section-title {
     width: 100%;
     margin-bottom: 3rem;
+  }
+
+  .home h4 {
+    margin-bottom: 0;
+  }
+
+  .home .form {
+    margin-top: 2rem;
   }
 }

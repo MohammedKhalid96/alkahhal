@@ -4,10 +4,10 @@
     <div class="divider"></div>
     <b-container>
       <b-row>
-        <b-col>
+        <b-col md="6">
           <div class="home_img flex-center">
             <Title small bold sky title="بدا في عام 1994 م " />
-            <Title big bold sky title="الكحال " />
+            <Title big bold title="الكحال " class="kahhal-name" />
             <Title
               small
               bold
@@ -17,7 +17,7 @@
           </div>
         </b-col>
 
-        <b-col>
+        <b-col md="6">
           <div
             class="home__form relative"
             data-aos="fade-up"

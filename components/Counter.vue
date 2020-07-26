@@ -2,10 +2,10 @@
   <div class="counter text-center section">
     <b-container>
       <b-row>
-        <b-col md="3">
+        <b-col cols="6" md="3">
           <div id="counter-1" class="counter__box">
             <div class="counter__box__name">
-              <Title sky big title="عملية ناجحة" />
+              <Title big title="عملية ناجحة" />
             </div>
 
             <div class="counter__box__number">
@@ -16,10 +16,10 @@
           </div>
         </b-col>
 
-        <b-col md="3">
+        <b-col cols="6" md="3">
           <div id="counter-2" class="counter__box">
             <div class="counter__box__name">
-              <Title sky big title="فروع" />
+              <Title big title="فروع" />
             </div>
 
             <div class="counter__box__number">
@@ -30,29 +30,29 @@
           </div>
         </b-col>
 
-        <b-col md="3">
+        <b-col cols="6" md="3">
           <div id="counter-3" class="counter__box">
             <div class="counter__box__name">
-              <Title sky big title="شركاء" />
+              <Title big title="شركاء" />
             </div>
 
             <div class="counter__box__number">
               <span
-                v-countUp:onWindowScroll.once="{ watchedElId: 'counter-3', startValue: 0, endValue: 25, options: { duration: 2 } }"
+                v-countUp:onWindowScroll.once="{ watchedElId: 'counter-1', startValue: 0, endValue: 25, options: { duration: 2 } }"
               ></span>
             </div>
           </div>
         </b-col>
 
-        <b-col md="3">
+        <b-col cols="6" md="3">
           <div id="counter-4" class="counter__box">
             <div class="counter__box__name">
-              <Title sky big title="خدمات" />
+              <Title big title="خدمات" />
             </div>
 
             <div class="counter__box__number">
               <span
-                v-countUp:onWindowScroll.once="{ watchedElId: 'counter-4', startValue: 0, endValue: 15, options: { duration: 2 } }"
+                v-countUp:onWindowScroll.once="{ watchedElId: 'counter-1', startValue: 0, endValue: 15, options: { duration: 2 } }"
               ></span>
             </div>
           </div>
