@@ -6,13 +6,13 @@
       <b-row>
         <b-col md="6">
           <div class="home_img flex-center">
-            <Title small bold sky title="بدا في عام 1994 م " />
-            <Title big bold title="الكحال " class="kahhal-name" />
+            <Title big bold title="خبراء العيون" class="kahhal-name" />
+            <Title small bold sky title="أكثر من 30 عاما في طب العبون" />
             <Title
               small
               bold
               sky
-              title="یمتلك نخبة من الإستشاریین و أساتذة الجامعة في كافة تخصصات طب و جراحة العیون"
+              title="نمتلك نخبة من الإستشاریین و أساتذة الجامعة في كافة تخصصات طب و جراحة العیون"
             />
           </div>
         </b-col>
@@ -26,7 +26,7 @@
             data-aos-duration="1000"
             data-aos-easing="ease-in-out"
           >
-            <Form />
+            <Form2 />
           </div>
         </b-col>
       </b-row>
@@ -36,12 +36,12 @@
 
 <script>
 import Title from "./Title";
-import Form from "./Form";
+import Form2 from "./Form2";
 
 export default {
   name: "Home",
 
-  components: { Title, Form },
+  components: { Title, Form2 },
 };
 </script>
 

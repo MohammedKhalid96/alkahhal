@@ -10,6 +10,11 @@
     </div>
     <div class="divider"></div>
 
+    <div id="doctors" class="doctors-section">
+      <Doctors />
+    </div>
+    <div class="divider"></div>
+
     <div id="about" class="about-section">
       <About />
     </div>
@@ -26,6 +31,7 @@
 import Title from "../components/Title";
 import Home from "../components/Home";
 import Form from "../components/Form";
+import Doctors from "../components/Doctors";
 import Services from "../components/Services";
 import About from "../components/About";
 import Contact from "../components/Contact";
@@ -38,6 +44,7 @@ export default {
     Home,
     Title,
     Form,
+    Doctors,
     Services,
     About,
     Contact,
