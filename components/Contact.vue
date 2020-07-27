@@ -72,7 +72,7 @@
             data-aos-duration="1000"
             data-aos-easing="ease-in-out"
           >
-            <Form />
+            <Form2 />
           </div>
         </b-col>
       </b-row>
@@ -82,12 +82,12 @@
 
 <script>
 import Title from "./Title";
-import Form from "./Form";
+import Form2 from "./Form2";
 
 export default {
   name: "Contact",
 
-  components: { Title, Form },
+  components: { Title, Form2 },
 
   data() {
     return {

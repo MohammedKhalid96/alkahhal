@@ -26,6 +26,19 @@
               bold
               title="نعمل بحرفية عالية ودقة متناهية ومهارة مميزة على أحدث الاجهزة الطبية و أفضل الامكانيات الجراحية المتكاملة المدعومة بكل مايلزم من تقنيات عالمية مع توفر المستوى الرفيع من الخدمات الفندقية , تسهم جميعا في ضمان النتائج المرجوة من الاستشفاء وبلوغ ذروة الصحة والتعافي"
             />
+
+            <div
+              class="section-link"
+              data-aos="fade-up"
+              data-aos-offset="200"
+              data-aos-delay="50"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
+            >
+              <Button smallRadius bgSky v-scroll-to="'#contact'">
+                <font-awesome-icon :icon="['fas', 'paper-plane']" />احجز موعد
+              </Button>
+            </div>
           </div>
         </b-col>
       </b-row>
@@ -35,11 +48,12 @@
 
 <script>
 import Title from "./Title";
+import Button from "./Button";
 
 export default {
   name: "About",
 
-  components: { Title },
+  components: { Title, Button },
 };
 </script>
 

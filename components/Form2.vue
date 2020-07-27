@@ -1,25 +1,13 @@
 <template>
   <div class="form relative">
     <b-form>
-      <div class="form-select-branch-doctor mb-2">
-        <b-row>
-          <b-col md="6">
-            <div class="form-radio select-branch">
-              <b-form-radio-group name="branch" buttons :value="selectedBranch">
-                <b-form-radio v-model="selectedBranch" value="Dmamm branch" required>فرع الدمام</b-form-radio>
-                <b-form-radio v-model="selectedBranch" value="Ahsa branch" required>فرع الأحساء</b-form-radio>
-              </b-form-radio-group>
-            </div>
-          </b-col>
-
-          <b-col md="6">
-            <div class="form-dropdown select-doctor">
-              <b-form-group>
-                <b-form-select name="doctor" v-model="selectedDoctor" :options="options" required></b-form-select>
-              </b-form-group>
-            </div>
-          </b-col>
-        </b-row>
+      <div class="form-select-branch-doctor mb-4 text-center">
+        <div class="form-radio select-branch">
+          <b-form-radio-group name="branch" buttons :value="selectedBranch" required>
+            <b-form-radio v-model="selectedBranch" value="Dmamm branch" required>فرع الدمام</b-form-radio>
+            <b-form-radio v-model="selectedBranch" value="Ahsa branch" required>فرع الأحساء</b-form-radio>
+          </b-form-radio-group>
+        </div>
       </div>
 
       <div class="form-patient-info">
@@ -54,31 +42,6 @@
         </b-row>
       </div>
 
-      <div class="form-date-time">
-        <b-row>
-          <b-col md="6">
-            <div class="select-date">
-              <b-form-group name="datepicker" :value="dateValue">
-                <b-form-datepicker
-                  id="example-datepicker"
-                  v-model="dateValue"
-                  class="mb-2dsdsdsdsd"
-                  locale="ar"
-                ></b-form-datepicker>
-              </b-form-group>
-            </div>
-          </b-col>
-
-          <b-col md="6">
-            <div class="select-time">
-              <b-form-group name="timepicker" :value="timeValue">
-                <b-form-timepicker v-model="timeValue" locale="ar"></b-form-timepicker>
-              </b-form-group>
-            </div>
-          </b-col>
-        </b-row>
-      </div>
-
       <div class="form-submit-btn text-center">
         <b-button type="submit" class="action-btn">
           <font-awesome-icon :icon="['fas', 'paper-plane']" />إرسال
@@ -94,15 +57,7 @@ export default {
 
   data() {
     return {
-      dateValue: "",
-      timeValue: "",
       selectedBranch: "",
-      selectedDoctor: null,
-      options: [
-        { value: null, text: "اسم الطبيب" },
-        { value: "د. إلهام التميمي", text: "د. إلهام التميمي" },
-        { value: "د. عادل عبدالعزيز الرشود", text: "د. عادل عبدالعزيز الرشود" },
-      ],
     };
   },
 };

@@ -19,11 +19,6 @@
       <Contact />
     </div>
     <div class="divider"></div>
-
-    <div id="counter" class="counter-section">
-      <Counter />
-    </div>
-    <div class="divider"></div>
   </div>
 </template>
 
