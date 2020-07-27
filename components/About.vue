@@ -11,7 +11,7 @@
         <b-col md="6">
           <div class="about__info flex-center">
             <div class="section-title">
-              <Title big bold title="عن الكحال" />
+              <Title class="main-title" big bold title="عن الكحال" />
             </div>
             <Title
               sky

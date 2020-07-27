@@ -1,26 +1,60 @@
 <template>
-  <div class="doctors section">
+  <div class="doctors-wrap section">
     <b-container>
+      <div class="section-title text-center">
+        <Title class="main-title" big bold title="الأطباء" />
+        <Title
+          small
+          gray
+          bold
+          title="نمتلك نخبة من الإستشاریین و أساتذة الجامعة في كافة تخصصات طب و جراحة العیون"
+        />
+      </div>
       <b-row>
-        <b-col v-for="doctor in doctors" :key="doctor.id" md="4" lg="3">
-          <div class="doctors__box">
-            <div class="doctors__img relative">
-              <b-img-lazy :src="doctor.doctor_img" fluid></b-img-lazy>
-            </div>
-
-            <div class="doctors__info">
-              <div class="doctor__info__name">
-                <Title sky small bold :title="doctor.doctor_name" />
+        <b-col v-for="owner in owners" :key="owner.id" md="3">
+          <div class="owner">
+            <div class="owner__box">
+              <div class="owner__img relative">
+                <b-img-lazy :src="owner.doctor_img" fluid-grow></b-img-lazy>
               </div>
 
-              <div class="doctor__info__title">
-                <Title sky small bold :title="doctor.doctor_title" />
+              <div class="owner__info">
+                <div class="owner__info__name">
+                  <Title sky small bold :title="owner.doctor_name" />
+                </div>
+
+                <div class="owner__info__title">
+                  <Title sky small bold :title="owner.doctor_title" />
+                </div>
               </div>
             </div>
           </div>
         </b-col>
-      </b-row>
 
+        <b-col md="9">
+          <div class="doctors">
+            <b-row>
+              <b-col v-for="doctor in doctors" :key="doctor.id" md="4">
+                <div class="doctors__box">
+                  <div class="doctors__img relative">
+                    <b-img-lazy :src="doctor.doctor_img" fluid-grow></b-img-lazy>
+                  </div>
+
+                  <div class="doctors__info">
+                    <div class="doctor__info__name">
+                      <Title sky small bold :title="doctor.doctor_name" />
+                    </div>
+
+                    <div class="doctor__info__title">
+                      <Title sky small bold :title="doctor.doctor_title" />
+                    </div>
+                  </div>
+                </div>
+              </b-col>
+            </b-row>
+          </div>
+        </b-col>
+      </b-row>
       <div
         class="section-link text-center"
         data-aos="fade-up"
@@ -48,9 +82,21 @@ export default {
 
   data() {
     return {
-      doctors: [
+      owners: [
         {
           id: 1,
+          doctor_img: require("../assets/images/doctors/د. عادل عبدالعزيز الرشود .jpeg"),
+          doctor_name: "د. عادل عبدالعزيز الرشود ",
+          doctor_title: "مؤسس شركة الكحال للخدمات الطبية",
+          doctor_edu_one: "درجة الدكتوراه في طب وجراحة العيون.",
+          doctor_edu_two: "زمالة جامعة الملك فيصل في طب وجراحة العيون.",
+          doctor_edu_three: "عضو هيئة التدريس بجامعة الإمام عبدالرحمن بن فيصل.",
+        },
+      ],
+
+      doctors: [
+        {
+          id: 2,
           doctor_img: require("../assets/images/doctors/عبدالعزيز عادل الرشود.jpg"),
           doctor_name: "د. عبد العزيز الرشود",
           doctor_title: "استشاري الشبكية والسائل الزجي والماء الابيض",
@@ -59,22 +105,35 @@ export default {
           doctor_edu_three: "عضو هيئة التدريس بجامعة الإمام عبدالرحمن بن فيصل.",
         },
         {
-          id: 2,
+          id: 3,
+          doctor_img: require("../assets/images/doctors/عبدالرحمن الغديان.jpg"),
+          doctor_name: "أ.د. عبد الرحمن الغديان",
+          doctor_title: "استشاري الشبكية والسائل الزجاجي",
+        },
+        {
+          id: 4,
           doctor_img: require("../assets/images/doctors/وقار مصفطي.jpg"),
           doctor_name: "د. وقار قريشي",
           doctor_title: "أخصائي طب وجراحة العيون",
         },
         {
-          id: 3,
+          id: 5,
           doctor_img: require("../assets/images/doctors/محمد ضياء.jpeg"),
           doctor_name: "د. محمد ضياء الدين",
           doctor_title: "أخصائي عيون",
         },
         {
-          id: 4,
+          id: 6,
           doctor_img: require("../assets/images/doctors/محمد النجار.jpg"),
           doctor_name: "د. محمد النجار",
           doctor_title: "أخصائي عيون",
+        },
+
+        {
+          id: 7,
+          doctor_img: require("../assets/images/eyes.png"),
+          doctor_name: "د. الهام التميمي",
+          doctor_title: "استشاري طب وجراحة العيون والحول للكبار والصغار",
         },
       ],
     };
@@ -84,16 +143,27 @@ export default {
 
 <style scoped>
 .col-md-4 {
+  margin-bottom: 3rem;
 }
 
-.col-md-4:nth-child(1) .doctors__box::before,
-.col-md-4:nth-child(1) .doctors__box::after {
+.col-md-4:nth-child(4),
+.col-md-4:nth-child(5),
+.col-md-4:nth-child(6) {
+  margin-bottom: 0;
+}
+
+.col-md-4:nth-child(6) img {
+  object-fit: contain;
+}
+
+.col-md-3:nth-child(1) .owner__box::before,
+.col-md-3:nth-child(1) .owner__box::after {
   position: absolute;
   content: "";
   width: 100%;
 }
 
-.col-md-4:nth-child(1) .doctors__box::before {
+.col-md-3:nth-child(1) .owner__box::before {
   height: 200px;
   z-index: -2;
   top: -8vh;
@@ -105,7 +175,7 @@ export default {
   background-size: 35px 35px;
 }
 
-.col-md-4:nth-child(1) .doctors__box::after {
+.col-md-3:nth-child(1) .owner__box::after {
   height: 150px;
   z-index: -3;
   top: -10vh;
@@ -116,8 +186,13 @@ export default {
   background-image: linear-gradient(to left, #0096af, #0093ad80);
 }
 
+.owner__box img {
+  height: 610px;
+  object-fit: cover;
+}
+
 .doctors__img img {
-  height: 234px;
+  height: 240px;
 }
 
 .doctors__img::after {

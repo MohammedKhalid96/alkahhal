@@ -2,7 +2,13 @@
   <div class="services section text-center">
     <b-container>
       <div class="section-title text-center">
-        <Title big bold title="الخدمات" />
+        <Title class="main-title" big bold title="الخدمات" />
+        <Title
+          small
+          gray
+          bold
+          title="إن مراكز الكحّال الطبية تزخر بإمكانيات متقدمة طبية وإكلينيكية و أقسام للعيادات التخصصية الدقيقة بإشراف نخبة من الاستشاريين والاستشاريات من أساتذة الجامعات السعودية"
+        />
       </div>
       <b-row>
         <b-col v-for="service in services" :key="service.id" md="4">

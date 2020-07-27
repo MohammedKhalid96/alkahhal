@@ -2,7 +2,7 @@
   <div class="contact">
     <b-container>
       <div class="section-title text-center">
-        <Title big bold title="أحجز موعدك الأن" />
+        <Title class="main-title" big bold title="أحجز موعدك الأن" />
       </div>
       <b-row>
         <b-col md="6">

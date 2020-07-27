@@ -109,11 +109,11 @@ ul {
 }
 
 .divider {
-  height: 90px;
+  height: 80px;
 }
 
 .section {
-  padding: 3rem 0;
+  padding: 2rem 0;
 }
 
 .relative {
@@ -122,13 +122,13 @@ ul {
 
 .section-title {
   position: relative;
-  width: 40%;
+  width: 100%;
   margin: auto;
   padding: 0.5rem 0;
   margin-bottom: 4rem;
 }
 
-.section-title h4,
+.section-title .main-title,
 .counter__box__name h4,
 .kahhal-name {
   background: -webkit-linear-gradient(#0096af, rgb(0, 150, 175, 0.5));

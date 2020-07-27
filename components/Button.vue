@@ -31,7 +31,7 @@ export default {
 
 <style scoped>
 button {
-  margin-top: 2rem;
+  margin-top: 3rem;
   background: transparent;
 }
 
