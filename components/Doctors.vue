@@ -51,7 +51,7 @@ export default {
       doctors: [
         {
           id: 1,
-          doctor_img: require("../assets/images/doctors/عبدالعزيز عادل الرشود.jpeg"),
+          doctor_img: require("../assets/images/doctors/عبدالعزيز عادل الرشود.jpg"),
           doctor_name: "د. عبد العزيز الرشود",
           doctor_title: "استشاري الشبكية والسائل الزجي والماء الابيض",
           doctor_edu_one: "درجة الدكتوراه في طب وجراحة العيون.",
@@ -60,39 +60,20 @@ export default {
         },
         {
           id: 2,
-          doctor_img: require("../assets/images/doctors/وقار مصفطيjpeg.jpeg"),
+          doctor_img: require("../assets/images/doctors/وقار مصفطي.jpg"),
           doctor_name: "د. وقار قريشي",
           doctor_title: "أخصائي طب وجراحة العيون",
         },
         {
-          id: 2,
-          doctor_img: require("../assets/images/doctors/AbdElrhman.jpg"),
-          doctor_name: "أ.د.عبد الرحمن الغديان",
-          doctor_title: "استشاري الشبكية والسائل الزجاجي",
-        },
-        {
           id: 3,
           doctor_img: require("../assets/images/doctors/محمد ضياء.jpeg"),
-          doctor_name: "د. عادل عبدالعزيز الرشود",
-          doctor_title:
-            "استشاري طب وجراحة العيون تخصص مقدمة العين وتصحيح عيوب قصر وطول النظر",
-        },
-        {
-          id: 4,
-          doctor_img: require("../assets/images/doctors/زين الدين .jpeg"),
-          doctor_name: "د. فهد الودعاني",
-          doctor_title: "استشاري طب وجراحة العيون",
-        },
-        {
-          id: 5,
-          doctor_img: require("../assets/images/doctors/مهدي الجيندي.jpeg"),
-          doctor_name: "د.محمد حمدي الخولي",
+          doctor_name: "د. محمد ضياء الدين",
           doctor_title: "أخصائي عيون",
         },
         {
-          id: 6,
-          doctor_img: require("../assets/images/doctors/محمد جلال.jpeg"),
-          doctor_name: "د. محمد ضياء الدين",
+          id: 4,
+          doctor_img: require("../assets/images/doctors/محمد النجار.jpg"),
+          doctor_name: "د. محمد النجار",
           doctor_title: "أخصائي عيون",
         },
       ],
@@ -103,7 +84,6 @@ export default {
 
 <style scoped>
 .col-md-4 {
-  margin-bottom: 5rem;
 }
 
 .col-md-4:nth-child(1) .doctors__box::before,
