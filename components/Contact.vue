@@ -64,14 +64,7 @@
         </b-col>
 
         <b-col md="6">
-          <div
-            class="contact-form"
-            data-aos="fade-up"
-            data-aos-offset="200"
-            data-aos-delay="50"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-out"
-          >
+          <div class="contact-form">
             <Form />
           </div>
         </b-col>
