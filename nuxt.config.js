@@ -24,7 +24,7 @@ export default {
         content: process.env.npm_package_description || ""
       }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.png" }]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/kahhal/favicon.png" }]
   },
   /*
    ** Global CSS
@@ -72,5 +72,9 @@ export default {
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
-  build: {}
+  build: {},
+
+  router: {
+    base: "/kahhal/"
+  }
 };
