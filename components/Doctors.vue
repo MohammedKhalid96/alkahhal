@@ -192,7 +192,7 @@ export default {
 }
 
 .owner__box img {
-  height: 600px;
+  height: 598.5px;
   -o-object-fit: cover;
   object-fit: cover;
 }
