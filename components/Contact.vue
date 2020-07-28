@@ -72,7 +72,7 @@
             data-aos-duration="1000"
             data-aos-easing="ease-in-out"
           >
-            <Form2 />
+            <Form />
           </div>
         </b-col>
       </b-row>
@@ -82,12 +82,12 @@
 
 <script>
 import Title from "./Title";
-import Form2 from "./Form2";
+import Form from "./Form";
 
 export default {
   name: "Contact",
 
-  components: { Title, Form2 },
+  components: { Title, Form },
 
   data() {
     return {
@@ -118,6 +118,14 @@ export default {
   line-height: 55px;
   text-align: center;
   margin-left: 1rem;
+  background-image: -webkit-gradient(
+    linear,
+    right top,
+    left top,
+    from(#0096af),
+    to(#0093ad80)
+  );
+  background-image: -o-linear-gradient(right, #0096af, #0093ad80);
   background-image: linear-gradient(to left, #0096af, #0093ad80);
   border-radius: 50%;
 }
@@ -132,14 +140,29 @@ export default {
 }
 
 @media (min-width: 992px) and (max-width: 1183px) {
+  .contact-info__img {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 0rem;
+  }
+
+  .contact-info__img img {
+    width: 20px;
+  }
+
+  .contact-info {
+    font-size: 0.9rem;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px),
   screen and (min-width: 320px) and (max-width: 767px) {
   .contact-info__img {
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    margin-left: 0rem;
   }
 
   .contact-info__img img {
@@ -147,11 +170,17 @@ export default {
   }
 
   .contact-info {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
   }
 
   .contact-info li {
     margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .contact-info {
+    font-size: 0.6rem;
   }
 }
 </style>

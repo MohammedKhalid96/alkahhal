@@ -1,14 +1,14 @@
 <template>
-  <div class="about section">
+  <div class="about">
     <b-container>
       <b-row>
-        <b-col md="6">
+        <b-col md="5" lg="6">
           <div class="about-img">
             <b-img-lazy src="../assets/images/intro.png" fluid></b-img-lazy>
           </div>
         </b-col>
 
-        <b-col md="6">
+        <b-col md="7" lg="6">
           <div class="about__info flex-center">
             <div class="section-title">
               <Title class="main-title" big bold title="عن الكحال" />
@@ -73,14 +73,35 @@ export default {
 @media (min-width: 992px) and (max-width: 1183px) {
 }
 
-@media (min-width: 768px) and (max-width: 991px),
-  screen and (min-width: 320px) and (max-width: 767px) {
+@media (min-width: 768px) and (max-width: 991px) {
+  .about-img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 100%;
+    background: none;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
   .about-img {
     background: none;
+    padding: 0;
   }
 
   .about-img img {
     width: 100%;
+  }
+
+  .about .section-title {
+    text-align: center;
   }
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="footer-wrap">
-    <div class="footer relative section">
+    <!-- <div class="footer relative section">
       <b-container>
         <b-row>
           <b-col md="3">
@@ -81,10 +81,11 @@
           </b-col>
         </b-row>
       </b-container>
-    </div>
+    </div>-->
 
     <div class="copyrights text-center">
       <Title sky small bold title="جميع الحقوق محفوظة الكحال" />
+      <a target="_blank" href="https://jumppeak.net/">JUMPPEAK.</a>
     </div>
   </div>
 </template>
@@ -104,66 +105,24 @@ export default {
 </script>
 
 <style scoped>
-.footer {
+.footer-wrap {
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(#0095af1c),
+    to(transparent)
+  );
+  background-image: -o-linear-gradient(bottom, #0095af1c, transparent);
   background-image: linear-gradient(to top, #0095af1c, transparent);
 }
 
-.footer__about {
-  margin-bottom: 5rem;
-}
-
-.footer__about__logo img {
-  width: 9rem;
-}
-
-.footer__links a {
-  margin-bottom: 3rem;
-  color: #0096af;
-  font-weight: bold;
-}
-
-.footer__contact li {
-  list-style: none;
-}
-
-.footer__links svg {
-  margin-left: 0.5rem;
-}
-
-.icon-img {
-  margin-left: 0.5rem;
-  border-radius: 50%;
-}
-
-.icon-img img {
-  width: 25px;
-}
-
-.footer__form {
-  position: absolute;
-  width: 50%;
-  left: 50%;
-  top: -65%;
-  transform: translateX(-50%);
-  z-index: 9;
-}
-
 .copyrights {
-  background: #fff;
-  padding-bottom: 0.3rem;
+  padding-bottom: 0.5rem;
 }
 
-@media (min-width: 992px) and (max-width: 1183px) {
-}
-
-@media (min-width: 768px) and (max-width: 991px),
-  screen and (min-width: 320px) and (max-width: 767px) {
-  .footer__form {
-    display: none;
-  }
-
-  .footer__about__logo img {
-    width: 7rem;
-  }
+.copyrights a {
+  color: #a9abad;
+  font-weight: bold;
 }
 </style>

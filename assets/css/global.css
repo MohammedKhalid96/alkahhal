@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -43,6 +44,7 @@ a:hover {
 }
 
 .btn:focus {
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
@@ -82,6 +84,7 @@ ul {
 .show > .btn-secondary.dropdown-toggle:focus {
   outline: none;
   border: 0;
+  -webkit-box-shadow: 0 0 0 0 transparent;
   box-shadow: 0 0 0 0 transparent;
 }
 
@@ -99,17 +102,19 @@ ul {
 .form-control:focus,
 .custom-select:focus {
   outline: 0;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
 .b-form-btn-label-control.form-control > .dropdown-menu {
   outline: none;
+  -webkit-box-shadow: none;
   box-shadow: none;
   border: 0;
 }
 
 .divider {
-  height: 80px;
+  height: 120px;
 }
 
 .section {
@@ -138,8 +143,15 @@ ul {
 }
 
 .flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
   flex-flow: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   height: 100%;
 }
@@ -165,12 +177,22 @@ ul {
 
 .bottom-svg svg {
   top: 99%;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
 .action-btn {
   border: 0;
   background: transparent;
+  background-image: -webkit-gradient(
+    linear,
+    right top,
+    left top,
+    from(#0096af),
+    to(#0093ad80)
+  );
+  background-image: -o-linear-gradient(right, #0096af, #0093ad80);
   background-image: linear-gradient(to left, #0096af, #0093ad80);
   color: #fff !important;
   border-radius: 5rem;
@@ -199,6 +221,7 @@ ul {
 
   .navbar-dark .navbar-toggler {
     border: 0;
+    -webkit-box-shadow: none;
     box-shadow: none;
     outline: none;
   }
@@ -230,6 +253,6 @@ ul {
   }
 
   .home .form {
-    margin-top: 2rem ;
+    margin-top: 2rem;
   }
 }

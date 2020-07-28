@@ -152,10 +152,6 @@ export default {
   margin-bottom: 0;
 }
 
-.col-md-4:nth-child(6) img {
-  object-fit: contain;
-}
-
 .col-md-3:nth-child(1) .owner__box::before,
 .col-md-3:nth-child(1) .owner__box::after {
   position: absolute;
@@ -171,6 +167,7 @@ export default {
   bottom: 0;
   max-width: 65.7%;
   opacity: 1;
+  background-image: -o-radial-gradient(#0096af 6%, transparent 0);
   background-image: radial-gradient(#0096af 6%, transparent 0);
   background-size: 35px 35px;
 }
@@ -183,16 +180,30 @@ export default {
   bottom: 4vh;
   max-width: 227px;
   opacity: 0.7;
+  background-image: -webkit-gradient(
+    linear,
+    right top,
+    left top,
+    from(#0096af),
+    to(#0093ad80)
+  );
+  background-image: -o-linear-gradient(right, #0096af, #0093ad80);
   background-image: linear-gradient(to left, #0096af, #0093ad80);
 }
 
 .owner__box img {
   height: 610px;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
 .doctors__img img {
   height: 240px;
+}
+
+.col-md-4:nth-child(6) img {
+  -o-object-fit: contain;
+  object-fit: contain;
 }
 
 .doctors__img::after {
@@ -203,10 +214,81 @@ export default {
   top: 0;
   width: 100%;
   height: 100%;
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(transparent),
+    color-stop(90%, rgba(0, 149, 175, 0.15))
+  );
+  background-image: -o-linear-gradient(
+    bottom,
+    transparent,
+    rgba(0, 149, 175, 0.15) 90%
+  );
   background-image: linear-gradient(
     0deg,
     transparent,
     rgba(0, 149, 175, 0.15) 90%
   );
+}
+
+@media (min-width: 992px) and (max-width: 1183px) {
+  .owner__box img {
+    height: 454px;
+  }
+  .doctors__img img {
+    height: 150px;
+  }
+  .col-md-3:nth-child(1) .owner__box::before {
+    top: -3.5vh;
+  }
+
+  .col-md-3:nth-child(1) .owner__box::after {
+    top: -4.5vh;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .owner__box img {
+    height: 440px;
+  }
+  .doctors__img img {
+    height: 130px;
+  }
+  .col-md-3:nth-child(1) .owner__box::before {
+    top: -3.5vh;
+  }
+
+  .col-md-3:nth-child(1) .owner__box::after {
+    top: -4.5vh;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .owner__box {
+    margin-bottom: 3rem;
+  }
+  .owner__box img,
+  .doctors__img img {
+    height: auto;
+  }
+
+  .col-md-3:nth-child(1) .owner__box::before {
+    top: -4.5vh;
+  }
+
+  .col-md-3:nth-child(1) .owner__box::after {
+    top: -6vh;
+  }
+
+  .doctors__img img {
+    height: auto;
+  }
+
+  .col-md-4:nth-child(4),
+  .col-md-4:nth-child(5) {
+    margin-bottom: 3rem;
+  }
 }
 </style>

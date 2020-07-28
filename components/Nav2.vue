@@ -42,6 +42,8 @@ header {
   width: 100%;
   padding: 0.5rem 0 0.5rem 0;
   margin: 0;
+  -webkit-box-align: inherit;
+  -ms-flex-align: inherit;
   align-items: inherit;
 }
 
@@ -63,7 +65,6 @@ header {
   font-size: 1.1em;
   color: #0096af;
   font-weight: bold;
-  margin-right: 1rem;
 }
 
 .nav-link img {
@@ -76,37 +77,53 @@ header {
 }
 
 .action-link .nav-link {
+  background-image: -webkit-gradient(
+    linear,
+    right top,
+    left top,
+    from(#0096af),
+    to(#0093ad80)
+  );
+  background-image: -o-linear-gradient(right, #0096af, #0093ad80);
   background-image: linear-gradient(to left, #0096af, #0093ad80);
   color: #fff !important;
   border-radius: 5rem;
   font-weight: normal !important;
 }
 
-@media (min-width: 992px) and (max-width: 1183px) {
-}
-
 @media (min-width: 768px) and (max-width: 991px),
-  screen and (min-width: 320px) and (max-width: 767px) {
-  .top-navbar {
-    display: none;
-  }
-
+  screen and (min-width: 321px) and (max-width: 767px) {
   .navbar-brand img {
-    width: 7rem;
+    width: 5.5rem;
   }
 
   .navbar-nav {
     margin-right: 0;
-    margin-top: 1rem;
   }
 
   .navbar-dark .navbar-nav .nav-link {
-    margin-bottom: 1rem;
+    font-size: 0.9em;
     margin-right: 0;
+    padding: 0.3rem 0.8rem 0.6rem 0.8rem !important;
   }
 
-  .action-link .nav-link {
-    text-align: center;
+  .action-link {
+    margin-bottom: 0.3rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .navbar-brand img {
+    width: 4rem;
+  }
+
+  .navbar-dark .navbar-nav .nav-link {
+    font-size: 0.7em;
+    padding: 0.3rem 0.5rem 0.6rem 0.5rem !important;
+  }
+
+  .action-link {
+    margin-bottom: 0.3rem;
   }
 }
 </style>

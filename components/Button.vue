@@ -36,6 +36,14 @@ button {
 }
 
 .sky {
+  background-image: -webkit-gradient(
+    linear,
+    right top,
+    left top,
+    from(#0096af),
+    to(#0093ad80)
+  );
+  background-image: -o-linear-gradient(right, #0096af, #0093ad80);
   background-image: linear-gradient(to left, #0096af, #0093ad80);
 }
 

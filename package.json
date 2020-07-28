@@ -20,7 +20,6 @@
     "express": "^4.17.1",
     "nuxt": "^2.13.0",
     "nuxt-fontawesome": "^0.4.0",
-    "vue-countup-directive": "^1.2.3",
     "vue-scrollto": "^2.18.1"
   },
   "engines": {

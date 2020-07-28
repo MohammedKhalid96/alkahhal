@@ -54,48 +54,48 @@ export default {
       services: [
         {
           id: 1,
-          service_img: require("../assets/images/services/service-1.png"),
+          service_img: require("../assets/images/services/علاج اعتلال الشبكية السكرى والناتج عن مضاعفات مرض السكر.png"),
           service_name:
             "علاج اعتلال الشبكية السكرى والناتج عن مضاعفات مرض السكر",
         },
         {
           id: 2,
-          service_img: require("../assets/images/services/service-2.png"),
+          service_img: require("../assets/images/services/عمليات السائل الزجاجى وانفصال الشبكية لمرضي السكر.png"),
           service_name: "عمليات السائل الزجاجي وانفصال الشبكية لمرضي السكر",
         },
         {
           id: 3,
-          service_img: require("../assets/images/services/service-3.png"),
+          service_img: require("../assets/images/services/عمليات ازالة المياه البيضاء بتقنية الفاكو.png"),
           service_name: "عمليات ازالة المياه البيضاء بتقنية الفاكو",
         },
         {
           id: 4,
-          service_img: require("../assets/images/services/service-4.png"),
+          service_img: require("../assets/images/services/عمليات المياه الزرقاء وعلاج ارتفاع ضغط العين.png"),
           service_name: "عمليات المياه الزرقاء وعلاج ارتفاع ضغط العين",
         },
         {
           id: 5,
-          service_img: require("../assets/images/services/service-1.png"),
+          service_img: require("../assets/images/services/عمليات الليزك وتصحيح الابصار.png"),
           service_name: "عمليات الليزك وتصحيح الابصار",
         },
         {
           id: 6,
-          service_img: require("../assets/images/services/service-2.png"),
+          service_img: require("../assets/images/services/عملية زراعة العدسات لعلاج قصر او طول النظر.png"),
           service_name: "عملية زراعة العدسات لعلاج قصر او طول النظر",
         },
         {
           id: 7,
-          service_img: require("../assets/images/services/service-3.png"),
+          service_img: require("../assets/images/services/عمليات مرض حول العين عند الاطفال والكبار.png"),
           service_name: "عمليات مرض حول العين عند الاطفال والكبار",
         },
         {
           id: 8,
-          service_img: require("../assets/images/services/service-4.png"),
+          service_img: require("../assets/images/services/عمليات انسداد المجرى الدمعى وجفاف العين لدى الكبار.png"),
           service_name: "عمليات انسداد المجرى الدمعى وجفاف العين لدى الكبار",
         },
         {
           id: 9,
-          service_img: require("../assets/images/services/service-1.png"),
+          service_img: require("../assets/images/services/عمليات تجميل الجفون.png"),
           service_name: "عمليات تجميل الجفون",
         },
       ],
@@ -107,7 +107,7 @@ export default {
 <style scoped>
 .services .col-md-4 {
   margin: 0 auto;
-  margin-bottom: 5rem;
+  margin-bottom: 6rem;
 }
 
 .services .col-md-4:nth-child(7),
@@ -119,10 +119,11 @@ export default {
 .service-img img {
   width: 60%;
   margin: 0 auto;
+  opacity: 0.9;
 }
 
 .service-name {
-  padding: 0 2rem;
+  margin-top: 2rem;
 }
 
 @media (min-width: 992px) and (max-width: 1183px) {
