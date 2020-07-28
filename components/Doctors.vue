@@ -192,13 +192,13 @@ export default {
 }
 
 .owner__box img {
-  height: 610px;
+  height: 600px;
   -o-object-fit: cover;
   object-fit: cover;
 }
 
 .doctors__img img {
-  height: 240px;
+  height: 234px;
 }
 
 .col-md-4:nth-child(6) img {

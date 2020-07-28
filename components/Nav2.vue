@@ -91,6 +91,10 @@ header {
   font-weight: normal !important;
 }
 
+.action-link {
+  margin-bottom: 0.3rem;
+}
+
 @media (min-width: 768px) and (max-width: 991px),
   screen and (min-width: 321px) and (max-width: 767px) {
   .navbar-brand img {
@@ -106,10 +110,6 @@ header {
     margin-right: 0;
     padding: 0.3rem 0.8rem 0.6rem 0.8rem !important;
   }
-
-  .action-link {
-    margin-bottom: 0.3rem;
-  }
 }
 
 @media (max-width: 320px) {
@@ -120,10 +120,6 @@ header {
   .navbar-dark .navbar-nav .nav-link {
     font-size: 0.7em;
     padding: 0.3rem 0.5rem 0.6rem 0.5rem !important;
-  }
-
-  .action-link {
-    margin-bottom: 0.3rem;
   }
 }
 </style>
