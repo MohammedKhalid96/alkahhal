@@ -199,7 +199,7 @@ export default {
 }
 
 .doctors__img img {
-  height: 234px;
+  height: 222.4px;
 }
 
 .col-md-4:nth-child(6) img {

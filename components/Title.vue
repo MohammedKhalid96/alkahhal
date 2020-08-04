@@ -50,7 +50,7 @@ export default {
 }
 
 .title__small {
-  font-size: 1.02em;
+  font-size: 1em;
 }
 
 .title__white {
