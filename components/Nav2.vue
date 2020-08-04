@@ -3,7 +3,7 @@
     <div class="navbar relative">
       <b-navbar toggleable="lg" type="dark" variant="info">
         <b-container>
-          <b-navbar-brand href="#" class="ml-auto">
+          <b-navbar-brand to="/" class="ml-auto">
             <b-img src="../assets/images/logo.png" fluid alt="alkahhal logo"></b-img>
           </b-navbar-brand>
 
@@ -14,7 +14,7 @@
           </b-navbar-nav>
 
           <b-navbar-nav class="mr-auto">
-            <b-nav-item href="#" v-scroll-to="'#contact'" class="action-link">
+            <b-nav-item to="/" v-scroll-to="'#contact'" class="action-link">
               <font-awesome-icon :icon="['fas', 'paper-plane']" />احجز الآن
             </b-nav-item>
           </b-navbar-nav>
