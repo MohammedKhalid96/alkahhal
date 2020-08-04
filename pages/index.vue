@@ -15,11 +15,6 @@
     </div>
     <div class="divider"></div>
 
-    <div id="about" class="about-section">
-      <About />
-    </div>
-    <div class="divider"></div>
-
     <div id="contact" class="contact-section">
       <Contact />
     </div>

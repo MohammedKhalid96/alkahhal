@@ -2,12 +2,12 @@
   <div class="services section text-center">
     <b-container>
       <div class="section-title text-center">
-        <Title class="main-title" big bold title="الخدمات" />
+        <Title class="main-title" big bold title="رؤية أفضل لحياة رائعة! " />
         <Title
           small
           gray
           bold
-          title="إن مراكز الكحّال الطبية تزخر بإمكانيات متقدمة طبية وإكلينيكية و أقسام للعيادات التخصصية الدقيقة بإشراف نخبة من الاستشاريين والاستشاريات من أساتذة الجامعات السعودية"
+          title="نحن نقدم لكم خدمات عالية الجودة في تخصص العيون بأفضل وأحدث الأجهزة المتطورة لأن هي الحفاظ على أعينكم دوماً"
         />
       </div>
       <b-row>
@@ -33,7 +33,7 @@
         data-aos-easing="ease-in-out"
       >
         <Button smallRadius bgSky v-scroll-to="'#contact'">
-          <font-awesome-icon :icon="['fas', 'paper-plane']" />احجز موعد
+          <font-awesome-icon :icon="['fas', 'paper-plane']" />لغد أوضح احجز الآن
         </Button>
       </div>
     </b-container>

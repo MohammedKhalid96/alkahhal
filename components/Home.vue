@@ -6,13 +6,13 @@
       <b-row>
         <b-col md="5" lg="6">
           <div class="home_img flex-center">
-            <Title big bold title="خبراء العيون" class="kahhal-name" />
-            <Title small bold sky title="أكثر من 30 عاما في طب العبون" />
+            <Title big bold title="ها هي الشمس تأتي!" class="kahhal-name" />
+            <Title medium bold sky title="خبراء طب العيون " />
             <Title
-              small
+              medium
               bold
               sky
-              title="نمتلك نخبة من الإستشاریین و أساتذة الجامعة في كافة تخصصات طب و جراحة العیون"
+              title="علی مدار ٣٥ عاماً ونحن نسعی دائماً لنكون اختياركم الآمن والأول لسلامة أعينكم"
             />
           </div>
         </b-col>
@@ -47,7 +47,13 @@ export default {
 
 <style scoped>
 .home {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(transparent), color-stop(90%, #0095af1c));
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(transparent),
+    color-stop(90%, #0095af1c)
+  );
   background-image: -o-linear-gradient(bottom, transparent, #0095af1c 90%);
   background-image: linear-gradient(0deg, transparent, #0095af1c 90%);
 }

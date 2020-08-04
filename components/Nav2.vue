@@ -15,7 +15,7 @@
 
           <b-navbar-nav class="mr-auto">
             <b-nav-item href="#" v-scroll-to="'#contact'" class="action-link">
-              <font-awesome-icon :icon="['fas', 'paper-plane']" />احجز موعد
+              <font-awesome-icon :icon="['fas', 'paper-plane']" />احجز الآن
             </b-nav-item>
           </b-navbar-nav>
         </b-container>

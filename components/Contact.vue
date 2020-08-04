@@ -2,7 +2,9 @@
   <div class="contact">
     <b-container>
       <div class="section-title text-center">
-        <Title class="main-title" big bold title="أحجز موعدك الأن" />
+        <Title class="main-title" big bold title="لا تجعل ضعف النظر يعيقك" />
+
+        <Title small gray bold title="احجز الان لسلامة عينيك دائما بإنتظارك " />
       </div>
       <b-row>
         <b-col md="6">

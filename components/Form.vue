@@ -19,7 +19,7 @@
                   name="name"
                   id="inline-form-input-name"
                   class="mb-2"
-                  placeholder="اسم المريض"
+                  placeholder="الاسم بالكامل"
                   required
                 ></b-input>
               </b-form-group>
@@ -33,7 +33,7 @@
                   name="phone"
                   id="inline-form-input-name"
                   class="mb-2"
-                  placeholder="رقم الهاتف"
+                  placeholder="رقم الجوال"
                   required
                 ></b-input>
               </b-form-group>

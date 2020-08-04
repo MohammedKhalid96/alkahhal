@@ -2,12 +2,12 @@
   <div class="doctors-wrap section">
     <b-container>
       <div class="section-title text-center">
-        <Title class="main-title" big bold title="الأطباء" />
+        <Title class="main-title" big bold title="التميز في العناية بالعيون بدلاً من كلمة الأطباء" />
         <Title
           small
           gray
           bold
-          title="نمتلك نخبة من الإستشاریین و أساتذة الجامعة في كافة تخصصات طب و جراحة العیون"
+          title="نمتلك نخبة من الاستشاريين وأساتذة الجامعة في كافة تخصصات طب وجراحة العيون"
         />
       </div>
       <b-row>
@@ -64,7 +64,7 @@
         data-aos-easing="ease-in-out"
       >
         <Button smallRadius bgSky v-scroll-to="'#contact'">
-          <font-awesome-icon :icon="['fas', 'paper-plane']" />احجز موعد
+          <font-awesome-icon :icon="['fas', 'paper-plane']" />يا لها من عيون جميلة احجز الآن
         </Button>
       </div>
     </b-container>
@@ -87,7 +87,8 @@ export default {
           id: 1,
           doctor_img: require("../assets/images/doctors/د. عادل عبدالعزيز الرشود .jpeg"),
           doctor_name: "د. عادل عبدالعزيز الرشود ",
-          doctor_title: "مؤسس شركة الكحال للخدمات الطبية",
+          doctor_title:
+            "مؤسس شركة الكحال للخدمات الطبیة واستشاري القرنية والماء الأبيض وتصحيح عیوب النظر الانكسارية",
           doctor_edu_one: "درجة الدكتوراه في طب وجراحة العيون.",
           doctor_edu_two: "زمالة جامعة الملك فيصل في طب وجراحة العيون.",
           doctor_edu_three: "عضو هيئة التدريس بجامعة الإمام عبدالرحمن بن فيصل.",
@@ -99,7 +100,7 @@ export default {
           id: 2,
           doctor_img: require("../assets/images/doctors/عبدالعزيز عادل الرشود.jpg"),
           doctor_name: "د. عبد العزيز الرشود",
-          doctor_title: "استشاري الشبكية والسائل الزجي والماء الابيض",
+          doctor_title: "استشاري الشبكية والسائل الزجاجي والماء الأبيض",
           doctor_edu_one: "درجة الدكتوراه في طب وجراحة العيون.",
           doctor_edu_two: "زمالة جامعة الملك فيصل في طب وجراحة العيون.",
           doctor_edu_three: "عضو هيئة التدريس بجامعة الإمام عبدالرحمن بن فيصل.",
@@ -120,20 +121,20 @@ export default {
           id: 5,
           doctor_img: require("../assets/images/doctors/محمد ضياء.jpeg"),
           doctor_name: "د. محمد ضياء الدين",
-          doctor_title: "أخصائي عيون",
+          doctor_title: "اخصائي طب وجراحة العيون",
         },
         {
           id: 6,
           doctor_img: require("../assets/images/doctors/محمد النجار.jpg"),
           doctor_name: "د. محمد النجار",
-          doctor_title: "أخصائي عيون",
+          doctor_title: "اخصائي طب وجراحة العيون",
         },
 
         {
           id: 7,
           doctor_img: require("../assets/images/eyes.png"),
           doctor_name: "د. الهام التميمي",
-          doctor_title: "استشاري طب وجراحة العيون والحول للكبار والصغار",
+          doctor_title: "استشاري طب وجراحة العیون في الحول للأطفال والبالغين",
         },
       ],
     };
@@ -192,7 +193,7 @@ export default {
 }
 
 .owner__box img {
-  height: 598.5px;
+  height: 598.25px;
   -o-object-fit: cover;
   object-fit: cover;
 }

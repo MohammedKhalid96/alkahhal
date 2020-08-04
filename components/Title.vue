@@ -41,16 +41,16 @@ export default {
 }
 
 .title__big {
-  font-size: 3.5em;
+  font-size: 3.3em;
   font-weight: bold;
 }
 
 .title__medium {
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 .title__small {
-  font-size: 1em;
+  font-size: 1.02em;
 }
 
 .title__white {

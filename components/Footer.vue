@@ -84,6 +84,14 @@
     </div>-->
 
     <div class="copyrights text-center">
+      <div class="section-title text-center">
+        <Title
+          class="main-title"
+          big
+          bold
+          title="لأنهم أملنا ومستقبلنا نهتم دائما بحماية ورعاية اعينهم"
+        />
+      </div>
       <Title sky small bold title="جميع الحقوق محفوظة الكحال" />
       <a target="_blank" href="https://jumppeak.net/">JUMPPEAK.</a>
     </div>
