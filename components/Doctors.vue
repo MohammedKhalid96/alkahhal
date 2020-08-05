@@ -2,7 +2,7 @@
   <div class="doctors-wrap section">
     <b-container>
       <div class="section-title text-center">
-        <Title class="main-title" big bold title="التميز في العناية بالعيون بدلاً من كلمة الأطباء" />
+        <Title class="main-title" big bold title="التميز في العناية بالعيون" />
         <Title
           small
           gray
@@ -58,8 +58,6 @@
       <div
         class="section-link text-center"
         data-aos="fade-up"
-        data-aos-offset="200"
-        data-aos-delay="50"
         data-aos-duration="1000"
         data-aos-easing="ease-in-out"
       >
