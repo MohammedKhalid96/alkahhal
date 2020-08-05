@@ -206,6 +206,26 @@ ul {
   margin-left: 0.5rem;
 }
 
+.contact__sub-title h4 {
+  position: relative;
+  width: 130px;
+  margin: auto;
+}
+
+.contact__sub-title h4::before {
+  position: absolute;
+  content: "“";
+  left: 0;
+  top: 0;
+}
+
+.contact__sub-title h4::after {
+  position: absolute;
+  content: "”";
+  right: 0;
+  top: 0;
+}
+
 @media (min-width: 992px) and (max-width: 1183px) {
 }
 

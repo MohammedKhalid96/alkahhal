@@ -4,7 +4,8 @@
       <div class="section-title text-center">
         <Title class="main-title" big bold title="لا تجعل ضعف النظر يعيقك" />
 
-        <Title small gray bold title="احجز الان لسلامة عينيك دائما بإنتظارك " />
+        <Title small gray bold title="احجز الان لسلامة عينيك " />
+        <Title class="contact__sub-title" small gray bold title="  دائما بإنتظارك " />
       </div>
       <b-row>
         <b-col md="6">

@@ -20,11 +20,11 @@
 
               <div class="owner__info">
                 <div class="owner__info__name">
-                  <Title sky small bold :title="owner.doctor_name" />
+                  <Title sky extra_small bold :title="owner.doctor_name" />
                 </div>
 
                 <div class="owner__info__title">
-                  <Title sky small bold :title="owner.doctor_title" />
+                  <Title sky extra_small bold :title="owner.doctor_title" />
                 </div>
               </div>
             </div>
@@ -42,11 +42,11 @@
 
                   <div class="doctors__info">
                     <div class="doctor__info__name">
-                      <Title sky small bold :title="doctor.doctor_name" />
+                      <Title sky extra_small bold :title="doctor.doctor_name" />
                     </div>
 
                     <div class="doctor__info__title">
-                      <Title sky small bold :title="doctor.doctor_title" />
+                      <Title sky extra_small bold :title="doctor.doctor_title" />
                     </div>
                   </div>
                 </div>
@@ -62,7 +62,7 @@
         data-aos-easing="ease-in-out"
       >
         <Button smallRadius bgSky v-scroll-to="'#contact'">
-          <font-awesome-icon :icon="['fas', 'paper-plane']" />يا لها من عيون جميلة احجز الآن
+          <font-awesome-icon :icon="['fas', 'paper-plane']" />احجز الآن
         </Button>
       </div>
     </b-container>
@@ -191,7 +191,7 @@ export default {
 }
 
 .owner__box img {
-  height: 598.25px;
+  height: 570.25px;
   -o-object-fit: cover;
   object-fit: cover;
 }

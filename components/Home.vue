@@ -6,10 +6,10 @@
       <b-row>
         <b-col md="5" lg="6">
           <div class="home_img flex-center">
-            <Title big bold title="ها هي الشمس تأتي!" class="kahhal-name" />
+            <Title big bold title="الكحال" class="kahhal-name" />
             <Title medium bold sky title="خبراء طب العيون " />
             <Title
-              medium
+              small
               bold
               sky
               title="علی مدار ٣٥ عاماً ونحن نسعی دائماً لنكون اختياركم الآمن والأول لسلامة أعينكم"

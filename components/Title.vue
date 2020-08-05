@@ -6,6 +6,7 @@
         title__big: big,
         title__medium: medium,
         title__small: small, 
+        title__extra_small: extra_small,
         title__bold: bold, 
         title__white: white, 
         title__sky: sky, 
@@ -26,12 +27,13 @@ export default {
     medium: Boolean,
     bold: Boolean,
     small: Boolean,
+    extra_small: Boolean,
     white: Boolean,
     sky: Boolean,
     gray: Boolean,
     shadow: Boolean,
-    center: Boolean
-  }
+    center: Boolean,
+  },
 };
 </script>
 
@@ -46,11 +48,15 @@ export default {
 }
 
 .title__medium {
-  font-size: 1.1em;
+  font-size: 1.5em;
 }
 
 .title__small {
-  font-size: 1em;
+  font-size: 1.1em;
+}
+
+.title__extra_small {
+  font-size: 0.9em;
 }
 
 .title__white {
