@@ -17,8 +17,10 @@
                     <b-img-lazy src="../assets/images/icons/phone-white.svg" fluid></b-img-lazy>
                   </div>
                   <div class="contact-info__details d-inline-flex">
-                    <p class="contact-info__name">الخط الساخن</p>
-                    {{contactInfoHotLine}}
+                    <p>
+                      <span class="contact-info__name">الخط الساخن</span>
+                      {{contactInfoHotLine}}
+                    </p>
                   </div>
                 </a>
               </li>
@@ -28,8 +30,10 @@
                     <b-img-lazy src="../assets/images/icons/mail-white.svg" fluid></b-img-lazy>
                   </div>
                   <div class="contact-info__details d-inline-flex">
-                    <p class="contact-info__name">البريد الألكتروني</p>
-                    {{contactInfoEmail}}
+                    <p>
+                      <span class="contact-info__name">البريد الألكتروني</span>
+                      {{contactInfoEmail}}
+                    </p>
                   </div>
                 </a>
               </li>
@@ -42,8 +46,10 @@
                     <b-img-lazy src="../assets/images/icons/location-white.svg" fluid></b-img-lazy>
                   </div>
                   <div class="contact-info__details d-inline-flex">
-                    <p class="contact-info__name">فرع الدمام</p>
-                    {{contactInfoAddressDammam}}
+                    <p>
+                      <span class="contact-info__name">فرع الدمام</span>
+                      {{contactInfoAddressDammam}}
+                    </p>
                   </div>
                 </a>
               </li>
@@ -57,8 +63,10 @@
                     <b-img-lazy src="../assets/images/icons/location-white.svg" fluid></b-img-lazy>
                   </div>
                   <div class="contact-info__details d-inline-flex">
-                    <p class="contact-info__name">فرع الأحساء</p>
-                    {{contactInfoAddressAlhesa}}
+                    <p>
+                      <span class="contact-info__name">فرع الأحساء</span>
+                      {{contactInfoAddressAlhesa}}
+                    </p>
                   </div>
                 </a>
               </li>
@@ -89,8 +97,7 @@ export default {
     return {
       contactInfoHotLine: "0553809777",
       contactInfoEmail: "alkahhalmedicalcomplex@gmail.com",
-      contactInfoAddressDammam:
-        "7672 ابو قيس الجهني, حي الحمراء, الدمام, السعودية",
+      contactInfoAddressDammam: "7672 ابو قيس الجهني, حي الحمراء, الدمام, ",
       contactInfoAddressAlhesa: "الأحساء, محاسن, المبرز",
     };
   },
@@ -169,14 +176,16 @@ export default {
     font-size: 0.7rem;
   }
 
+  .contact-info__img {
+    display: none !important;
+  }
+
+  .contact-info__name {
+    margin-left: 0.2em;
+  }
+
   .contact-info li {
     margin-bottom: 1rem;
-  }
-}
-
-@media (max-width: 320px) {
-  .contact-info {
-    font-size: 0.6rem;
   }
 }
 </style>
