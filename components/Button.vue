@@ -33,18 +33,12 @@ export default {
 button {
   margin-top: 3rem;
   background: transparent;
+  color: #fff;
 }
 
 .sky {
-  background-image: -webkit-gradient(
-    linear,
-    right top,
-    left top,
-    from(#0096af),
-    to(#0093ad80)
-  );
-  background-image: -o-linear-gradient(right, #0096af, #0093ad80);
-  background-image: linear-gradient(to left, #0096af, #0093ad80);
+  background: #f2c916;
+  font-weight: bold;
 }
 
 .fakelink__roundedradius {
@@ -56,8 +50,5 @@ button {
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
-  #pricing .btn {
-    padding: 0.7rem 0.2rem;
-  }
 }
 </style>

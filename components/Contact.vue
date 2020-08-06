@@ -110,7 +110,7 @@ export default {
 }
 
 .contact-info a {
-  color: #0096af;
+  color: #11799a;
   font-size: 1em;
   font-weight: bold;
 }
@@ -121,15 +121,7 @@ export default {
   line-height: 55px;
   text-align: center;
   margin-left: 1rem;
-  background-image: -webkit-gradient(
-    linear,
-    right top,
-    left top,
-    from(#0096af),
-    to(#0093ad80)
-  );
-  background-image: -o-linear-gradient(right, #0096af, #0093ad80);
-  background-image: linear-gradient(to left, #0096af, #0093ad80);
+  background: #11799a;
   border-radius: 50%;
 }
 
@@ -138,7 +130,7 @@ export default {
 }
 
 .contact-info__name {
-  color: #a9abad;
+  color: #5c5d5e;
   margin-left: 0.5rem;
 }
 

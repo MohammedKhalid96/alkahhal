@@ -83,7 +83,7 @@ export default {
   bottom: -4vh;
   max-width: 69.7%;
   opacity: 1;
-  background-image: radial-gradient(#0096af 6%, transparent 0);
+  background-image: radial-gradient(#11799a 6%, transparent 0);
   background-size: 35px 35px;
 }
 
@@ -98,17 +98,17 @@ export default {
 
 .select-branch .btn {
   background: #fff;
-  border: 1px solid #0096af !important;
-  color: #0096af;
+  border: 1px solid #f2c916 !important;
+  color: #11799a;
   border-radius: 5rem !important;
   padding: 0.6rem 1.6rem;
   padding-top: 0.3rem;
   margin-left: 0.3rem;
+  font-weight: bold;
 }
 
 .select-branch .btn.active {
-  background: transparent;
-  background: linear-gradient(to left, #0096af, rgba(0, 147, 173, 0.5));
+  background: #f2c916;
   border: 0;
   box-shadow: none;
   color: #fff;

@@ -51,9 +51,12 @@ export default {
     left bottom,
     left top,
     from(transparent),
-    color-stop(90%, #0095af1c)
+    color-stop(90%, #11799a)
   );
-  background-image: -o-linear-gradient(bottom, transparent, #0095af1c 90%);
-  background-image: linear-gradient(0deg, transparent, #0095af1c 90%);
+  background-image: -o-linear-gradient(bottom, transparent, #11799a 90%);
+  background-image: linear-gradient(0deg, transparent, #11799a 90%),
+    url("../assets/images/video-1-e.png");
+  background-size: 100% 100%;
+  padding-bottom: 5rem;
 }
 </style>

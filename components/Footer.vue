@@ -118,11 +118,11 @@ export default {
     linear,
     left bottom,
     left top,
-    from(#0095af1c),
+    from(#117a9a4b),
     to(transparent)
   );
-  background-image: -o-linear-gradient(bottom, #0095af1c, transparent);
-  background-image: linear-gradient(to top, #0095af1c, transparent);
+  background-image: -o-linear-gradient(bottom, #117a9a4b, transparent);
+  background-image: linear-gradient(to top, #117a9a4b, transparent 90%);
 }
 
 .copyrights {
@@ -130,7 +130,7 @@ export default {
 }
 
 .copyrights a {
-  color: #a9abad;
+  color: #5c5d5e;
   font-weight: bold;
 }
 </style>

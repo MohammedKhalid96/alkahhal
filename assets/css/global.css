@@ -21,6 +21,7 @@ body {
   text-align: right;
   overflow-x: hidden;
   font-family: "FrutigerLTArabic", sans-serif;
+  background: #117c9c1a;
 }
 
 h4 {
@@ -134,12 +135,8 @@ ul {
 }
 
 .section-title .main-title,
-.counter__box__name h4,
-.kahhal-name {
-  background: -webkit-linear-gradient(#0096af, rgb(0, 150, 175, 0.5));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.counter__box__name h4 {
+  color: #11799a;
 }
 
 .flex-center {
@@ -156,45 +153,11 @@ ul {
   height: 100%;
 }
 
-.top-svg svg,
-.bottom-svg svg {
-  position: absolute;
-  height: 40%;
-  width: 100%;
-  left: 0;
-  fill: #0096af;
-}
-
-.nav-svg svg {
-  fill: #fff;
-  z-index: 2;
-  top: -98%;
-}
-
-.top-svg svg {
-  bottom: 99%;
-}
-
-.bottom-svg svg {
-  top: 99%;
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-
 .action-btn {
   border: 0;
-  background: transparent;
-  background-image: -webkit-gradient(
-    linear,
-    right top,
-    left top,
-    from(#0096af),
-    to(#0093ad80)
-  );
-  background-image: -o-linear-gradient(right, #0096af, #0093ad80);
-  background-image: linear-gradient(to left, #0096af, #0093ad80);
+  background: #f2c916 !important;
   color: #fff !important;
+  font-weight: bold;
   border-radius: 5rem;
   padding: 0.6rem 2rem;
   padding-top: 0.3rem;
@@ -217,6 +180,7 @@ ul {
   content: "“";
   left: 0;
   top: 0;
+  color: #f2c916;
 }
 
 .contact__sub-title h4::after {
@@ -224,6 +188,11 @@ ul {
   content: "”";
   right: 0;
   top: 0;
+  color: #f2c916;
+}
+
+.kahhal-name h4 {
+  color: #fff !important;
 }
 
 @media (min-width: 992px) and (max-width: 1183px) {
@@ -274,5 +243,9 @@ ul {
 
   .home .form {
     margin-top: 2rem;
+  }
+
+  .home h4 {
+    color: #fff !important;
   }
 }

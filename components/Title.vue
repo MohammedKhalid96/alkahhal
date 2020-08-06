@@ -64,11 +64,11 @@ export default {
 }
 
 .title__sky {
-  color: #0096af;
+  color: #11799a;
 }
 
 .title__gray {
-  color: #a9abad;
+  color: #5c5d5e;
 }
 
 .title__bold {

@@ -166,8 +166,8 @@ export default {
   bottom: 0;
   max-width: 65.7%;
   opacity: 1;
-  background-image: -o-radial-gradient(#0096af 6%, transparent 0);
-  background-image: radial-gradient(#0096af 6%, transparent 0);
+  background-image: -o-radial-gradient(#11799a 6%, transparent 0);
+  background-image: radial-gradient(#11799a 6%, transparent 0);
   background-size: 35px 35px;
 }
 
@@ -179,15 +179,7 @@ export default {
   bottom: 4vh;
   max-width: 227px;
   opacity: 0.7;
-  background-image: -webkit-gradient(
-    linear,
-    right top,
-    left top,
-    from(#0096af),
-    to(#0093ad80)
-  );
-  background-image: -o-linear-gradient(right, #0096af, #0093ad80);
-  background-image: linear-gradient(to left, #0096af, #0093ad80);
+  background: #11799a;
 }
 
 .owner__box img {
@@ -203,33 +195,6 @@ export default {
 .col-md-4:nth-child(6) img {
   -o-object-fit: contain;
   object-fit: contain;
-}
-
-.doctors__img::after {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-image: -webkit-gradient(
-    linear,
-    left bottom,
-    left top,
-    from(transparent),
-    color-stop(90%, rgba(0, 149, 175, 0.15))
-  );
-  background-image: -o-linear-gradient(
-    bottom,
-    transparent,
-    rgba(0, 149, 175, 0.15) 90%
-  );
-  background-image: linear-gradient(
-    0deg,
-    transparent,
-    rgba(0, 149, 175, 0.15) 90%
-  );
 }
 
 @media (min-width: 992px) and (max-width: 1183px) {

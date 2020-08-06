@@ -117,7 +117,6 @@ export default {
 .service-img img {
   width: 60%;
   margin: 0 auto;
-  opacity: 0.9;
 }
 
 .service-name {
