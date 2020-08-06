@@ -16,15 +16,15 @@
             <div class="owner__box">
               <div class="owner__img relative">
                 <b-img-lazy :src="owner.doctor_img" fluid-grow></b-img-lazy>
-              </div>
 
-              <div class="owner__info">
-                <div class="owner__info__name">
-                  <Title sky extra_small bold :title="owner.doctor_name" />
-                </div>
+                <div class="owner__info">
+                  <div class="owner__info__name">
+                    <Title white extra_small bold :title="owner.doctor_name" />
+                  </div>
 
-                <div class="owner__info__title">
-                  <Title sky extra_small bold :title="owner.doctor_title" />
+                  <div class="owner__info__title">
+                    <Title white extra_small bold :title="owner.doctor_title" />
+                  </div>
                 </div>
               </div>
             </div>
@@ -160,8 +160,8 @@ export default {
 .col-md-3:nth-child(1) .owner__box::before {
   height: 200px;
   z-index: -2;
-  top: -8vh;
-  right: -6vh;
+  top: -2vh;
+  right: -10vh;
   bottom: 0;
   max-width: 65.7%;
   opacity: 1;
@@ -173,8 +173,8 @@ export default {
 .col-md-3:nth-child(1) .owner__box::after {
   height: 150px;
   z-index: -3;
-  top: -10vh;
-  right: -1vh;
+  top: -5vh;
+  right: -2vh;
   bottom: 4vh;
   max-width: 227px;
   opacity: 0.7;
@@ -182,9 +182,32 @@ export default {
 }
 
 .owner__box img {
-  height: 570.25px;
-  -o-object-fit: cover;
-  object-fit: cover;
+  position: relative;
+  height: 552.25px;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.owner__info {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(#117a9a1a),
+    color-stop(90%, #11799a)
+  );
+  background-image: -o-linear-gradient(bottom, #117a9a1a, #11799a 90%);
+  background-image: linear-gradient(
+    to top,
+    #11799a,
+    rgba(17, 122, 154, 0.8),
+    transparent
+  );
+  padding: 1rem;
 }
 
 .doctors__img img {
@@ -200,26 +223,32 @@ export default {
 
 @media (min-width: 992px) and (max-width: 1183px) {
   .owner__box img {
-    height: 454px;
+    height: 390px;
   }
   .doctors__img img {
     height: 150px;
   }
   .col-md-3:nth-child(1) .owner__box::before {
-    top: -3.5vh;
+    top: -1.5vh;
+    right: -7vh;
   }
 
   .col-md-3:nth-child(1) .owner__box::after {
-    top: -4.5vh;
+    top: -2.5vh;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
   .owner__box img {
-    height: 440px;
+    height: 450px;
+    -o-object-fit: cover;
+    object-fit: cover;
   }
+
   .doctors__img img {
     height: 130px;
+    -o-object-fit: cover;
+    object-fit: cover;
   }
   .col-md-3:nth-child(1) .owner__box::before {
     top: -3.5vh;
