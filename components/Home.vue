@@ -76,7 +76,10 @@ export default {
 
 @media (min-width: 320px) and (max-width: 767px) {
   .home_img img {
-    height: auto;
+    height: 200px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    object-position: center;
   }
 
   .home_text {
