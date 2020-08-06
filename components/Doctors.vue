@@ -111,28 +111,27 @@ export default {
         },
         {
           id: 4,
+          doctor_img: require("../assets/images/eyes.png"),
+          doctor_name: "د. الهام التميمي",
+          doctor_title: "استشاري طب وجراحة العیون في الحول للأطفال والبالغين",
+        },
+        {
+          id: 5,
           doctor_img: require("../assets/images/doctors/وقار مصفطي.jpg"),
           doctor_name: "د. وقار قريشي",
           doctor_title: "أخصائي طب وجراحة العيون",
         },
         {
-          id: 5,
+          id: 6,
           doctor_img: require("../assets/images/doctors/محمد ضياء.jpeg"),
           doctor_name: "د. محمد ضياء الدين",
           doctor_title: "اخصائي طب وجراحة العيون",
         },
         {
-          id: 6,
+          id: 7,
           doctor_img: require("../assets/images/doctors/محمد النجار.jpg"),
           doctor_name: "د. محمد النجار",
           doctor_title: "اخصائي طب وجراحة العيون",
-        },
-
-        {
-          id: 7,
-          doctor_img: require("../assets/images/eyes.png"),
-          doctor_name: "د. الهام التميمي",
-          doctor_title: "استشاري طب وجراحة العیون في الحول للأطفال والبالغين",
         },
       ],
     };
@@ -190,11 +189,13 @@ export default {
 
 .doctors__img img {
   height: 222.4px;
-}
-
-.col-md-4:nth-child(6) img {
   -o-object-fit: contain;
   object-fit: contain;
+}
+
+.col-md-4:nth-child(2) img {
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 @media (min-width: 992px) and (max-width: 1183px) {

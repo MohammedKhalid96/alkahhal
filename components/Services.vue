@@ -2,7 +2,7 @@
   <div class="services section text-center">
     <b-container>
       <div class="section-title text-center">
-        <Title class="main-title" big bold title="رؤية أفضل لحياة رائعة! " />
+        <Title class="main-title" big bold title="خدماتنا لأمان عينيك " />
         <Title
           small
           gray

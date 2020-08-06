@@ -3,17 +3,20 @@
     <div class="divider"></div>
     <div class="divider"></div>
     <b-container>
+      <div class="home_text text-center">
+        <Title big bold white title="الكحال" class="kahhal-name" />
+        <Title medium bold white title="خبراء طب العيون " />
+        <Title
+          small
+          bold
+          white
+          title="علی مدار ٣٥ عاماً ونحن نسعی دائماً لنكون اختياركم الآمن والأول لسلامة أعينكم"
+        />
+      </div>
       <b-row>
         <b-col md="5" lg="6">
-          <div class="home_img flex-center">
-            <Title big bold title="الكحال" class="kahhal-name" />
-            <Title medium bold sky title="خبراء طب العيون " />
-            <Title
-              small
-              bold
-              sky
-              title="علی مدار ٣٥ عاماً ونحن نسعی دائماً لنكون اختياركم الآمن والأول لسلامة أعينكم"
-            />
+          <div class="home_img">
+            <b-img src="../assets/images/video-2.jpg" alt fluid></b-img>
           </div>
         </b-col>
 
@@ -50,13 +53,34 @@ export default {
     linear,
     left bottom,
     left top,
-    from(transparent),
+    from(#117a9a1a),
     color-stop(90%, #11799a)
   );
-  background-image: -o-linear-gradient(bottom, transparent, #11799a 90%);
-  background-image: linear-gradient(0deg, transparent, #11799a 90%),
-    url("../assets/images/video-1-e.png");
+  background-image: -o-linear-gradient(bottom, #117a9a1a, #11799a 90%);
+  background-image: linear-gradient(0deg, #117a9a1a, #11799a 90%);
   background-size: 100% 100%;
   padding-bottom: 5rem;
+}
+
+.home_text {
+  margin-bottom: 5rem;
+}
+
+.home_img img {
+  border-radius: 5rem;
+  height: 323.33px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .home_img img {
+    height: auto;
+  }
+
+  .home_text {
+    margin-bottom: 2rem;
+  }
 }
 </style>
