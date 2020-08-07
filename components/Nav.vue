@@ -15,7 +15,8 @@
 
           <b-navbar-nav class="mr-auto">
             <b-nav-item to="/" v-scroll-to="'#contact'" class="action-link">
-              <font-awesome-icon :icon="['fas', 'paper-plane']" />احجز الآن
+              <span class="btn-anim"></span>
+              <font-awesome-icon :icon="['fas', 'hand-pointer']" />احجز الآن
             </b-nav-item>
           </b-navbar-nav>
         </b-container>
@@ -63,7 +64,7 @@ header {
 
 .navbar-dark .navbar-nav .nav-link {
   padding: 0.5rem 1rem 0.8rem 1rem !important;
-  font-size: 1.1em;
+  font-size: 1em;
   color: #fff;
   font-weight: bold;
 }
@@ -78,22 +79,14 @@ header {
 }
 
 .action-link .nav-link {
-  background-image: -webkit-gradient(
-    linear,
-    right top,
-    left top,
-    from(#0096af),
-    to(#0093ad80)
-  );
-  background-image: -o-linear-gradient(right, #0096af, #0093ad80);
-  background-image: linear-gradient(to left, #f2c916, #f2c916);
   color: #fff !important;
   border-radius: 5rem;
   font-weight: bold !important;
 }
 
 .action-link {
-  margin-bottom: 0.3rem;
+  position: relative;
+  margin-bottom: 0.4rem;
 }
 
 @media (min-width: 768px) and (max-width: 991px),

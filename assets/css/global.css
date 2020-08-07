@@ -155,6 +155,7 @@ ul {
 }
 
 .action-btn {
+  position: relative;
   border: 0;
   background: #f2c916 !important;
   color: #fff !important;
@@ -206,6 +207,27 @@ ul {
 
 .top__svg {
   bottom: 100%;
+}
+
+.btn-anim {
+  display: inline-block;
+  width: 45%;
+  height: 40px;
+  background: rgba(242, 202, 22, 0.8);
+  border-radius: 5rem;
+  cursor: pointer;
+  box-shadow: 0 0 0 #f2c916;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: -1;
+  transition: all 0.5s;
+}
+
+.action-link:hover .btn-anim {
+  width: 100%;
+  background: #f2c916;
 }
 
 @media (min-width: 992px) and (max-width: 1183px) {
