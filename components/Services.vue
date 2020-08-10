@@ -1,27 +1,31 @@
 <template>
-  <div class="services section text-center">
+  <div class="services relative text-center">
+    <div class="section-title text-center">
+      <Title class="main-title" big bold white title="خدماتنا لأمان عينيك " />
+      <Title
+        small
+        white
+        bold
+        title="نحن نقدم لكم خدمات عالية الجودة في تخصص العيون بأفضل وأحدث الأجهزة المتطورة لأن هي الحفاظ على أعينكم دوماً"
+      />
+    </div>
     <b-container>
-      <div class="section-title text-center">
-        <Title class="main-title" big bold white title="خدماتنا لأمان عينيك " />
-        <Title
-          small
-          white
-          bold
-          title="نحن نقدم لكم خدمات عالية الجودة في تخصص العيون بأفضل وأحدث الأجهزة المتطورة لأن هي الحفاظ على أعينكم دوماً"
-        />
-      </div>
       <b-row>
-        <b-col v-for="service in services" :key="service.id" md="4">
-          <div class="service-box">
-            <div class="service-img">
-              <b-img-lazy :src="service.service_img" fluid></b-img-lazy>
-            </div>
+        <client-only placeholder="Loading...">
+          <agile :rtl="true" :infinite="true" :slidesToShow="5" :dots="false">
+            <div v-for="service in services" :key="service.id">
+              <div class="service-box">
+                <div class="service-img">
+                  <b-img-lazy :src="service.service_img" fluid></b-img-lazy>
+                </div>
 
-            <div class="service-name">
-              <Title small bold white :title="service.service_name" />
+                <div class="service-name">
+                  <Title small bold white :title="service.service_name" />
+                </div>
+              </div>
             </div>
-          </div>
-        </b-col>
+          </agile>
+        </client-only>
       </b-row>
 
       <div
@@ -103,27 +107,16 @@ export default {
 </script>
 
 <style scoped>
-.services {
+.section-title {
   background: #11799a;
-}
-.services .col-md-4 {
-  margin: 0 auto;
-  margin-bottom: 6rem;
-}
-
-.services .col-md-4:nth-child(7),
-.services .col-md-4:nth-child(8),
-.services .col-md-4:nth-child(9) {
-  margin-bottom: 0;
 }
 
 .service-img img {
-  width: 60%;
-  margin: 0 auto;
 }
 
 .service-name {
-  margin-top: 2rem;
+  padding: 3rem 1rem;
+  background: #0096af;
 }
 
 @media (min-width: 992px) and (max-width: 1183px) {
@@ -131,9 +124,5 @@ export default {
 
 @media (min-width: 768px) and (max-width: 991px),
   screen and (min-width: 320px) and (max-width: 767px) {
-  .services .col-md-4:nth-child(7),
-  .services .col-md-4:nth-child(8) {
-    margin-bottom: 5rem;
-  }
 }
 </style>

@@ -36,7 +36,7 @@ export default {
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: ["@plugins/scroll.js", "@/plugins/aos.js"],
+  plugins: ["@plugins/scroll.js", "@/plugins/aos.js", "@/plugins/vue-agile"],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
@@ -72,7 +72,7 @@ export default {
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
-  build: {},
+  build: { transpile: ["vue-agile"] },
 
   router: {
     base: "/kahhal/"

@@ -207,6 +207,15 @@ ul {
   bottom: 100%;
 }
 
+.agile--ssr .agile__slides > * {
+  overflow: hidden;
+  width: 0;
+}
+
+.agile--ssr .agile__slides > *:first-child {
+  width: 100%;
+}
+
 @media (min-width: 992px) and (max-width: 1183px) {
 }
 
