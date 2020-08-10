@@ -82,6 +82,7 @@ export default {
 .title__center {
   text-align: center;
 }
+
 @media (min-width: 992px) and (max-width: 1183px),
   screen and (min-width: 768px) and (max-width: 991px),
   screen and (min-width: 320px) and (max-width: 767px) {

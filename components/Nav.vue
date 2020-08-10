@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="navbar relative">
-      <b-navbar toggleable="lg" type="dark" variant="info">
+      <b-navbar toggleable="lg" type="dark" variant="info" fixed="top">
         <b-container>
           <b-navbar-brand to="/" class="ml-auto">
             <b-img src="../assets/images/logo.png" fluid alt="alkahhal logo"></b-img>
@@ -9,14 +9,14 @@
 
           <b-navbar-nav class="m-auto">
             <b-nav-item href="tel:0553809777">
-              <b-img src="../assets/images/icons/phone-white.svg"></b-img>0553809777
+              <b-img src="../assets/images/icons/phone.svg"></b-img>0553809777
             </b-nav-item>
           </b-navbar-nav>
 
           <b-navbar-nav class="mr-auto">
             <b-nav-item to="/" v-scroll-to="'#contact'" class="action-link">
               <span class="btn-anim"></span>
-              <font-awesome-icon :icon="['fas', 'hand-pointer']" />احجز الآن
+              <font-awesome-icon :icon="['fas', 'calendar-check']" />احجز الآن
             </b-nav-item>
           </b-navbar-nav>
         </b-container>
@@ -33,15 +33,11 @@ export default {
 
 <style scoped>
 header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 9;
+  background: transparent;
 }
 
 .navbar {
-  width: 100%;
+  width: 90%;
   padding: 0.5rem 0 0.5rem 0;
   margin: 0;
   -webkit-box-align: inherit;
@@ -49,13 +45,18 @@ header {
   align-items: inherit;
 }
 
+.fixed-top {
+  right: auto;
+  left: 50% !important;
+  transform: translateX(-50%);
+}
+
 .bg-info {
-  background: transparent !important;
-  background-size: cover !important;
+  background: #fff !important;
 }
 
 .navbar-brand img {
-  width: 9rem;
+  width: 8rem;
 }
 
 .navbar-brand {
@@ -63,10 +64,9 @@ header {
 }
 
 .navbar-dark .navbar-nav .nav-link {
-  padding: 0.5rem 1rem 0.8rem 1rem !important;
+  padding: 0.3rem 1.2rem 0.6rem 1.2rem !important;
   font-size: 1em;
-  color: #fff;
-  font-weight: bold;
+  color: #5c5d5e;
 }
 
 .nav-link img {
@@ -79,9 +79,14 @@ header {
 }
 
 .action-link .nav-link {
-  color: #fff !important;
+  background: #fff;
+  color: #5c5d5e !important;
+  border: 1px solid #0096af;
   border-radius: 5rem;
-  font-weight: bold !important;
+}
+
+.action-link .nav-link svg {
+  color: #0096af;
 }
 
 .action-link {

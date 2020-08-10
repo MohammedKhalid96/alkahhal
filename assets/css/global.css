@@ -22,7 +22,6 @@ body {
   text-align: right;
   overflow-x: hidden;
   font-family: "FrutigerLTArabic", sans-serif;
-  background: #117c9c1a;
 }
 
 h4 {
@@ -127,17 +126,16 @@ ul {
   position: relative;
 }
 
+.kahhal-name h4 {
+  font-size: 13em;
+}
+
 .section-title {
   position: relative;
   width: 100%;
   margin: auto;
   padding: 0.5rem 0;
   margin-bottom: 4rem;
-}
-
-.section-title .main-title,
-.counter__box__name h4 {
-  color: #11799a;
 }
 
 .flex-center {
@@ -207,27 +205,6 @@ ul {
 
 .top__svg {
   bottom: 100%;
-}
-
-.btn-anim {
-  display: inline-block;
-  width: 45%;
-  height: 40px;
-  background: rgba(242, 202, 22, 0.8);
-  border-radius: 5rem;
-  cursor: pointer;
-  box-shadow: 0 0 0 #f2c916;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  z-index: -1;
-  transition: all 0.5s;
-}
-
-.action-link:hover .btn-anim {
-  width: 100%;
-  background: #f2c916;
 }
 
 @media (min-width: 992px) and (max-width: 1183px) {

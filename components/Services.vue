@@ -2,10 +2,10 @@
   <div class="services section text-center">
     <b-container>
       <div class="section-title text-center">
-        <Title class="main-title" big bold title="خدماتنا لأمان عينيك " />
+        <Title class="main-title" big bold white title="خدماتنا لأمان عينيك " />
         <Title
           small
-          gray
+          white
           bold
           title="نحن نقدم لكم خدمات عالية الجودة في تخصص العيون بأفضل وأحدث الأجهزة المتطورة لأن هي الحفاظ على أعينكم دوماً"
         />
@@ -18,7 +18,7 @@
             </div>
 
             <div class="service-name">
-              <Title small sky bold :title="service.service_name" />
+              <Title small bold white :title="service.service_name" />
             </div>
           </div>
         </b-col>
@@ -103,6 +103,9 @@ export default {
 </script>
 
 <style scoped>
+.services {
+  background: #11799a;
+}
 .services .col-md-4 {
   margin: 0 auto;
   margin-bottom: 6rem;
