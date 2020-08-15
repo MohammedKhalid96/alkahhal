@@ -22,7 +22,6 @@
     <div id="contact" class="contact-section">
       <Contact />
     </div>
-    <div class="divider"></div>
   </div>
 </template>
 

@@ -1,15 +1,6 @@
 <template>
   <div class="form relative">
     <b-form>
-      <div class="form-select-branch-doctor mb-4 text-center">
-        <div class="form-radio select-branch">
-          <b-form-radio-group name="branch" buttons :value="selectedBranch" required>
-            <b-form-radio v-model="selectedBranch" value="Dmamm branch" required>فرع الدمام</b-form-radio>
-            <b-form-radio v-model="selectedBranch" value="Ahsa branch" required>فرع الأحساء</b-form-radio>
-          </b-form-radio-group>
-        </div>
-      </div>
-
       <div class="form-patient-info">
         <b-row>
           <b-col md="6">
@@ -42,9 +33,18 @@
         </b-row>
       </div>
 
+      <div class="form-select-branch-doctor mb-4 text-center">
+        <div class="form-radio select-branch">
+          <b-form-radio-group name="branch" buttons :value="selectedBranch" required>
+            <b-form-radio v-model="selectedBranch" value="Dmamm branch" required>فرع الدمام</b-form-radio>
+            <b-form-radio v-model="selectedBranch" value="Ahsa branch" required>فرع الأحساء</b-form-radio>
+          </b-form-radio-group>
+        </div>
+      </div>
+
       <div class="form-submit-btn text-center">
         <b-button type="submit" class="action-btn">
-          <font-awesome-icon :icon="['fas', 'paper-plane']" />إرسال
+          <font-awesome-icon :icon="['fas', 'calendar-check']" />إرسال
         </b-button>
       </div>
     </b-form>
@@ -65,26 +65,9 @@ export default {
 
 <style scoped>
 .form {
-  padding: 4rem;
-  background: #fff;
-  background-size: cover;
   border-radius: 5rem;
   color: #0096af;
   font-weight: bold;
-}
-
-.form::before {
-  position: absolute;
-  width: 100%;
-  content: "";
-  z-index: -2;
-  top: -6vh;
-  right: -6vh;
-  bottom: -4vh;
-  max-width: 69.7%;
-  opacity: 1;
-  background-image: radial-gradient(#11799a 6%, transparent 0);
-  background-size: 35px 35px;
 }
 
 .form-inline .form-control {
@@ -97,9 +80,9 @@ export default {
 }
 
 .select-branch .btn {
-  background: #fff;
-  border: 1px solid #f2c916 !important;
-  color: #11799a;
+  background: transparent;
+  border: 1px solid #fff !important;
+  color: #fff;
   border-radius: 5rem !important;
   padding: 0.6rem 1.6rem;
   padding-top: 0.3rem;
@@ -108,10 +91,10 @@ export default {
 }
 
 .select-branch .btn.active {
-  background: #f2c916;
+  background: #fff;
   border: 0;
   box-shadow: none;
-  color: #fff;
+  color: #0096af;
 }
 
 .select-doctor {

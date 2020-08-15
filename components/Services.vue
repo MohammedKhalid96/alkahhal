@@ -6,7 +6,6 @@
         <Title
           small
           white
-          bold
           title="نحن نقدم لكم خدمات عالية الجودة في تخصص العيون بأفضل وأحدث الأجهزة المتطورة لأن هي الحفاظ على أعينكم دوماً"
         />
       </div>
@@ -22,7 +21,7 @@
             </div>
           </div>
         </slide>
-        
+
         <hooper-navigation slot="hooper-addons"></hooper-navigation>
         <hooper-progress slot="hooper-addons"></hooper-progress>
       </hooper>
@@ -49,7 +48,7 @@ import {
   Hooper,
   Slide,
   Navigation as HooperNavigation,
-  Progress as HooperProgress
+  Progress as HooperProgress,
 } from "hooper";
 import "hooper/dist/hooper.css";
 
