@@ -207,13 +207,37 @@ ul {
   bottom: 100%;
 }
 
-.agile--ssr .agile__slides > * {
-  overflow: hidden;
-  width: 0;
+.hooper {
+  height: 100% !important;
 }
 
-.agile--ssr .agile__slides > *:first-child {
-  width: 100%;
+.hooper-next,
+.hooper-prev {
+  position: static !important;
+  transform: translateY(0) !important;
+  border-radius: 50%;
+  margin-top: 2rem;
+}
+
+.hooper button {
+  outline: none;
+}
+
+.hooper-prev {
+  background: #0096af !important;
+  margin-left: 1rem;
+}
+
+.hooper-next {
+  border: 1px solid #0096af !important;
+}
+
+.hooper-prev svg {
+  fill: #fff;
+}
+
+.hooper-next svg {
+  fill: #11799a;
 }
 
 @media (min-width: 992px) and (max-width: 1183px) {
