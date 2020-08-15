@@ -9,6 +9,11 @@
     </div>
     <div class="divider"></div>
 
+    <div id="video" class="video-section">
+      <Video />
+    </div>
+    <div class="divider"></div>
+
     <div id="doctors" class="doctors-section">
       <Doctors />
     </div>
@@ -26,7 +31,7 @@ import Title from "../components/Title";
 import Home from "../components/Home";
 import Doctors from "../components/Doctors";
 import Services from "../components/Services";
-import About from "../components/About";
+import Video from "../components/Video";
 import Contact from "../components/Contact";
 
 export default {
@@ -37,7 +42,7 @@ export default {
     Title,
     Doctors,
     Services,
-    About,
+    Video,
     Contact,
   },
 };

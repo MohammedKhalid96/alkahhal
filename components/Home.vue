@@ -31,7 +31,6 @@ export default {
 
 <style scoped>
 .home {
-  background: #f1f1f1;
   padding-bottom: 5rem;
 }
 

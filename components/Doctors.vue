@@ -2,10 +2,10 @@
   <div class="doctors-wrap section">
     <b-container>
       <div class="section-title text-center">
-        <Title class="main-title" big bold title="التميز في العناية بالعيون" />
+        <Title class="main-title" big sky bold title="التميز في العناية بالعيون" />
         <Title
           small
-          gray
+          sky
           bold
           title="نمتلك نخبة من الاستشاريين وأساتذة الجامعة في كافة تخصصات طب وجراحة العيون"
         />
