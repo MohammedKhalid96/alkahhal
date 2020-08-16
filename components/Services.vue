@@ -1,14 +1,17 @@
 <template>
-  <div class="services relative text-center">
+  <div class="services relative pt-4 text-center">
     <b-container>
-      <div class="section-title text-center">
-        <Title class="main-title" big bold white title="خدماتنا لأمان عينيك " />
-        <Title
-          small
-          white
-          title="نحن نقدم لكم خدمات عالية الجودة في تخصص العيون بأفضل وأحدث الأجهزة المتطورة لأن هي الحفاظ على أعينكم دوماً"
-        />
+      <div class="service-section-title">
+        <div class="section-title text-center">
+          <Title class="main-title" big bold white title="خدماتنا لأمان عينيك " />
+          <Title
+            small
+            white
+            title="نحن نقدم لكم خدمات عالية الجودة في تخصص العيون بأفضل وأحدث الأجهزة المتطورة لأن هي الحفاظ على أعينكم دوماً"
+          />
+        </div>
       </div>
+
       <hooper :settings="hooperSettings">
         <slide v-for="service in services" :key="service.id">
           <div class="service-box">
@@ -17,25 +20,19 @@
             </div>
 
             <div>
-              <Title small bold sky :title="service.service_name" class="service-name" />
+              <Title extra_small bold sky :title="service.service_name" class="service-name" />
+            </div>
+
+            <div class="service-action">
+              <Button smallRadius transparent v-scroll-to="'#contact'">
+                <font-awesome-icon :icon="['fas', 'calendar-check']" />احجز الآن
+              </Button>
             </div>
           </div>
         </slide>
 
         <hooper-navigation slot="hooper-addons"></hooper-navigation>
-        <hooper-progress slot="hooper-addons"></hooper-progress>
       </hooper>
-
-      <div
-        class="section-link"
-        data-aos="fade-up"
-        data-aos-duration="1000"
-        data-aos-easing="ease-in-out"
-      >
-        <Button smallRadius bgSky v-scroll-to="'#contact'">
-          <font-awesome-icon :icon="['fas', 'paper-plane']" />لغد أوضح احجز الآن
-        </Button>
-      </div>
     </b-container>
   </div>
 </template>
@@ -44,12 +41,7 @@
 import Title from "./Title";
 import Button from "./Button";
 
-import {
-  Hooper,
-  Slide,
-  Navigation as HooperNavigation,
-  Progress as HooperProgress,
-} from "hooper";
+import { Hooper, Slide, Navigation as HooperNavigation } from "hooper";
 import "hooper/dist/hooper.css";
 
 export default {
@@ -61,7 +53,6 @@ export default {
     Hooper,
     Slide,
     HooperNavigation,
-    HooperProgress,
   },
 
   data() {
@@ -116,12 +107,11 @@ export default {
       ],
 
       hooperSettings: {
-        itemsToShow: 3,
+        itemsToShow: 1,
         infiniteScroll: true,
         wheelControl: false,
         breakpoints: {
-          800: {
-            centerMode: false,
+          991: {
             itemsToShow: 3,
           },
         },
@@ -132,15 +122,24 @@ export default {
 </script>
 
 <style scoped>
-.section-title {
+.service-section-title {
   background: #11799a;
 }
 
+.section-title {
+  background: url("../assets/images/small-eye.png");
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-bottom: 2rem;
+}
+
 .service-box {
-  border: 1px solid #11799a;
+  border: 1px solid rgba(17, 122, 154, 0.4);
   padding: 0.5rem;
   margin: 0 0.5rem;
   border-radius: 0.5rem;
+  transition: all 0.1s;
 }
 
 .service-img img {
@@ -151,7 +150,7 @@ export default {
 }
 
 .service-name {
-  padding: 1rem 0 2rem 0;
+  padding: 1rem 0 0 0;
   overflow: hidden;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
@@ -160,10 +159,27 @@ export default {
   -webkit-line-clamp: 1;
 }
 
+.service-action {
+  position: relative;
+  bottom: -1000px;
+  margin-bottom: 1rem;
+}
+
+.service-box:hover .service-action {
+  bottom: 0;
+  transition: all 0.3s;
+}
 @media (min-width: 992px) and (max-width: 1183px) {
 }
 
 @media (min-width: 768px) and (max-width: 991px),
   screen and (min-width: 320px) and (max-width: 767px) {
+  .service-img img {
+    height: 200px;
+  }
+
+  .service-name {
+    overflow: unset;
+  }
 }
 </style>

@@ -81,12 +81,12 @@ header {
 .action-link .nav-link {
   background: #fff;
   color: #5c5d5e !important;
-  border: 1px solid #0096af;
+  border: 1px solid #11799a;
   border-radius: 5rem;
 }
 
 .action-link .nav-link svg {
-  color: #0096af;
+  color: #11799a;
 }
 
 .action-link {

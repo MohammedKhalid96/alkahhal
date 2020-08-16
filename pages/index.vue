@@ -12,12 +12,10 @@
     <div id="video" class="video-section">
       <Video />
     </div>
-    <div class="divider"></div>
 
     <div id="doctors" class="doctors-section">
       <Doctors />
     </div>
-    <div class="divider"></div>
 
     <div id="contact" class="contact-section">
       <Contact />
@@ -48,4 +46,19 @@ export default {
 </script>
 
 <style scoped>
+#doctors {
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(#117a9a1a),
+    to(transparent)
+  );
+  background-image: -o-linear-gradient(bottom, rgba(17, 124, 156, 0.2), rgba(17, 122, 154, 0.2));
+  background-image: linear-gradient(to top, rgba(17, 124, 156, 0.2), rgba(17, 122, 154, 0.2));
+}
+
+#contact {
+  background: rgba(17, 124, 156, 0.2);
+}
 </style>

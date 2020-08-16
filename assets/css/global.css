@@ -84,7 +84,7 @@ a:hover {
 
 .btn {
   border: 0;
-  padding: 0.5rem 1rem 0.8rem 1rem;
+  padding: 0.4rem 1.5rem 0.7rem 1.5rem;
   font-size: 1.1em;
 }
 
@@ -96,7 +96,7 @@ a:hover {
 .select-date .btn,
 .select-time .btn:hover,
 .select-date .btn:hover {
-  color: #0096af !important;
+  color: #11799a !important;
 }
 
 svg {
@@ -123,10 +123,11 @@ ul {
 }
 
 .form-control {
-  background: transparent;
+  background: transparent !important;
   border: 1px solid #fff;
   border-radius: 5rem;
   padding: 1.5rem 1rem;
+  color: #fff !important;
 }
 
 .custom-select {
@@ -153,7 +154,7 @@ ul {
 }
 
 .section {
-  padding: 2rem 0;
+  padding: 5rem 0;
 }
 
 .relative {
@@ -186,11 +187,15 @@ ul {
   height: 100%;
 }
 
+.none {
+  display: none;
+}
+
 .action-btn {
   position: relative;
   border: 0;
   background: #fff !important;
-  color: #0096af !important;
+  color: #11799a !important;
   font-weight: bold;
   border-radius: 5rem;
   padding: 0.6rem 2rem;
@@ -199,7 +204,7 @@ ul {
 }
 
 .action-btn svg {
-  color: #0096af;
+  color: #11799a;
   margin-left: 0.5rem;
 }
 
@@ -229,7 +234,7 @@ ul {
   transform: translateY(0) !important;
   border-radius: 50%;
   margin-top: 2rem;
-  padding: 0.7em;
+  padding: 0.6em !important;
 }
 
 .hooper button {
@@ -237,12 +242,12 @@ ul {
 }
 
 .hooper-prev {
-  background: #0096af !important;
+  background: #11799a !important;
   margin-left: 1rem;
 }
 
 .hooper-next {
-  border: 1px solid #0096af !important;
+  border: 1px solid #11799a !important;
 }
 
 .hooper-prev svg {
@@ -252,6 +257,7 @@ ul {
 .hooper-next svg {
   fill: #11799a;
 }
+
 
 @media (min-width: 992px) and (max-width: 1183px) {
 }
@@ -266,24 +272,16 @@ ul {
     max-width: 98%;
   }
 
-  .navbar-dark .navbar-toggler {
-    border: 0;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    outline: none;
-  }
-
-  .navbar-dark .navbar-toggler-icon {
-    background-image: url("../images/icons/open-menu.svg");
+  .navbar .container,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl {
+    max-width: 100%;
   }
 
   .divider {
     height: 30px;
-  }
-
-  .top-svg svg,
-  .bottom-svg svg {
-    height: 5%;
   }
 
   .section {
@@ -303,7 +301,7 @@ ul {
     margin-top: 2rem;
   }
 
-  .home h4 {
-    color: #fff !important;
+  .kahhal-name h4 {
+    font-size: 4em;
   }
 }

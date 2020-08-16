@@ -4,7 +4,7 @@
       <Title class="main-title" big sky bold title="لا تجعل ضعف النظر يعيقك" />
     </div>
 
-    <div class="contact__bg section">
+    <div class="contact__bg pt-5 pb-4">
       <b-container>
         <b-row>
           <b-col md="6">
@@ -122,7 +122,12 @@ export default {
 }
 
 .contact__bg {
-  background: rgba(0, 149, 175, 0.9);
+  background: rgba(0, 149, 175, 0.8);
+}
+
+.section-title {
+  background: url("../assets/images/Group 47@2x.png");
+  background-size: cover;
 }
 
 .contact-info li {

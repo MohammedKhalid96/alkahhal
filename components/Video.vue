@@ -5,7 +5,7 @@
       <Title class="main-title" big bold sky title="التميز في العناية بالعيون" />
     </div>
     <div class="video__img relative">
-      <b-img-lazy src="../assets/images/building.jpg" fluid-grow></b-img-lazy>
+      <b-img-lazy src="../assets/images/building.jpg" class="video__bg" fluid-grow></b-img-lazy>
       <div class="video__img__overlay">
         <div class="video__img__overlay__text text-center">
           <Title medium white bold title="لأنهم أملنا ومستقبلنا" />
@@ -48,7 +48,6 @@ export default {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center left;
-  padding-bottom: 3rem;
 }
 
 .video__img .video__img__overlay {
@@ -69,5 +68,22 @@ export default {
 iframe {
   width: 100% !important;
   height: 300px !important;
+}
+
+@media (min-width: 768px) and (max-width: 991px),
+  screen and (min-width: 320px) and (max-width: 767px) {
+  .video {
+    background-size: cover;
+  }
+  .video__bg {
+    height: 300px !important;
+    object-fit: cover;
+  }
+  .video__img img {
+    height: 100px;
+  }
+  .video__img .video__img__overlay {
+    padding: 1rem 0;
+  }
 }
 </style>

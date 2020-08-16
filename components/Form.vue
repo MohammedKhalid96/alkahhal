@@ -36,15 +36,19 @@
       <div class="form-select-branch-doctor mb-4 text-center">
         <div class="form-radio select-branch">
           <b-form-radio-group name="branch" buttons :value="selectedBranch" required>
-            <b-form-radio v-model="selectedBranch" value="Dmamm branch" required>فرع الدمام</b-form-radio>
-            <b-form-radio v-model="selectedBranch" value="Ahsa branch" required>فرع الأحساء</b-form-radio>
+            <b-form-radio v-model="selectedBranch" value="Dmamm branch" required>
+              <font-awesome-icon :icon="['fas', 'circle']" />فرع الدمام
+            </b-form-radio>
+            <b-form-radio v-model="selectedBranch" value="Ahsa branch" required>
+              <font-awesome-icon :icon="['fas', 'circle']" />فرع الأحساء
+            </b-form-radio>
           </b-form-radio-group>
         </div>
       </div>
 
       <div class="form-submit-btn text-center">
         <b-button type="submit" class="action-btn">
-          <font-awesome-icon :icon="['fas', 'calendar-check']" />إرسال
+          <font-awesome-icon :icon="['fas', 'calendar-check']" />احجز الآن
         </b-button>
       </div>
     </b-form>
@@ -66,7 +70,7 @@ export default {
 <style scoped>
 .form {
   border-radius: 5rem;
-  color: #0096af;
+  color: #11799a;
   font-weight: bold;
 }
 
@@ -94,7 +98,7 @@ export default {
   background: #fff;
   border: 0;
   box-shadow: none;
-  color: #0096af;
+  color: #11799a;
 }
 
 .select-doctor {

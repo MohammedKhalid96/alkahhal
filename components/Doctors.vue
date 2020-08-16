@@ -2,44 +2,15 @@
   <div class="doctors-wrap section">
     <b-container>
       <div class="section-title text-center">
-        <Title class="main-title" big sky bold title="التميز في العناية بالعيون" />
-        <Title
-          small
-          sky
-          bold
-          title="نمتلك نخبة من الاستشاريين وأساتذة الجامعة في كافة تخصصات طب وجراحة العيون"
-        />
+        <Title class="main-title" big sky bold title="نخبة من الاستشاريين وأساتذة الجامعة" />
+        <Title small sky bold title="في كافة تخصصات طب وجراحة العيون" />
       </div>
-      <b-row>
-        <b-col v-for="owner in owners" :key="owner.id" md="3">
-          <div class="owner">
-            <div class="owner__box">
-              <div class="owner__img relative">
-                <b-img-lazy :src="owner.doctor_img" fluid-grow></b-img-lazy>
-
-                <div class="owner__info">
-                  <div class="owner__info__name">
-                    <Title white extra_small bold :title="owner.doctor_name" />
-                  </div>
-
-                  <div class="owner__info__title">
-                    <Title white extra_small bold :title="owner.doctor_title" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </b-col>
-
-        <b-col md="9">
-          <div class="doctors">
-            <b-row>
-              <b-col v-for="doctor in doctors" :key="doctor.id" md="4">
+      <b-row no-gutters>
+        <b-col md="3">
+          <hooper :settings="info_slider" class="info_slider" group="doctors_slider">
+            <slide v-for="doctor in doctors" :key="doctor.id">
+              <div class="doctors">
                 <div class="doctors__box">
-                  <div class="doctors__img relative">
-                    <b-img-lazy :src="doctor.doctor_img" fluid-grow></b-img-lazy>
-                  </div>
-
                   <div class="doctors__info">
                     <div class="doctor__info__name">
                       <Title sky extra_small bold :title="doctor.doctor_name" />
@@ -50,21 +21,32 @@
                     </div>
                   </div>
                 </div>
-              </b-col>
-            </b-row>
-          </div>
+              </div>
+            </slide>
+
+            <hooper-navigation slot="hooper-addons"></hooper-navigation>
+          </hooper>
+        </b-col>
+
+        <b-col md="9">
+          <hooper :settings="img_slider" group="doctors_slider">
+            <slide v-for="doctor in doctors" :key="doctor.id">
+              <div class="doctors">
+                <div class="doctors__box">
+                  <div class="doctors__box__img">
+                    <b-img-lazy :src="doctor.doctor_img" fluid></b-img-lazy>
+                  </div>
+                  <div class="doctors__info">
+                    <div class="doctor__info__name text-center">
+                      <Title sky extra_small bold :title="doctor.doctor_name" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </slide>
+          </hooper>
         </b-col>
       </b-row>
-      <div
-        class="section-link text-center"
-        data-aos="fade-up"
-        data-aos-duration="1000"
-        data-aos-easing="ease-in-out"
-      >
-        <Button smallRadius bgSky v-scroll-to="'#contact'">
-          <font-awesome-icon :icon="['fas', 'paper-plane']" />احجز الآن
-        </Button>
-      </div>
     </b-container>
   </div>
 </template>
@@ -73,17 +55,20 @@
 import Title from "./Title";
 import Button from "./Button";
 
+import { Hooper, Slide, Navigation as HooperNavigation } from "hooper";
+import "hooper/dist/hooper.css";
+
 export default {
   name: "Doctors",
 
-  components: { Title, Button },
+  components: { Title, Button, Hooper, Slide, HooperNavigation },
 
   data() {
     return {
       owners: [
         {
           id: 1,
-          doctor_img: require("../assets/images/doctors/د. عادل عبدالعزيز الرشود .jpeg"),
+          doctor_img: require("../assets/images/doctors/د. عادل عبدالعزيز الرشود.png"),
           doctor_name: "د. عادل عبدالعزيز الرشود ",
           doctor_title:
             "مؤسس شركة الكحال للخدمات الطبیة واستشاري القرنية والماء الأبيض وتصحيح عیوب النظر الانكسارية",
@@ -95,194 +80,100 @@ export default {
 
       doctors: [
         {
+          id: 1,
+          doctor_img: require("../assets/images/doctors/د. عادل عبدالعزيز الرشود.png"),
+          doctor_name: "د. عادل عبدالعزيز الرشود ",
+          doctor_title:
+            "مؤسس شركة الكحال للخدمات الطبیة واستشاري القرنية والماء الأبيض وتصحيح عیوب النظر الانكسارية",
+        },
+        {
           id: 2,
-          doctor_img: require("../assets/images/doctors/عبدالعزيز عادل الرشود.jpg"),
+          doctor_img: require("../assets/images/doctors/عبدالعزيز عادل الرشود.png"),
           doctor_name: "د. عبد العزيز الرشود",
           doctor_title: "استشاري الشبكية والسائل الزجاجي والماء الأبيض",
-          doctor_edu_one: "درجة الدكتوراه في طب وجراحة العيون.",
-          doctor_edu_two: "زمالة جامعة الملك فيصل في طب وجراحة العيون.",
-          doctor_edu_three: "عضو هيئة التدريس بجامعة الإمام عبدالرحمن بن فيصل.",
         },
         {
           id: 3,
-          doctor_img: require("../assets/images/doctors/عبدالرحمن الغديان.jpg"),
+          doctor_img: require("../assets/images/doctors/عبدالرحمن الغديان.png"),
           doctor_name: "أ.د. عبد الرحمن الغديان",
           doctor_title: "استشاري الشبكية والسائل الزجاجي",
         },
-        {
-          id: 4,
-          doctor_img: require("../assets/images/eyes.png"),
-          doctor_name: "د. الهام التميمي",
-          doctor_title: "استشاري طب وجراحة العیون في الحول للأطفال والبالغين",
-        },
+        // {
+        //   id: 4,
+        //   doctor_img: require("../assets/images/eyes.png"),
+        //   doctor_name: "د. الهام التميمي",
+        //   doctor_title: "استشاري طب وجراحة العیون في الحول للأطفال والبالغين",
+        // },
         {
           id: 5,
-          doctor_img: require("../assets/images/doctors/وقار مصفطي.jpg"),
+          doctor_img: require("../assets/images/doctors/وقار مصفطي.png"),
           doctor_name: "د. وقار قريشي",
           doctor_title: "أخصائي طب وجراحة العيون",
         },
         {
           id: 6,
-          doctor_img: require("../assets/images/doctors/محمد ضياء.jpeg"),
+          doctor_img: require("../assets/images/doctors/محمد ضياء.png"),
           doctor_name: "د. محمد ضياء الدين",
           doctor_title: "اخصائي طب وجراحة العيون",
         },
         {
           id: 7,
-          doctor_img: require("../assets/images/doctors/محمد النجار.jpg"),
+          doctor_img: require("../assets/images/doctors/محمد النجار.png"),
           doctor_name: "د. محمد النجار",
           doctor_title: "اخصائي طب وجراحة العيون",
         },
       ],
+      info_slider: {
+        itemsToShow: 1,
+        infiniteScroll: true,
+        wheelControl: false,
+        breakpoints: {
+          991: {
+            itemsToShow: 1,
+          },
+        },
+      },
+
+      img_slider: {
+        itemsToShow: 1,
+        infiniteScroll: true,
+        wheelControl: false,
+        breakpoints: {
+          991: {
+            itemsToShow: 3,
+          },
+        },
+      },
     };
   },
 };
 </script>
 
 <style scoped>
-.col-md-4 {
-  margin-bottom: 3rem;
+.doctors-wrap {
+  background: url("../assets/images/Group 39.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
 }
 
-.col-md-4:nth-child(4),
-.col-md-4:nth-child(5),
-.col-md-4:nth-child(6) {
-  margin-bottom: 0;
+.info_slider .doctors__box {
+  height: 220px;
 }
 
-.col-md-3:nth-child(1) .owner__box::before,
-.col-md-3:nth-child(1) .owner__box::after {
-  position: absolute;
-  content: "";
-  width: 100%;
-}
-
-.col-md-3:nth-child(1) .owner__box::before {
-  height: 200px;
-  z-index: -2;
-  top: -2vh;
-  right: -10vh;
-  bottom: 0;
-  max-width: 65.7%;
-  opacity: 1;
-  background-image: -o-radial-gradient(#11799a 6%, transparent 0);
-  background-image: radial-gradient(#11799a 6%, transparent 0);
-  background-size: 35px 35px;
-}
-
-.col-md-3:nth-child(1) .owner__box::after {
-  height: 150px;
-  z-index: -3;
-  top: -5vh;
-  right: -2vh;
-  bottom: 4vh;
-  max-width: 227px;
-  opacity: 0.7;
-  background: #11799a;
-}
-
-.owner__box img {
+.info_slider .doctors__info {
   position: relative;
-  height: 552.25px;
-  -o-object-fit: contain;
-  object-fit: contain;
+  top: 100%;
 }
-
-.owner__info {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  background-image: -webkit-gradient(
-    linear,
-    left bottom,
-    left top,
-    from(#117a9a1a),
-    color-stop(90%, #11799a)
-  );
-  background-image: -o-linear-gradient(bottom, #117a9a1a, #11799a 90%);
-  background-image: linear-gradient(
-    to top,
-    #11799a,
-    rgba(17, 122, 154, 0.8),
-    transparent
-  );
-  padding: 1rem;
-}
-
-.doctors__img img {
-  height: 222.4px;
-  -o-object-fit: contain;
-  object-fit: contain;
-}
-
-.col-md-4:nth-child(2) img {
-  -o-object-fit: cover;
-  object-fit: cover;
-}
-
 @media (min-width: 992px) and (max-width: 1183px) {
-  .owner__box img {
-    height: 390px;
-  }
-  .doctors__img img {
-    height: 150px;
-  }
-  .col-md-3:nth-child(1) .owner__box::before {
-    top: -1.5vh;
-    right: -7vh;
-  }
-
-  .col-md-3:nth-child(1) .owner__box::after {
-    top: -2.5vh;
-  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .owner__box img {
-    height: 450px;
-    -o-object-fit: cover;
-    object-fit: cover;
-  }
-
-  .doctors__img img {
-    height: 130px;
-    -o-object-fit: cover;
-    object-fit: cover;
-  }
-  .col-md-3:nth-child(1) .owner__box::before {
-    top: -3.5vh;
-  }
-
-  .col-md-3:nth-child(1) .owner__box::after {
-    top: -4.5vh;
-  }
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
-  .owner__box {
-    margin-bottom: 3rem;
-  }
-  .owner__box img,
-  .doctors__img img {
+  .info_slider .doctors__box {
     height: auto;
-  }
-
-  .col-md-3:nth-child(1) .owner__box::before {
-    top: -4.5vh;
-  }
-
-  .col-md-3:nth-child(1) .owner__box::after {
-    top: -6vh;
-  }
-
-  .doctors__img img {
-    height: auto;
-  }
-
-  .col-md-4:nth-child(4),
-  .col-md-4:nth-child(5) {
-    margin-bottom: 3rem;
   }
 }
 </style>

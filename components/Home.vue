@@ -1,36 +1,128 @@
 <template>
-  <div class="home section">
-    <div class="divider"></div>
+  <div class="home-wrap relative">
+    <div class="home">
+      <div class="divider"></div>
 
-    <b-container>
-      <b-row>
-        <b-col md="5" lg="5">
-          <div class="home_text">
-            <Title bold sky title="الكحال" class="kahhal-name" />
-            <Title medium bold gray title="خبراء طب العيون علی مدار ٣٥ عاماً " />
-            <Title small gray title="ونحن نسعی دائماً لنكون اختياركم الآمن والأول لسلامة أعينكم" />
+      <b-container>
+        <b-row>
+          <b-col md="5" lg="5">
+            <div class="home_text">
+              <Title bold sky title="الكحال" class="kahhal-name" />
+              <Title medium bold gray title="خبراء طب العيون علی مدار ٣٥ عاماً " />
+              <Title small gray title="ونحن نسعی دائماً لنكون اختياركم الآمن والأول لسلامة أعينكم" />
+            </div>
+          </b-col>
+
+          <b-col md="7" lg="7"></b-col>
+        </b-row>
+      </b-container>
+    </div>
+
+    <div @click="togglePopup" class="latest-offers-btn">
+      <div class="latest-offers-btn__intern-wrap">
+        <Title small sky bold title="عرض ما بعد العيد" />
+        <div class="latest-offers-btn__img">
+          <b-img src="../assets/images/icons/percentage.png"></b-img>
+        </div>
+      </div>
+    </div>
+
+    <div @click="closePopup" :class="isActive" class="latest-offers-popup">
+      <div class="latest-offers-popup__internal-wrap">
+        <div class="offers pt-4 pb-4 relative">
+          <div class="offers-grid">
+            <div class="popup-close text-left">
+              <font-awesome-icon :icon="['fas', 'times']" />
+            </div>
+            <b-row>
+              <b-col md="4" v-for="offer in offers" :key="offer.id">
+                <div class="offer text-center">
+                  <Title small sky bold :title="offer.name" class="mb-4" />
+                  <b-img-lazy :src="offer.offerImage" fluid class="mb-2"></b-img-lazy>
+                  <Title small sky bold :title="offer.price" />
+                  <Title small sky bold :title="offer.bounce" />
+                </div>
+              </b-col>
+            </b-row>
           </div>
-        </b-col>
 
-        <b-col md="7" lg="7"></b-col>
-      </b-row>
-    </b-container>
+          <div class="popup-action text-center mt-4">
+            <Button smallRadius bgSky border v-scroll-to="'#contact'">
+              <font-awesome-icon :icon="['fas', 'calendar-check']" />احجز الأن
+            </Button>
+          </div>
+
+          <div class="text-left pl-5 mt-2">
+            <Title extra_small sky title="العروض مستمرة لمدة شهر واحد *" />
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import Title from "./Title";
-import Form from "./Form";
+import Button from "./Button";
 
 export default {
   name: "Home",
 
-  components: { Title, Form },
+  components: { Title, Button },
+
+  data() {
+    return {
+      offers: [
+        {
+          id: 1,
+          name: "الليزك",
+          offerImage: require("../assets/images/offers/lasik.png"),
+          price: "فقط 3999",
+          bounce: "+ 500 فحوصات",
+        },
+        {
+          id: 2,
+          name: "الماء الابيض",
+          offerImage: require("../assets/images/offers/whitewater.png"),
+          price: "فقط 5999",
+          bounce: "+ 500 فحوصات",
+        },
+        {
+          id: 3,
+          name: "الكشف عن الشبكية لمرضي السكري",
+          offerImage: require("../assets/images/offers/retina.png"),
+          price: "فقط 99",
+        },
+      ],
+
+      isActive: "",
+      animation: "stop",
+    };
+  },
+
+  methods: {
+    togglePopup() {
+      this.isActive = "true";
+    },
+
+    closePopup() {
+      this.isActive = "";
+    },
+  },
 };
 </script>
 
 <style scoped>
+.home-wrap {
+  background: url("../assets/images/home.png");
+  background-size: cover;
+  background-position: top right;
+}
+
 .home {
+  background: url("../assets/images/little-eye-opacity.png");
+  background-size: cover;
+  background-position: left;
   padding-bottom: 5rem;
 }
 
@@ -43,19 +135,124 @@ export default {
   height: 323.33px;
 }
 
+.latest-offers-btn {
+  position: absolute;
+  width: 15%;
+  left: 0;
+  bottom: 3rem;
+  background: #fff;
+  border: 6px solid #11799a;
+  border-left: 0;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  background: url("../assets/images/icons/offer.png");
+  background-position: left;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.latest-offers-btn__intern-wrap {
+  border: 5px solid #f2c916;
+  padding: 1rem 2rem;
+  border-top-right-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  border-left: 0;
+}
+
+.latest-offers-btn__img img {
+  width: 80px;
+  margin-top: 1rem;
+}
+
+.latest-offers-popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  z-index: 9999;
+  background: rgb(0, 0, 0, 0.5);
+}
+
+.latest-offers-popup__internal-wrap {
+  position: fixed;
+  width: 80%;
+  background: #fff;
+  top: 50%;
+  left: -100%;
+  transform: translate(-50%, -50%);
+  border: 6px solid #11799a;
+  border-radius: 2rem;
+}
+
+.offers {
+  border: 5px solid #f2c916;
+  border-radius: 1.5rem;
+}
+
+.latest-offers-popup__btn {
+  position: absolute;
+  width: 20%;
+  overflow: visible;
+  right: -5%;
+  bottom: 0;
+  background: #fff;
+  border-radius: 2rem;
+}
+
+.latest-offers-popup__btn .latest-offers-btn__intern-wrap {
+  border: 0;
+}
+
+.popup-close {
+  width: 100%;
+  padding-left: 3.5rem;
+  display: block;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.popup-close svg {
+  color: #fff;
+  background: #11799a;
+  width: 30px;
+  height: 30px;
+  padding: 0.1rem;
+  border-radius: 50%;
+}
+
+.true {
+  left: 0;
+  transition: all 0.5s;
+}
+
+.true .latest-offers-popup__internal-wrap {
+  left: 50%;
+  transition: all 0.5s;
+}
 @media (min-width: 768px) and (max-width: 991px) {
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
-  .home_img img {
-    height: 200px;
-    -o-object-fit: cover;
-    object-fit: cover;
-    object-position: center;
+  .home {
+    padding-bottom: 0;
+    padding-top: 2rem;
+  }
+
+  .info_slider .doctors__box {
+    height: auto;
+  }
+
+  .latest-offers-btn__img img {
+    width: 40px;
+  }
+
+  .latest-offers-btn {
+    display: none;
   }
 
   .home_text {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 }
 </style>
