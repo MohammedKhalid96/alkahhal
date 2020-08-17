@@ -11,7 +11,7 @@
           <Title medium white bold title="لأنهم أملنا ومستقبلنا" />
           <Title medium white bold title="نهتم دائما بحماية ورعاية أعينهم" />
           <div v-b-modal.modal-center>
-            <b-img-lazy src="../assets/images/icons/video.svg"></b-img-lazy>
+            <b-img-lazy src="../assets/images/icons/video.svg" class="play-img"></b-img-lazy>
           </div>
 
           <b-modal id="modal-center" size="lg" centered hide-footer>
@@ -68,6 +68,12 @@ export default {
 iframe {
   width: 100% !important;
   height: 300px !important;
+}
+
+@media (min-width: 992px) and (max-width: 1183px) { 
+  .play-img {
+    width: 90px !important;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px),

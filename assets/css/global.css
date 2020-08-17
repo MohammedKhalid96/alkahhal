@@ -258,6 +258,33 @@ ul {
   fill: #11799a;
 }
 
+.slider-btns {
+  color: #5c5d5e;
+  font-size: 1.1em;
+}
+
+.slider-btns button {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 1px solid #11799a;
+  outline: none;
+}
+
+.prev {
+  background: #11799a;
+  color: #fff;
+  margin: 0 0.4rem;
+}
+
+.next {
+  background: transparent;
+  color: #11799a;
+}
+
+.slider-btns svg {
+  font-size: 1.5em;
+}
 
 @media (min-width: 992px) and (max-width: 1183px) {
 }

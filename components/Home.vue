@@ -1,5 +1,5 @@
 <template>
-  <div class="home-wrap relative">
+  <div class="home-wrap">
     <div class="home">
       <div class="divider"></div>
 
@@ -35,7 +35,7 @@
               <font-awesome-icon :icon="['fas', 'times']" />
             </div>
             <b-row>
-              <b-col md="4" v-for="offer in offers" :key="offer.id">
+              <b-col cols="6" md="4" v-for="offer in offers" :key="offer.id">
                 <div class="offer text-center">
                   <Title small sky bold :title="offer.name" class="mb-4" />
                   <b-img-lazy :src="offer.offerImage" fluid class="mb-2"></b-img-lazy>
@@ -230,7 +230,33 @@ export default {
   left: 50%;
   transition: all 0.5s;
 }
+
 @media (min-width: 768px) and (max-width: 991px) {
+   .latest-offers-btn__intern-wrap #title {
+    display: none;
+  }
+
+  .latest-offers-btn__intern-wrap {
+    padding: 0.2rem;
+    text-align: center;
+  }
+
+  .home_text {
+    margin-bottom: 1rem;
+  }
+
+  .offers img {
+    width: 50px;
+  }
+
+  .latest-offers-popup__internal-wrap {
+    width: 90%;
+  }
+
+
+  .popup-close {
+    padding-left: 1.5rem;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
@@ -244,15 +270,44 @@ export default {
   }
 
   .latest-offers-btn__img img {
-    width: 40px;
+    width: 28px;
   }
 
   .latest-offers-btn {
+    position: absolute;
+    z-index: 999;
+    bottom: -15%;
+    width: 15%;
+    background: rgba(255, 255, 255, 0.589) !important;
+
+  }
+  .latest-offers-btn__intern-wrap #title {
     display: none;
+  }
+
+  .latest-offers-btn__intern-wrap {
+    padding: 0.2rem;
+    text-align: center;
   }
 
   .home_text {
     margin-bottom: 1rem;
+  }
+
+  .offers img {
+    width: 50px;
+  }
+
+  .latest-offers-popup__internal-wrap {
+    width: 90%;
+  }
+
+  .col-6 {
+    margin: auto;
+  }
+
+  .popup-close {
+    padding-left: 1.5rem;
   }
 }
 </style>

@@ -12,7 +12,7 @@
         </div>
       </div>
 
-      <hooper :settings="hooperSettings">
+      <hooper :settings="hooperSettings" ref="carousel" @slide="updateCarousel">
         <slide v-for="service in services" :key="service.id">
           <div class="service-box">
             <div class="service-img">
@@ -30,9 +30,16 @@
             </div>
           </div>
         </slide>
-
-        <hooper-navigation slot="hooper-addons"></hooper-navigation>
       </hooper>
+      <div class="slider-btns">
+        التالي
+        <button @click.prevent="slidePrev" class="prev">
+          <font-awesome-icon :icon="['fas', 'caret-right']" />
+        </button>
+        <button @click.prevent="slideNext" class="next">
+          <font-awesome-icon :icon="['fas', 'caret-left']" />
+        </button>
+      </div>
     </b-container>
   </div>
 </template>
@@ -41,7 +48,7 @@
 import Title from "./Title";
 import Button from "./Button";
 
-import { Hooper, Slide, Navigation as HooperNavigation } from "hooper";
+import { Hooper, Slide } from "hooper";
 import "hooper/dist/hooper.css";
 
 export default {
@@ -52,7 +59,6 @@ export default {
     Button,
     Hooper,
     Slide,
-    HooperNavigation,
   },
 
   data() {
@@ -111,12 +117,29 @@ export default {
         infiniteScroll: true,
         wheelControl: false,
         breakpoints: {
-          991: {
+          767: {
             itemsToShow: 3,
           },
         },
       },
     };
+  },
+  watch: {
+    carouselData() {
+      this.$refs.carousel.slideTo(this.carouselData);
+    },
+  },
+
+  methods: {
+    slidePrev() {
+      this.$refs.carousel.slidePrev();
+    },
+    slideNext() {
+      this.$refs.carousel.slideNext();
+    },
+    updateCarousel(payload) {
+      this.myCarouselData = payload.currentSlide;
+    },
   },
 };
 </script>
@@ -138,7 +161,7 @@ export default {
   border: 1px solid rgba(17, 122, 154, 0.4);
   padding: 0.5rem;
   margin: 0 0.5rem;
-  border-radius: 0.5rem;
+  border-radius: 2rem;
   transition: all 0.1s;
 }
 
@@ -146,7 +169,7 @@ export default {
   width: 100%;
   height: 260px;
   object-fit: cover;
-  border-radius: 0.5rem;
+  border-radius: 2rem;
 }
 
 .service-name {
@@ -169,6 +192,11 @@ export default {
   bottom: 0;
   transition: all 0.3s;
 }
+
+.slider-btns {
+  margin-top: 2rem;
+}
+
 @media (min-width: 992px) and (max-width: 1183px) {
 }
 

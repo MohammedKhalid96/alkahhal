@@ -7,7 +7,13 @@
       </div>
       <b-row no-gutters>
         <b-col md="3">
-          <hooper :settings="info_slider" class="info_slider" group="doctors_slider">
+          <hooper
+            :settings="info_slider"
+            class="info_slider"
+            group="doctors_slider"
+            ref="carousel"
+            @slide="updateCarousel"
+          >
             <slide v-for="doctor in doctors" :key="doctor.id">
               <div class="doctors">
                 <div class="doctors__box">
@@ -23,13 +29,20 @@
                 </div>
               </div>
             </slide>
-
-            <hooper-navigation slot="hooper-addons"></hooper-navigation>
           </hooper>
+          <div class="slider-btns">
+            التالي
+            <button @click.prevent="slidePrev" class="prev">
+              <font-awesome-icon :icon="['fas', 'caret-right']" />
+            </button>
+            <button @click.prevent="slideNext" class="next">
+              <font-awesome-icon :icon="['fas', 'caret-left']" />
+            </button>
+          </div>
         </b-col>
 
         <b-col md="9">
-          <hooper :settings="img_slider" group="doctors_slider">
+          <hooper :settings="img_slider" group="doctors_slider" class="img_slider">
             <slide v-for="doctor in doctors" :key="doctor.id">
               <div class="doctors">
                 <div class="doctors__box">
@@ -55,13 +68,18 @@
 import Title from "./Title";
 import Button from "./Button";
 
-import { Hooper, Slide, Navigation as HooperNavigation } from "hooper";
+import { Hooper, Slide } from "hooper";
 import "hooper/dist/hooper.css";
 
 export default {
   name: "Doctors",
 
-  components: { Title, Button, Hooper, Slide, HooperNavigation },
+  components: {
+    Title,
+    Button,
+    Hooper,
+    Slide,
+  },
 
   data() {
     return {
@@ -98,17 +116,17 @@ export default {
           doctor_name: "أ.د. عبد الرحمن الغديان",
           doctor_title: "استشاري الشبكية والسائل الزجاجي",
         },
-        // {
-        //   id: 4,
-        //   doctor_img: require("../assets/images/eyes.png"),
-        //   doctor_name: "د. الهام التميمي",
-        //   doctor_title: "استشاري طب وجراحة العیون في الحول للأطفال والبالغين",
-        // },
+        {
+          id: 4,
+          doctor_img: require("../assets/images/doctors/ladies-doctors.png"),
+          doctor_name: "د. الهام التميمي",
+          doctor_title: "استشاري طب وجراحة العیون في الحول للأطفال والبالغين",
+        },
         {
           id: 5,
-          doctor_img: require("../assets/images/doctors/وقار مصفطي.png"),
-          doctor_name: "د. وقار قريشي",
-          doctor_title: "أخصائي طب وجراحة العيون",
+          doctor_img: require("../assets/images/doctors/ladies-doctors.png"),
+          doctor_name: "د. سناء عبد الكريم",
+          doctor_title: "استشاري طب وجراحة العيون - الشبكية",
         },
         {
           id: 6,
@@ -118,11 +136,31 @@ export default {
         },
         {
           id: 7,
+          doctor_img: require("../assets/images/doctors/وقار مصفطي.png"),
+          doctor_name: "د. وقار قريشي",
+          doctor_title: "أخصائي طب وجراحة العيون",
+        },
+
+        {
+          id: 8,
           doctor_img: require("../assets/images/doctors/محمد النجار.png"),
           doctor_name: "د. محمد النجار",
           doctor_title: "اخصائي طب وجراحة العيون",
         },
+        {
+          id: 9,
+          doctor_img: require("../assets/images/doctors/ladies-doctors.png"),
+          doctor_name: "د. ليمياء فاروق",
+          doctor_title: "أخصائية طب وجراحة العيون",
+        },
+        {
+          id: 10,
+          doctor_img: require("../assets/images/doctors/ladies-doctors.png"),
+          doctor_name: "د. سارة سامي",
+          doctor_title: "أخصائية طب وجراحة العيون",
+        },
       ],
+
       info_slider: {
         itemsToShow: 1,
         infiniteScroll: true,
@@ -144,7 +182,26 @@ export default {
           },
         },
       },
+
+      carouselData: 0,
     };
+  },
+  watch: {
+    carouselData() {
+      this.$refs.carousel.slideTo(this.carouselData);
+    },
+  },
+
+  methods: {
+    slidePrev() {
+      this.$refs.carousel.slidePrev();
+    },
+    slideNext() {
+      this.$refs.carousel.slideNext();
+    },
+    updateCarousel(payload) {
+      this.myCarouselData = payload.currentSlide;
+    },
   },
 };
 </script>
@@ -158,7 +215,7 @@ export default {
 }
 
 .info_slider .doctors__box {
-  height: 220px;
+  height: 240px;
 }
 
 .info_slider .doctors__info {
@@ -174,6 +231,10 @@ export default {
 @media (min-width: 320px) and (max-width: 767px) {
   .info_slider .doctors__box {
     height: auto;
+  }
+
+  .img_slider {
+    margin-top: 5rem;
   }
 }
 </style>
