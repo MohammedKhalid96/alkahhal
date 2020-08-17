@@ -70,7 +70,7 @@ iframe {
   height: 300px !important;
 }
 
-@media (min-width: 992px) and (max-width: 1183px) { 
+@media (min-width: 992px) and (max-width: 1183px) {
   .play-img {
     width: 90px !important;
   }
@@ -83,6 +83,7 @@ iframe {
   }
   .video__bg {
     height: 300px !important;
+    -o-object-fit: cover;
     object-fit: cover;
   }
   .video__img img {

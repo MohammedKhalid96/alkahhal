@@ -48,6 +48,8 @@ header {
 .fixed-top {
   right: auto;
   left: 50% !important;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 

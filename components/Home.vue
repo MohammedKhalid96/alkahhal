@@ -180,6 +180,8 @@ export default {
   background: #fff;
   top: 50%;
   left: -100%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   border: 6px solid #11799a;
   border-radius: 2rem;
@@ -223,16 +225,20 @@ export default {
 
 .true {
   left: 0;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
   transition: all 0.5s;
 }
 
 .true .latest-offers-popup__internal-wrap {
   left: 50%;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
   transition: all 0.5s;
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-   .latest-offers-btn__intern-wrap #title {
+  .latest-offers-btn__intern-wrap #title {
     display: none;
   }
 
@@ -252,7 +258,6 @@ export default {
   .latest-offers-popup__internal-wrap {
     width: 90%;
   }
-
 
   .popup-close {
     padding-left: 1.5rem;
@@ -279,7 +284,6 @@ export default {
     bottom: -15%;
     width: 15%;
     background: rgba(255, 255, 255, 0.589) !important;
-
   }
   .latest-offers-btn__intern-wrap #title {
     display: none;

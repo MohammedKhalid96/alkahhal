@@ -47,15 +47,23 @@ export default {
 
 <style scoped>
 #doctors {
+  background-image: -o-linear-gradient(
+    bottom,
+    rgba(17, 124, 156, 0.2),
+    rgba(17, 122, 154, 0.2)
+  );
   background-image: -webkit-gradient(
     linear,
     left bottom,
     left top,
-    from(#117a9a1a),
-    to(transparent)
+    from(rgba(17, 124, 156, 0.2)),
+    to(rgba(17, 122, 154, 0.2))
   );
-  background-image: -o-linear-gradient(bottom, rgba(17, 124, 156, 0.2), rgba(17, 122, 154, 0.2));
-  background-image: linear-gradient(to top, rgba(17, 124, 156, 0.2), rgba(17, 122, 154, 0.2));
+  background-image: linear-gradient(
+    to top,
+    rgba(17, 124, 156, 0.2),
+    rgba(17, 122, 154, 0.2)
+  );
 }
 
 #contact {

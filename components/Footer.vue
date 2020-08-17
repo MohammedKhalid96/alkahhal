@@ -32,14 +32,14 @@ export default {
 
 <style scoped>
 .footer-wrap {
+  background-image: -o-linear-gradient(bottom, #117a9a4b, #117a9a1a);
   background-image: -webkit-gradient(
     linear,
     left bottom,
     left top,
-    from(#117a9a1a),
-    to(transparent)
+    from(#117a9a4b),
+    to(#117a9a1a)
   );
-  background-image: -o-linear-gradient(bottom, #117a9a4b, #117a9a1a);
   background-image: linear-gradient(to top, #117a9a4b, #117a9a1a);
 }
 

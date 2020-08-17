@@ -97,6 +97,7 @@ export default {
 .select-branch .btn.active {
   background: #fff;
   border: 0;
+  -webkit-box-shadow: none;
   box-shadow: none;
   color: #11799a;
 }

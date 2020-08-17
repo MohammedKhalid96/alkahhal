@@ -162,12 +162,15 @@ export default {
   padding: 0.5rem;
   margin: 0 0.5rem;
   border-radius: 2rem;
+  -webkit-transition: all 0.1s;
+  -o-transition: all 0.1s;
   transition: all 0.1s;
 }
 
 .service-img img {
   width: 100%;
   height: 260px;
+  -o-object-fit: cover;
   object-fit: cover;
   border-radius: 2rem;
 }
@@ -190,6 +193,8 @@ export default {
 
 .service-box:hover .service-action {
   bottom: 0;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 
