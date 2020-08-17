@@ -41,7 +41,7 @@
           </div>
         </b-col>
 
-        <b-col md="9">
+        <b-col md="9" class="img_slider_wrap">
           <hooper :settings="img_slider" group="doctors_slider" class="img_slider">
             <slide v-for="doctor in doctors" :key="doctor.id">
               <div class="doctors">
@@ -233,7 +233,7 @@ export default {
     height: auto;
   }
 
-  .img_slider {
+  .img_slider_wrap {
     margin-top: 5rem;
   }
 }
