@@ -85,6 +85,10 @@ header {
   color: #5c5d5e !important;
   border: 1px solid #11799a;
   border-radius: 5rem;
+  -webkit-animation: offer_animation 2s infinite;
+  -moz-animation: offer_animation 2s infinite;
+  -o-animation: offer_animation 2s infinite;
+  animation: offer_animation 2s infinite;
 }
 
 .action-link .nav-link svg {

@@ -162,10 +162,10 @@ export default {
 .latest-offers-btn__img img {
   width: 80px;
   margin-top: 1rem;
-  -webkit-animation: offer_animation 2s infinite; 
-  -moz-animation: offer_animation 2s infinite; 
-  -o-animation: offer_animation 2s infinite; 
-  animation: offer_animation 2s infinite; 
+  -webkit-animation: offer_animation 2s infinite;
+  -moz-animation: offer_animation 2s infinite;
+  -o-animation: offer_animation 2s infinite;
+  animation: offer_animation 2s infinite;
 }
 
 .latest-offers-popup {
@@ -239,39 +239,6 @@ export default {
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
-}
-
-@-webkit-keyframes offer_animation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-moz-keyframes offer_animation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-o-keyframes offer_animation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes offer_animation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
