@@ -333,4 +333,8 @@ ul {
   .kahhal-name h4 {
     font-size: 4em;
   }
+
+  .contact-form.flex-center {
+    display: unset !important;
+  }
 }

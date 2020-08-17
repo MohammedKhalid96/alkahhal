@@ -14,7 +14,7 @@
           </b-navbar-nav>
 
           <b-navbar-nav class="mr-auto">
-            <b-nav-item to="/" v-scroll-to="'#contact'" class="action-link">
+            <b-nav-item to="/" v-scroll-to="'#contact-form'" class="action-link">
               <span class="btn-anim"></span>
               <font-awesome-icon :icon="['fas', 'calendar-check']" />احجز الآن
             </b-nav-item>
@@ -115,7 +115,8 @@ header {
 
 @media (max-width: 320px) {
   .navbar {
-    width: 96%;
+    width: 100%;
+    padding: 0.5rem 0.3rem;
   }
 
   .navbar-brand img {

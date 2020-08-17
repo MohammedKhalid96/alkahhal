@@ -47,7 +47,7 @@
           </div>
 
           <div class="popup-action text-center mt-4">
-            <Button smallRadius bgSky border v-scroll-to="'#contact'">
+            <Button smallRadius bgSky border v-scroll-to="'#contact-form'">
               <font-awesome-icon :icon="['fas', 'calendar-check']" />احجز الأن
             </Button>
           </div>

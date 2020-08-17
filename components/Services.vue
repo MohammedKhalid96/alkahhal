@@ -24,7 +24,7 @@
             </div>
 
             <div class="service-action">
-              <Button smallRadius transparent v-scroll-to="'#contact'">
+              <Button smallRadius transparent v-scroll-to="'#contact-form'">
                 <font-awesome-icon :icon="['fas', 'calendar-check']" />احجز الآن
               </Button>
             </div>

@@ -78,7 +78,7 @@
           <b-col md="6">
             <Title medium white center bold title="احجز الان لسلامة عينيك " />
 
-            <div class="contact-form flex-center">
+            <div id="contact-form" class="contact-form flex-center">
               <Form />
             </div>
           </b-col>
@@ -181,19 +181,12 @@ export default {
 
 @media (min-width: 768px) and (max-width: 991px),
   screen and (min-width: 320px) and (max-width: 767px) {
-  .contact-info__img {
-    width: 20px;
-    height: 20px;
-    line-height: 20px;
-    margin-left: 0rem;
+  .contact {
+    background-size: cover;
   }
-
-  .contact-info__img img {
-    width: 15px;
-  }
-
   .contact-info {
     font-size: 0.7rem;
+    font-weight: bold;
   }
 
   .contact-info__img {
@@ -206,6 +199,10 @@ export default {
 
   .contact-info li {
     margin-bottom: 1rem;
+  }
+
+  .pt-5 {
+    padding-top: 1rem !important;
   }
 }
 </style>
