@@ -114,6 +114,10 @@ header {
 }
 
 @media (max-width: 320px) {
+  .navbar {
+    width: 96%;
+  }
+
   .navbar-brand img {
     width: 4rem;
   }
