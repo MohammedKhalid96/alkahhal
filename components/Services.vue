@@ -66,7 +66,7 @@ export default {
       services: [
         {
           id: 1,
-          service_img: require("../assets/images/services/علاج اعتلال الشبكية السكرى والناتج عن مضاعفات مرض السكر.png"),
+          service_img: require("../assets/images/services/علاج-اعتلال-الشبكية-السكرى-والناتج-عن-مضاعفات-مرض-السكر.jpg"),
           service_name:
             "علاج اعتلال الشبكية السكرى والناتج عن مضاعفات مرض السكر",
         },

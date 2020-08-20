@@ -63,6 +63,12 @@
         </div>
       </div>
     </div>
+
+    <div class="whatsapp">
+      <a target="_blank" href="https://api.whatsapp.com/send?phone=++9660553809777">
+        <font-awesome-icon :icon="['fab', 'whatsapp']" />
+      </a>
+    </div>
   </div>
 </template>
 
@@ -139,6 +145,28 @@ export default {
 .home_img img {
   border-radius: 5rem;
   height: 323.33px;
+}
+
+.whatsapp {
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  bottom: 36%;
+  text-align: center;
+}
+
+.whatsapp a {
+  display: inline-block;
+  background: #fff;
+  color: #11799a;
+  width: 4rem;
+  height: 4rem;
+  line-height: 3.2rem;
+  font-size: 2rem;
+  border: 2px solid #11799a;
+  border-left: 0;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
 }
 
 .latest-offers-btn {
@@ -286,15 +314,26 @@ export default {
     height: auto;
   }
 
+  .whatsapp {
+    bottom: 34%;
+  }
+
+  .whatsapp a {
+    font-size: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    line-height: 2.2rem;
+    background: rgba(255, 255, 255, 0.6) !important;
+  }
+
   .latest-offers-btn__img img {
     width: 28px;
   }
 
   .latest-offers-btn {
-
-    bottom: 30%;
+    bottom: 20%;
     width: 15%;
-    background: rgba(255, 255, 255, 0.589) !important;
+    background: rgba(255, 255, 255, 0.6) !important;
   }
   .latest-offers-btn__intern-wrap #title {
     display: none;

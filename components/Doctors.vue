@@ -99,63 +99,63 @@ export default {
       doctors: [
         {
           id: 1,
-          doctor_img: require("../assets/images/doctors/د. عادل عبدالعزيز الرشود.png"),
+          doctor_img: require("../assets/images/new-doctors/د. عادل عبدالعزيز الرشود.jpg"),
           doctor_name: "د. عادل عبدالعزيز الرشود ",
           doctor_title:
             "مؤسس شركة الكحال للخدمات الطبیة واستشاري القرنية والماء الأبيض وتصحيح عیوب النظر الانكسارية",
         },
         {
           id: 2,
-          doctor_img: require("../assets/images/doctors/عبدالعزيز عادل الرشود.png"),
+          doctor_img: require("../assets/images/new-doctors/عبدالعزيز عادل الرشود.jpeg"),
           doctor_name: "د. عبد العزيز الرشود",
           doctor_title: "استشاري الشبكية والسائل الزجاجي والماء الأبيض",
         },
         {
           id: 3,
-          doctor_img: require("../assets/images/doctors/عبدالرحمن الغديان.png"),
+          doctor_img: require("../assets/images/new-doctors/عبدالرحمن الغديان.jpeg"),
           doctor_name: "أ.د. عبد الرحمن الغديان",
           doctor_title: "استشاري الشبكية والسائل الزجاجي",
         },
         {
           id: 4,
-          doctor_img: require("../assets/images/doctors/ladies-doctors.png"),
+          doctor_img: require("../assets/images/new-doctors/ladies-doctors.jpg"),
           doctor_name: "د. الهام التميمي",
           doctor_title: "استشاري طب وجراحة العیون في الحول للأطفال والبالغين",
         },
         {
           id: 5,
-          doctor_img: require("../assets/images/doctors/ladies-doctors.png"),
+          doctor_img: require("../assets/images/new-doctors/ladies-doctors.jpg"),
           doctor_name: "د. سناء عبد الكريم",
           doctor_title: "استشاري طب وجراحة العيون - الشبكية",
         },
         {
           id: 6,
-          doctor_img: require("../assets/images/doctors/محمد ضياء.png"),
+          doctor_img: require("../assets/images/new-doctors/محمد ضياء.jpeg"),
           doctor_name: "د. محمد ضياء الدين",
           doctor_title: "اخصائي طب وجراحة العيون",
         },
         {
           id: 7,
-          doctor_img: require("../assets/images/doctors/وقار مصفطي.png"),
+          doctor_img: require("../assets/images/new-doctors/وقار مصفطي.jpeg"),
           doctor_name: "د. وقار قريشي",
           doctor_title: "أخصائي طب وجراحة العيون",
         },
 
         {
           id: 8,
-          doctor_img: require("../assets/images/doctors/محمد النجار.png"),
+          doctor_img: require("../assets/images/new-doctors/محمد النجار.jpeg"),
           doctor_name: "د. محمد النجار",
           doctor_title: "اخصائي طب وجراحة العيون",
         },
         {
           id: 9,
-          doctor_img: require("../assets/images/doctors/ladies-doctors.png"),
+          doctor_img: require("../assets/images/new-doctors/ladies-doctors.jpg"),
           doctor_name: "د. ليمياء فاروق",
           doctor_title: "أخصائية طب وجراحة العيون",
         },
         {
           id: 10,
-          doctor_img: require("../assets/images/doctors/ladies-doctors.png"),
+          doctor_img: require("../assets/images/new-doctors/ladies-doctors.jpg"),
           doctor_name: "د. سارة سامي",
           doctor_title: "أخصائية طب وجراحة العيون",
         },
@@ -222,10 +222,26 @@ export default {
   position: relative;
   top: 100%;
 }
+
+.img_slider_wrap .doctors__box {
+  margin-left: 2rem;
+}
+
+.doctors__box__img img {
+  height: 380px;
+  object-fit: cover;
+}
 @media (min-width: 992px) and (max-width: 1183px) {
+  .img_slider_wrap .doctors__box {
+    margin-right: 2rem;
+    margin-left: 0;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+  .img_slider_wrap .doctors__box {
+    margin-right: 2rem;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
@@ -235,6 +251,10 @@ export default {
 
   .img_slider_wrap {
     margin-top: 5rem;
+  }
+
+  .img_slider_wrap .doctors__box {
+    margin-left: 0;
   }
 }
 </style>
