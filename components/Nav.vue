@@ -7,11 +7,7 @@
             <b-img src="../assets/images/logo.png" fluid alt="alkahhal logo"></b-img>
           </b-navbar-brand>
 
-          <b-navbar-nav class="m-auto">
-            <b-nav-item href="tel:0553809777">
-              <b-img src="../assets/images/icons/phone.svg"></b-img>0553809777
-            </b-nav-item>
-          </b-navbar-nav>
+     
 
           <b-navbar-nav class="mr-auto">
             <b-nav-item to="/" v-scroll-to="'#contact-form'" class="action-link">

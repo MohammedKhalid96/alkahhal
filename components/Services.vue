@@ -20,7 +20,7 @@
             </div>
 
             <div>
-              <Title extra_small bold sky :title="service.service_name" class="service-name" />
+              <Title small bold sky :title="service.service_name" class="service-name" />
             </div>
 
             <div class="service-action">
@@ -158,7 +158,6 @@ export default {
 }
 
 .service-box {
-  border: 1px solid rgba(17, 122, 154, 0.4);
   padding: 0.5rem;
   margin: 0 0.5rem;
   border-radius: 2rem;

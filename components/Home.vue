@@ -2,14 +2,19 @@
   <div class="home-wrap">
     <div class="home">
       <div class="divider"></div>
+      <div class="divider"></div>
 
       <b-container>
         <b-row>
           <b-col md="5" lg="5">
             <div class="home_text">
-              <Title bold sky title="الكحال" class="kahhal-name" />
-              <Title medium bold gray title="خبراء طب العيون علی مدار ٣٥ عاماً " />
-              <Title small gray title="ونحن نسعی دائماً لنكون اختياركم الآمن والأول لسلامة أعينكم" />
+              <Title bold sky title="خبراء طب العيون علی مدار ٣٥ عاماً " class="kahhal-name" />
+              <Title
+                medium
+                bold
+                gray
+                title="و نسعی دائماً لنكون اختياركم الآمن والأول لسلامة أعينكم"
+              />
             </div>
           </b-col>
 
@@ -121,7 +126,8 @@ export default {
 
 .home {
   background: url("../assets/images/little-eye-opacity.png");
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: contain;
   background-position: left;
   padding-bottom: 5rem;
 }
@@ -136,7 +142,8 @@ export default {
 }
 
 .latest-offers-btn {
-  position: absolute;
+  position: fixed;
+  z-index: 999;
   width: 15%;
   left: 0;
   bottom: 3rem;
@@ -145,9 +152,7 @@ export default {
   border-left: 0;
   border-top-right-radius: 2rem;
   border-bottom-right-radius: 2rem;
-  background: url("../assets/images/icons/offer.png");
-  background-position: left;
-  background-size: contain;
+
   cursor: pointer;
 }
 
@@ -156,6 +161,9 @@ export default {
   padding: 1rem 2rem;
   border-top-right-radius: 1.5rem;
   border-bottom-right-radius: 1.5rem;
+  background: url("../assets/images/icons/offer.png");
+  background-position: left;
+  background-size: contain;
   border-left: 0;
 }
 
@@ -283,9 +291,8 @@ export default {
   }
 
   .latest-offers-btn {
-    position: absolute;
-    z-index: 999;
-    bottom: -15%;
+
+    bottom: 30%;
     width: 15%;
     background: rgba(255, 255, 255, 0.589) !important;
   }
