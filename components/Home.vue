@@ -8,7 +8,7 @@
         <b-row>
           <b-col md="5" lg="5">
             <div class="home_text">
-              <Title bold sky title="خبراء طب العيون علی مدار ٣٥ عاماً " class="kahhal-name" />
+              <Title bold sky title="خبراء طب العيون علی مدار 35 عاماً " class="kahhal-name" />
               <Title
                 medium
                 bold
@@ -45,7 +45,6 @@
                   <Title small sky bold :title="offer.name" class="mb-4" />
                   <b-img-lazy :src="offer.offerImage" fluid class="mb-2"></b-img-lazy>
                   <Title small sky bold :title="offer.price" />
-                  <Title small sky bold :title="offer.bounce" />
                 </div>
               </b-col>
             </b-row>

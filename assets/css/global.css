@@ -6,7 +6,7 @@
 }
 
 @font-face {
-  font-family: "FrutigerLTArabic";
+  font-family: "FrutigerLTArabicLight";
   src: url("../fonts/FrutigerLTArabic-45Light.otf");
   src: url("../fonts/FrutigerLTArabic-Light.eot") format("embedded-opentype"),
     url("../fonts/FrutigerLTArabic-Light.woff2") format("woff2"),
@@ -16,12 +16,23 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "FrutigerLTArabic";
+  src: url("../fonts/bold/FrutigerLTArabic-55Roman.otf");
+  src: url("../fonts/bold/Frutiger-LT-Arabic-55-Roman.eot") format("embedded-opentype"),
+    url("../fonts/bold/Frutiger-LT-Arabic-55-Roman.woff2") format("woff2"),
+    url("../fonts/bold/FrutigerLTArabic-55Roman.woff") format("woff"),
+    url("../fonts/bold/Frutiger-LT-Arabic-55-Roman.ttf") format("truetype"),
+    url("../fonts/bold/FrutigerLTArabic-55Roman.svg") format("svg");
+  font-display: swap;
+}
+
 body {
   position: relative;
   direction: rtl;
   text-align: right;
   overflow-x: hidden;
-  font-family: "FrutigerLTArabic", sans-serif;
+  font-family: "FrutigerLTArabicLight", sans-serif;
 }
 
 .contact .form-control::-webkit-input-placeholder {
@@ -162,7 +173,9 @@ ul {
 }
 
 .kahhal-name h4 {
-  font-size: 4em;
+  font-size: 3em;
+  font-family: "FrutigerLTArabic", sans-serif;
+  font-weight: bold;
 }
 
 .section-title {

@@ -105,16 +105,16 @@ export default {
             "مؤسس شركة الكحال للخدمات الطبیة واستشاري القرنية والماء الأبيض وتصحيح عیوب النظر الانكسارية",
         },
         {
-          id: 2,
-          doctor_img: require("../assets/images/new-doctors/عبدالعزيز عادل الرشود.jpeg"),
-          doctor_name: "د. عبد العزيز الرشود",
-          doctor_title: "استشاري الشبكية والسائل الزجاجي والماء الأبيض",
-        },
-        {
           id: 3,
           doctor_img: require("../assets/images/new-doctors/عبدالرحمن الغديان.jpeg"),
           doctor_name: "أ.د. عبد الرحمن الغديان",
           doctor_title: "استشاري الشبكية والسائل الزجاجي",
+        },
+        {
+          id: 2,
+          doctor_img: require("../assets/images/new-doctors/عبدالعزيز عادل الرشود.jpeg"),
+          doctor_name: "د. عبد العزيز الرشود",
+          doctor_title: "استشاري الشبكية والسائل الزجاجي والماء الأبيض",
         },
         {
           id: 4,
