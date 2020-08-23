@@ -211,7 +211,19 @@ export default {
   }
 
   .service-name {
+    padding: 0.5rem 0 0 0;
+    -webkit-line-clamp: 2;
     overflow: unset;
+  }
+
+  .service-box {
+    padding: 0;
+    margin: 0;
+    margin-left: 0.5rem;
+  }
+
+  .service-action {
+    display: none;
   }
 }
 </style>

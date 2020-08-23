@@ -7,8 +7,6 @@
             <b-img src="../assets/images/logo.png" fluid alt="alkahhal logo"></b-img>
           </b-navbar-brand>
 
-     
-
           <b-navbar-nav class="mr-auto">
             <b-nav-item to="/" v-scroll-to="'#contact-form'" class="action-link">
               <span class="btn-anim"></span>
@@ -98,6 +96,11 @@ header {
 
 @media (min-width: 768px) and (max-width: 991px),
   screen and (min-width: 321px) and (max-width: 767px) {
+  .navbar {
+    width: 100%;
+    padding: 0.5rem 0.3rem;
+  }
+  
   .navbar-brand img {
     width: 5.5rem;
   }

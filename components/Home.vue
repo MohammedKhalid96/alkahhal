@@ -8,7 +8,7 @@
         <b-row>
           <b-col md="5" lg="5">
             <div class="home_text">
-              <Title bold sky title="خبراء طب العيون علی مدار 35 عاماً " class="kahhal-name" />
+              <Title bold sky shadow title="خبراء طب العيون علی مدار 35 عاماً " class="kahhal-name" />
               <Title
                 medium
                 bold

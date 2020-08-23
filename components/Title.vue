@@ -89,5 +89,9 @@ export default {
   .title__big {
     font-size: 2em;
   }
+
+  .title__medium {
+  font-size: 1.2em;
+}
 }
 </style>

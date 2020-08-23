@@ -111,12 +111,6 @@ export default {
           doctor_title: "استشاري الشبكية والسائل الزجاجي",
         },
         {
-          id: 2,
-          doctor_img: require("../assets/images/new-doctors/عبدالعزيز عادل الرشود.jpeg"),
-          doctor_name: "د. عبد العزيز الرشود",
-          doctor_title: "استشاري الشبكية والسائل الزجاجي والماء الأبيض",
-        },
-        {
           id: 4,
           doctor_img: require("../assets/images/new-doctors/ladies-doctors.jpg"),
           doctor_name: "د. الهام التميمي",
@@ -129,9 +123,21 @@ export default {
           doctor_title: "استشاري طب وجراحة العيون - الشبكية",
         },
         {
+          id: 2,
+          doctor_img: require("../assets/images/new-doctors/عبدالعزيز عادل الرشود.jpeg"),
+          doctor_name: "د. عبد العزيز الرشود",
+          doctor_title: "استشاري الشبكية والسائل الزجاجي والماء الأبيض",
+        },
+        {
           id: 6,
           doctor_img: require("../assets/images/new-doctors/محمد ضياء.jpeg"),
           doctor_name: "د. محمد ضياء الدين",
+          doctor_title: "اخصائي طب وجراحة العيون",
+        },
+        {
+          id: 8,
+          doctor_img: require("../assets/images/new-doctors/محمد النجار.jpeg"),
+          doctor_name: "د. محمد النجار",
           doctor_title: "اخصائي طب وجراحة العيون",
         },
         {
@@ -139,13 +145,6 @@ export default {
           doctor_img: require("../assets/images/new-doctors/وقار مصفطي.jpeg"),
           doctor_name: "د. وقار قريشي",
           doctor_title: "أخصائي طب وجراحة العيون",
-        },
-
-        {
-          id: 8,
-          doctor_img: require("../assets/images/new-doctors/محمد النجار.jpeg"),
-          doctor_name: "د. محمد النجار",
-          doctor_title: "اخصائي طب وجراحة العيون",
         },
         {
           id: 9,

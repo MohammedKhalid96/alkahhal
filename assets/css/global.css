@@ -356,7 +356,7 @@ ul {
   }
 
   .divider {
-    height: 30px;
+    height: 10px;
   }
 
   .section {
@@ -377,7 +377,7 @@ ul {
   }
 
   .kahhal-name h4 {
-    font-size: 2.5em;
+    font-size: 2em;
   }
 
   .contact-form.flex-center {
